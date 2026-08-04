@@ -1,0 +1,18 @@
+[
+  {
+    "description": "Generate Agent Skills from MCP servers, with an on-demand CLI for discovery and execution.",
+    "forks": 0,
+    "homepage": "",
+    "language": "TypeScript",
+    "name": "mcp2skill",
+    "stars": 0,
+    "topics": [
+      "agent-skills",
+      "cli",
+      "mcp",
+      "model-context-protocol"
+    ],
+    "updatedAt": "2026-07-29T16:16:03Z",
+    "url": "https://github.com/zaimokuza-yoshiteru/mcp2skill"
+  }
+]

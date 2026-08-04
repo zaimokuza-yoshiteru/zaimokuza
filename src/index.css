@@ -1,0 +1,182 @@
+@import 'tailwindcss';
+
+@theme {
+  /* 全站设计 token（设计规范见根目录 AGENTS.md） */
+  --color-bg-page: #f5f0e6;
+  --color-bg-card: #f8f3ea;
+  --color-bg-section: #ebe3d2;
+  --color-surface-hover: #efe8d9;
+  --color-text-primary: #1f2329;
+  --color-text-secondary: rgba(0, 0, 0, 0.55);
+  --color-border-warm: #e3dac6;
+  --font-serif-main: Georgia, 'Times New Roman', 'PingFang SC', 'MiSans', serif;
+  --font-sans-main: 'PingFang SC', -apple-system, 'MiSans', sans-serif;
+  --font-mono-num: 'Geist Mono', ui-monospace, monospace;
+  --ease-out-strong: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('./assets/geist-mono-regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- 自定义光标（内容区隐藏系统光标，黑点 + 缓动圆环替代） ---------- */
+.cursor-hidden-zone,
+.cursor-hidden-zone * {
+  cursor: none !important;
+}
+.cursor-dot {
+  z-index: 100000;
+  pointer-events: none;
+  background: #000;
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s;
+}
+.cursor-ring {
+  z-index: 99999;
+  pointer-events: none;
+  will-change: left, top;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    height 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.2s;
+}
+.cursor-ring.cursor-button {
+  width: 80px;
+  height: 80px;
+}
+
+/* ---------- 滚动 reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition:
+    opacity 0.8s var(--ease-out-strong),
+    transform 0.8s var(--ease-out-strong);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Hero 反色遮罩层 ---------- */
+.hero-invert {
+  z-index: 9;
+  pointer-events: none;
+  will-change: clip-path;
+  background: #000;
+  color: #fff;
+  position: fixed;
+}
+
+/* ---------- Hero 标题逐字符浮现 ---------- */
+.hero-char {
+  opacity: 0;
+  transform: translateY(40px);
+  display: inline-block;
+  animation: 0.6s var(--ease-out-strong) forwards hero-char-reveal;
+}
+@keyframes hero-char-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-fade-in {
+  opacity: 0;
+  animation: 0.8s var(--ease-out-strong) 0.8s forwards hero-fade;
+}
+@keyframes hero-fade {
+  to {
+    opacity: 1;
+  }
+}
+/* 遮罩层内的克隆不播动画 */
+.hero-invert .hero-char,
+.hero-invert .hero-fade-in {
+  opacity: 1 !important;
+  animation: none !important;
+  transform: none !important;
+}
+/* 遮罩层内的次要文字提亮为白色（黑底上保持可读） */
+.hero-invert .text-text-secondary {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+/* ---------- Hero 地球 Lottie（hover 上浮 60px） ---------- */
+.hero-earth {
+  aspect-ratio: 1200 / 855;
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero-earth-inner {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hero-earth:hover .hero-earth-inner {
+  transform: translateY(-60px);
+}
+
+/* ---------- 降级：减少动态 / 触屏 ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .cursor-hidden-zone,
+  .cursor-hidden-zone * {
+    cursor: auto !important;
+  }
+  .cursor-dot,
+  .cursor-ring,
+  .hero-invert {
+    display: none !important;
+  }
+  .reveal {
+    transition: opacity 0.3s ease !important;
+    transform: none !important;
+  }
+  .hero-char,
+  .hero-fade-in {
+    animation-duration: 0.01s !important;
+    animation-delay: 0s !important;
+  }
+}
+@media (pointer: coarse) {
+  .cursor-hidden-zone,
+  .cursor-hidden-zone * {
+    cursor: auto !important;
+  }
+  .cursor-dot,
+  .cursor-ring,
+  .hero-invert {
+    display: none !important;
+  }
+}
