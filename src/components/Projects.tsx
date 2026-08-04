@@ -1,13 +1,13 @@
 import projects from '../data/projects.json'
 
 /** 语言圆点配色（GitHub 惯例色） */
-const LANG_COLORS = {
+const LANG_COLORS: Record<string, string> = {
   TypeScript: '#3178c6', JavaScript: '#f1e05a', Java: '#b07219',
   Python: '#3572a5', Go: '#00add8', Rust: '#dea584',
   'C++': '#f34b7d', C: '#555', HTML: '#e34c26', CSS: '#563d7c',
 }
 
-function SectionHeader({ id, title, sub }) {
+function SectionHeader({ id, title, sub }: { id: string; title: string; sub?: string }) {
   return (
     <div className="reveal">
       <h2 id={id} className="scroll-mt-[40px] text-[32px] font-semibold tracking-tight md:text-[40px]">

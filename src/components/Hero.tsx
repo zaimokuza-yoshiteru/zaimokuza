@@ -1,10 +1,11 @@
 import { useEffect, useRef } from 'react'
 import lottie from 'lottie-web'
-import { profile } from '../data/profile.js'
+import type { AnimationItem } from 'lottie-web'
+import { profile } from '../data/profile'
 
 /** Hero 文案（真实内容与反色遮罩克隆共用）。
  *  真实文案始终英文；遮罩克隆传 zh 显示中文——黑圈内白字即为中文。 */
-export function HeroText({ zh = false }) {
+export function HeroText({ zh = false }: { zh?: boolean }) {
   return (
     <>
       {/* 中文是黑圈内的克隆文案，字符更宽，字号收小避免换行；
@@ -49,13 +50,13 @@ export function HeroText({ zh = false }) {
 }
 
 export default function Hero() {
-  const earthRef = useRef(null)
+  const earthRef = useRef<HTMLDivElement>(null)
 
   // 地球 Lottie 动画（hover 上浮效果见 index.css 的 .hero-earth 规则）
   useEffect(() => {
     const container = earthRef.current
     if (!container) return
-    let anim
+    let anim: AnimationItem | undefined
     let cancelled = false
     // 路径带 BASE_URL，兼容 GitHub Pages 子路径部署
     fetch(`${import.meta.env.BASE_URL}lottie/earth/data.json`)

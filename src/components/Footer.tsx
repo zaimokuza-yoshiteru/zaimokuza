@@ -1,4 +1,4 @@
-import { profile } from '../data/profile.js'
+import { profile } from '../data/profile'
 
 /** 黑色页脚 */
 export default function Footer() {

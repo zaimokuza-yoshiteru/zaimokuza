@@ -1,11 +1,11 @@
-import Nav from './components/Nav.jsx'
-import Hero from './components/Hero.jsx'
-import Projects from './components/Projects.jsx'
-import Experience from './components/Experience.jsx'
-import Footer from './components/Footer.jsx'
-import CustomCursor from './components/CustomCursor.jsx'
-import HeroInvert from './components/HeroInvert.jsx'
-import { useRevealOnScroll } from './interactions.js'
+import Nav from './components/Nav'
+import Hero from './components/Hero'
+import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Footer from './components/Footer'
+import CustomCursor from './components/CustomCursor'
+import HeroInvert from './components/HeroInvert'
+import { useRevealOnScroll } from './interactions'
 
 export default function App() {
   useRevealOnScroll()

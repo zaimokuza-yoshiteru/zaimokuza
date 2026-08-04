@@ -1,4 +1,4 @@
-import { profile } from '../data/profile.js'
+import { profile } from '../data/profile'
 
 /** 顶部导航：左侧名字，右侧锚点 + GitHub */
 export default function Nav() {

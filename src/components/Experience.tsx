@@ -1,5 +1,5 @@
-import { profile } from '../data/profile.js'
-import { SectionHeader } from './Projects.jsx'
+import { profile } from '../data/profile'
+import { SectionHeader } from './Projects'
 
 /** 经历时间线：左时间右内容的极简竖线结构，每段经历下含要点列表 */
 export default function Experience() {
@@ -32,7 +32,7 @@ export default function Experience() {
                         )}
                       </div>
                       <p className="mt-[4px] text-[14px] leading-[24px] text-text-secondary">{h.detail}</p>
-                      {h.tags?.length > 0 && (
+                      {h.tags && h.tags.length > 0 && (
                         <div className="mt-[8px] flex flex-wrap gap-[6px]">
                           {h.tags.map((t) => (
                             <span key={t} className="rounded-full bg-bg-section px-[8px] py-[2px] text-[12px] text-text-secondary">

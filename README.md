@@ -6,7 +6,7 @@ Personal website of **Zaimokuza** — full-stack engineer. Intro, open-source wo
 
 ## Stack
 
-React 18 · Vite 6 · Tailwind CSS v4 · lottie-web
+React 18 · TypeScript · Vite 6 · Tailwind CSS v4 · lottie-web
 
 ## Develop
 

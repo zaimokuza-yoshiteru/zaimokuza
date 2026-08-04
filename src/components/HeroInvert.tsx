@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { HeroText } from './Hero.jsx'
+import { HeroText } from './Hero'
 
 /**
  * Hero 反色遮罩：fixed 黑层内嵌白色 HeroText 克隆，
@@ -7,8 +7,8 @@ import { HeroText } from './Hero.jsx'
  * 每帧同步克隆与真实文案的屏幕位置（body 滚动时保持对齐）。
  */
 export default function HeroInvert() {
-  const layerRef = useRef(null)
-  const cloneRef = useRef(null)
+  const layerRef = useRef<HTMLDivElement>(null)
+  const cloneRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!window.matchMedia('(pointer: fine)').matches) return
@@ -25,7 +25,7 @@ export default function HeroInvert() {
     let raf = 0
     const R_MAX = 95
 
-    const onMove = (e) => {
+    const onMove = (e: MouseEvent) => {
       mouseX = e.clientX
       mouseY = e.clientY
     }

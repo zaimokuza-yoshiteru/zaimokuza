@@ -6,29 +6,31 @@ import { useEffect, useRef } from 'react'
  * 悬停链接/按钮时圆环放大到 80px；悬停 hero 区域时光标隐藏（反色遮罩接管）。
  */
 export default function CustomCursor() {
-  const dotRef = useRef(null)
-  const ringRef = useRef(null)
+  const dotRef = useRef<HTMLDivElement>(null)
+  const ringRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!window.matchMedia('(pointer: fine)').matches) return
     const dot = dotRef.current
     const ring = ringRef.current
+    if (!dot || !ring) return
     let targetX = -100
     let targetY = -100
     let ringX = -100
     let ringY = -100
     let raf = 0
 
-    const onMove = (e) => {
+    const onMove = (e: MouseEvent) => {
       targetX = e.clientX
       targetY = e.clientY
       dot.style.opacity = '1'
       dot.style.left = `${targetX}px`
       dot.style.top = `${targetY}px`
     }
-    const onOver = (e) => {
-      const interactive = e.target.closest?.('a, button, [role="button"]')
-      const hero = e.target.closest?.('[data-cursor="hero"]')
+    const onOver = (e: MouseEvent) => {
+      const el = e.target as Element
+      const interactive = el.closest?.('a, button, [role="button"]')
+      const hero = el.closest?.('[data-cursor="hero"]')
       ring.classList.toggle('cursor-button', !!interactive)
       // hero 区域由反色遮罩充当光标
       const hide = !!hero

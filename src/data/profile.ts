@@ -1,7 +1,43 @@
 /**
  * 个人信息 —— 修改此文件即可更新全站内容。
  */
-export const profile = {
+
+/** 经历要点（每段经历下的项目条目） */
+export interface Highlight {
+  period?: string
+  title: string
+  detail: string
+  tags?: string[]
+}
+
+/** 一段经历（教育经历的 highlights 为空数组） */
+export interface ExperienceItem {
+  period: string
+  role: string
+  org: string
+  highlights: Highlight[]
+}
+
+/** 双语文案：页面默认英文，Hero 黑圈内显示中文 */
+export interface Bilingual {
+  en: string
+  zh: string
+}
+
+export interface Profile {
+  name: string
+  heroTitle: Bilingual
+  tagline: Bilingual
+  bio: Bilingual
+  location: Bilingual
+  social: {
+    github: string
+    email?: string
+  }
+  experience: ExperienceItem[]
+}
+
+export const profile: Profile = {
   // 展示名（导航左侧 / 页脚，Georgia 衬线西文）
   name: 'Zaimokuza',
   // Hero 大标题与一句话定位：默认英文，鼠标移入显示中文
