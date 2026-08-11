@@ -5,14 +5,36 @@
     "homepage": "",
     "language": "TypeScript",
     "name": "mcp2skill",
-    "stars": 0,
+    "stars": 1,
     "topics": [
       "agent-skills",
       "cli",
       "mcp",
       "model-context-protocol"
     ],
-    "updatedAt": "2026-07-29T16:16:03Z",
+    "updatedAt": "2026-08-05T02:28:14Z",
     "url": "https://github.com/zaimokuza-yoshiteru/mcp2skill"
+  },
+  {
+    "description": "Unified stdio MCP server for Jira, Confluence, and Bitbucket Data Center — 499 policy-gated REST operations, read-first exposure tiers, E2E-verified against licensed DC instances",
+    "forks": 0,
+    "homepage": "https://www.npmjs.com/package/@zaimokuza/atlassian-server-mcp",
+    "language": "TypeScript",
+    "name": "atlassian-server-mcp",
+    "stars": 0,
+    "topics": [
+      "atlassian",
+      "bitbucket",
+      "confluence",
+      "data-center",
+      "jira",
+      "jira-data-center",
+      "mcp",
+      "mcp-server",
+      "model-context-protocol",
+      "typescript"
+    ],
+    "updatedAt": "2026-08-11T03:51:02Z",
+    "url": "https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp"
   }
 ]
