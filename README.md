@@ -13,13 +13,18 @@ React 18 · TypeScript · Vite 6 · Tailwind CSS v4 · lottie-web
 ```bash
 npm install
 npm run dev        # dev server
-npm run build      # production build
+npm run build      # tsc --noEmit + production build
+npm run preview    # preview the production build
 node scripts/fetch-github.mjs   # refresh src/data/projects.json from GitHub (needs gh CLI)
 ```
 
 ## Content
 
-All copy lives in `src/data/profile.js` — edit that one file to update the whole site. For design tokens and the interaction system, see [AGENTS.md](./AGENTS.md).
+All copy lives in `src/data/profile.ts` — edit that one file to update the whole site. For design tokens and the interaction system, see [AGENTS.md](./AGENTS.md).
+
+## Deploy
+
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds and publishes `dist` to GitHub Pages. The site is served from the `/zaimokuza/` sub-path, so Vite sets `base` accordingly for builds — reference static assets through `import.meta.env.BASE_URL`, never with a leading `/`.
 
 ## License
 

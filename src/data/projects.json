@@ -1,27 +1,44 @@
 [
   {
-    "description": "Generate Agent Skills from MCP servers, with an on-demand CLI for discovery and execution.",
-    "forks": 0,
-    "homepage": "",
+    "name": "dsh-theme-library",
+    "description": "Extensible animated theme library for DeepSeek Harness",
     "language": "TypeScript",
-    "name": "mcp2skill",
     "stars": 1,
+    "forks": 0,
+    "url": "https://github.com/zaimokuza-yoshiteru/dsh-theme-library",
+    "homepage": "",
     "topics": [
-      "agent-skills",
-      "cli",
-      "mcp",
-      "model-context-protocol"
+      "dsh-plugin"
     ],
-    "updatedAt": "2026-08-05T02:28:14Z",
-    "url": "https://github.com/zaimokuza-yoshiteru/mcp2skill"
+    "updatedAt": "2026-08-25T03:46:42Z"
   },
   {
-    "description": "Unified stdio MCP server for Jira, Confluence, and Bitbucket Data Center — 499 policy-gated REST operations, read-first exposure tiers, E2E-verified against licensed DC instances",
-    "forks": 0,
-    "homepage": "https://www.npmjs.com/package/@zaimokuza/atlassian-server-mcp",
+    "name": "dsh-acp-adapter",
+    "description": "Use AI agents from the DSH session UI.",
     "language": "TypeScript",
+    "stars": 1,
+    "forks": 0,
+    "url": "https://github.com/zaimokuza-yoshiteru/dsh-acp-adapter",
+    "homepage": null,
+    "topics": [
+      "acp",
+      "agent-client-protocol",
+      "ai-agents",
+      "cordis",
+      "deepseek-harness",
+      "dsh",
+      "dsh-plugin"
+    ],
+    "updatedAt": "2026-08-25T03:46:40Z"
+  },
+  {
     "name": "atlassian-server-mcp",
-    "stars": 0,
+    "description": "Unified stdio MCP server for Jira, Confluence, and Bitbucket Data Center — 499 policy-gated REST operations, read-first exposure tiers, E2E-verified against licensed DC instances",
+    "language": "TypeScript",
+    "stars": 1,
+    "forks": 0,
+    "url": "https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp",
+    "homepage": "https://www.npmjs.com/package/@zaimokuza/atlassian-server-mcp",
     "topics": [
       "atlassian",
       "bitbucket",
@@ -34,7 +51,22 @@
       "model-context-protocol",
       "typescript"
     ],
-    "updatedAt": "2026-08-11T03:51:02Z",
-    "url": "https://github.com/zaimokuza-yoshiteru/atlassian-server-mcp"
+    "updatedAt": "2026-08-13T17:07:29Z"
+  },
+  {
+    "name": "mcp2skill",
+    "description": "Generate Agent Skills from MCP servers, with an on-demand CLI for discovery and execution.",
+    "language": "TypeScript",
+    "stars": 1,
+    "forks": 0,
+    "url": "https://github.com/zaimokuza-yoshiteru/mcp2skill",
+    "homepage": "",
+    "topics": [
+      "agent-skills",
+      "cli",
+      "mcp",
+      "model-context-protocol"
+    ],
+    "updatedAt": "2026-08-05T02:28:14Z"
   }
 ]

@@ -69,8 +69,8 @@ export const profile: Profile = {
           period: '2025-01 — 至今',
           title: 'Teller Made Easy（新加坡华侨银行支行柜面系统）',
           detail:
-            '柜员为客户办理转账、贷款等全量银行业务的核心系统，双屏通过 WebSocket 实时协同；承担前后端全栈开发（React + Spring Boot 4）。主导 OCR 识别从传统方案升级为基于 GPT 的 AI 方案（后续计划切换至亚马逊云服务），覆盖方案选型、落地与效果验证。',
-          tags: ['React', 'Spring Boot 4', 'WebSocket', 'GPT', 'OCR'],
+            '柜员为客户办理转账、贷款等全量银行业务的核心系统，双屏通过 WebSocket 实时协同；承担前后端全栈开发（React + Spring Boot 4）。',
+          tags: ['React', 'Spring Boot 4', 'WebSocket'],
         },
         {
           period: '2021-07 — 2024-12',

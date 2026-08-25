@@ -6,7 +6,7 @@ Personal website of Zaimokuza (full-stack engineer): intro, open-source works, a
 
 - `npm run dev` — Vite dev server
 - `npm run build` / `npm run preview` — production build (`tsc --noEmit` first) / preview
-- `node scripts/fetch-github.mjs` — regenerate `src/data/projects.json` from the GitHub API (requires the `gh` CLI, authenticated)
+- `node scripts/fetch-github.mjs` — regenerate `src/data/projects.json` from the GitHub API (requires the `gh` CLI, authenticated). Pulls non-fork repos of `zaimokuza-yoshiteru`, skips the repos listed in `EXCLUDE` (this site itself), sorts by stars then recency.
 
 ## Structure
 
@@ -15,7 +15,13 @@ Personal website of Zaimokuza (full-stack engineer): intro, open-source works, a
 - `src/components/` — `Nav`, `Hero` (also exports `HeroText`, reused by the invert mask), `HeroInvert`, `Projects` (also exports shared `SectionHeader`), `Experience`, `Footer`, `CustomCursor`.
 - `src/interactions.ts` — `useRevealOnScroll` hook (IntersectionObserver adds `.visible` to `.reveal` elements, once).
 - `src/index.css` — Tailwind v4 entry; design tokens live in `@theme`.
-- `public/lottie/earth/` — Lottie assets for the hero globe animation.
+- `src/assets/geist-mono-regular.ttf` — self-hosted font behind `font-mono-num`.
+- `public/lottie/earth/` — Lottie assets for the hero globe animation (`data.json` + `images/`).
+- `.github/workflows/deploy.yml` — builds on push to `main` and publishes `dist` to GitHub Pages.
+
+## Deployment / base path
+
+The site is served from `https://<user>.github.io/zaimokuza/`, so `vite.config.ts` sets `base: '/zaimokuza/'` for `build` and `'/'` for dev. Any runtime URL to a `public/` asset or an internal link MUST be prefixed with `import.meta.env.BASE_URL` (see `Nav.tsx` logo href and the Lottie fetch/`assetsPath` in `Hero.tsx`) — hardcoded leading-slash paths 404 in production.
 
 ## Design tokens (`src/index.css` → `@theme`)
 
