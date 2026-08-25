@@ -48,8 +48,8 @@ export const profile: Profile = {
   },
   // Hero 下方一段简介：默认英文，黑圈内中文
   bio: {
-    en: 'About 9 years of full-stack experience. Currently building core banking systems with React & Spring Boot at a foreign bank; previously maintained company-wide base services. Also built MCP services and several AI applications at work.',
-    zh: '约 9 年全栈开发经验，目前在外资银行负责基于 React 与 Spring Boot 的核心业务系统，也维护过公司级基础服务。在公司搭建过 MCP 服务和多个 AI 应用。',
+    en: '9 years of full-stack development experience. Currently building core banking systems and maintaining foundational services at a multinational bank using React + Spring Boot.',
+    zh: '9 年全栈开发经验。现于外资银行基于 React + Spring Boot 构建核心业务系统及维护基础服务。',
   },
   location: { en: 'Shanghai, China', zh: '中国 · 上海' },
 
