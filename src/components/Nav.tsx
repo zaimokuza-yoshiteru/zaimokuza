@@ -1,14 +1,10 @@
 import { profile } from '../data/profile'
 
-/** 顶部导航：左侧名字，右侧锚点 + GitHub */
+/** 顶部导航：右侧锚点与 GitHub 入口。 */
 export default function Nav() {
   return (
     <nav className="w-full border-b border-black/[0.06] shadow-[0_1px_16px_rgba(31,35,41,0.03)]">
-      <div className="mx-auto flex h-[72px] w-[calc(100%-56px)] max-w-[1260px] items-center justify-between">
-        {/* BASE_URL 兼容 GitHub Pages 子路径（开发环境为 /） */}
-        <a href={import.meta.env.BASE_URL} className="font-serif-main text-[18px] italic tracking-tight md:text-[20px]">
-          {profile.name}
-        </a>
+      <div className="mx-auto flex h-[72px] w-[calc(100%-56px)] max-w-[1260px] items-center justify-end">
         <div className="flex items-center gap-[16px] text-[13px] text-text-secondary md:gap-[28px] md:text-[14px]">
           <a href="#projects" className="transition-colors hover:text-text-primary">作品</a>
           <a href="#experience" className="transition-colors hover:text-text-primary">经历</a>

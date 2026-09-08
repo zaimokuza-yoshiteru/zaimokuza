@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "test:stars": "node --test scripts/test-github-stars.mjs",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview"
   },

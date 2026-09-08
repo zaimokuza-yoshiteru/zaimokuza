@@ -1,16 +1,19 @@
 import projects from '../data/projects.json'
+import { profile } from '../data/profile'
+import { useGithubStars } from '../hooks/useGithubStars'
+import ProjectCat from './ProjectCat'
+import { resetTilt, tiltSurface } from '../tilt'
 
-/** 语言圆点配色（GitHub 惯例色） */
-const LANG_COLORS: Record<string, string> = {
-  TypeScript: '#3178c6', JavaScript: '#f1e05a', Java: '#b07219',
-  Python: '#3572a5', Go: '#00add8', Rust: '#dea584',
-  'C++': '#f34b7d', C: '#555', HTML: '#e34c26', CSS: '#563d7c',
-}
+// 主题实验固定收尾，其余项目保持生成数据的相对顺序。
+const displayedProjects = [
+  ...projects.filter((project) => project.name !== 'dsh-theme-library'),
+  ...projects.filter((project) => project.name === 'dsh-theme-library'),
+]
 
-function SectionHeader({ id, title, sub }: { id: string; title: string; sub?: string }) {
+function SectionHeader({ title, sub }: { title: string; sub?: string }) {
   return (
-    <div className="reveal">
-      <h2 id={id} className="scroll-mt-[40px] text-[32px] font-semibold tracking-tight md:text-[40px]">
+    <div>
+      <h2 className="text-[32px] font-semibold tracking-tight md:text-[40px]">
         {title}
       </h2>
       {sub && <p className="mt-[10px] text-[14px] text-text-secondary">{sub}</p>}
@@ -20,42 +23,43 @@ function SectionHeader({ id, title, sub }: { id: string; title: string; sub?: st
 
 /** 开源作品集：数据来自 scripts/fetch-github.mjs 生成的 projects.json */
 export default function Projects() {
+  const stars = useGithubStars()
+  const copy = profile.projects
   return (
     <section className="mx-auto w-[calc(100%-56px)] max-w-[1260px] py-[48px] md:py-[64px]">
-      <SectionHeader id="projects" title="开源作品" sub="在 GitHub 上维护的开源项目，持续更新。" />
-      <div className="mt-[36px] grid gap-[16px] md:grid-cols-2">
-        {projects.map((p, i) => (
-          <a
-            key={p.name}
-            href={p.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="reveal group rounded-[12px] border border-border-warm bg-bg-card p-[24px] transition-all duration-500 [transition-timing-function:var(--ease-out-strong)] hover:-translate-y-[4px] hover:shadow-[0_12px_32px_rgba(0,0,0,0.06)]"
-            style={{ transitionDelay: `${i * 60}ms` }}
-          >
-            <div className="flex items-center justify-between">
-              <h3 className="font-mono-num text-[16px] font-medium">{p.name}</h3>
-              <span className="text-[16px] text-text-secondary transition-transform duration-500 [transition-timing-function:var(--ease-out-strong)] group-hover:translate-x-[3px]">
-                →
-              </span>
-            </div>
-            <p className="mt-[10px] min-h-[44px] text-[14px] leading-[22px] text-text-secondary">
-              {p.description || '暂无描述'}
-            </p>
-            <div className="mt-[16px] flex flex-wrap items-center gap-x-[16px] gap-y-[6px] text-[12px] text-text-secondary">
-              {p.language && (
-                <span className="flex items-center gap-[6px]">
-                  <span className="inline-block size-[10px] rounded-full" style={{ background: LANG_COLORS[p.language] || '#999' }} />
-                  {p.language}
-                </span>
-              )}
-              <span className="font-mono-num">★ {p.stars}</span>
-              {p.topics?.map((t) => (
-                <span key={t} className="rounded-full bg-bg-section px-[8px] py-[2px]">{t}</span>
-              ))}
-            </div>
-          </a>
-        ))}
+      <div id="projects" className="projects-heading scroll-mt-[40px]">
+        <SectionHeader title={copy.title} sub={copy.intro} />
+        <ProjectCat />
+      </div>
+      <div className="mt-[36px] flex flex-col gap-[12px]">
+        {displayedProjects.map((p, i) => {
+          const entry = copy.entries[p.name]
+          return (
+            <a
+              key={p.name}
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onPointerMove={tiltSurface}
+              onPointerLeave={resetTilt}
+              onPointerCancel={resetTilt}
+              className="reveal project-card group grid gap-[18px] rounded-[12px] border border-border-warm bg-bg-card p-[24px] md:grid-cols-[28px_minmax(0,1fr)_72px] md:items-start md:gap-x-[24px] md:p-[32px] xl:grid-cols-[28px_240px_minmax(0,1fr)_72px]"
+              style={{ transitionDelay: `${i * 50}ms` }}
+            >
+              <span aria-hidden="true" className="font-mono-num text-[13px] leading-[28px] text-text-secondary">{String(i + 1).padStart(2, '0')}</span>
+              <div className="min-w-0">
+                <h3 className="break-words font-mono-num text-[18px] font-medium leading-[30px] tracking-tight">{p.name}</h3>
+              </div>
+              <p className="project-description text-[16px] leading-[29px] text-text-secondary md:col-start-2 xl:col-start-3">
+                {entry?.description ?? copy.fallback}
+              </p>
+              <div className="flex items-center justify-between gap-[16px] text-text-secondary md:col-start-3 md:row-start-1 md:row-span-2 md:flex-col md:items-end xl:col-start-4 xl:row-span-1">
+                <span className="whitespace-nowrap font-mono-num text-[13px] leading-[28px]" aria-label={`${stars[p.name]} GitHub Stars`}>☆ {stars[p.name]}</span>
+                <span className="whitespace-nowrap text-[12px]">{copy.linkLabel} <span aria-hidden="true" className="project-arrow inline-block">↗</span></span>
+              </div>
+            </a>
+          )
+        })}
       </div>
     </section>
   )

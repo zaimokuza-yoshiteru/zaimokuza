@@ -11,7 +11,7 @@ export default function HeroInvert() {
   const cloneRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (!window.matchMedia('(pointer: fine)').matches) return
+    if (!window.matchMedia('(pointer: fine)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const layer = layerRef.current
     const clone = cloneRef.current
     const real = document.querySelector('.hero-content[data-cursor="hero"]')
@@ -62,7 +62,7 @@ export default function HeroInvert() {
   return (
     <div ref={layerRef} className="hero-invert" style={{ inset: 0, clipPath: 'circle(0px at -300px -300px)' }} aria-hidden="true">
       <div ref={cloneRef} className="hero-content" style={{ position: 'absolute', left: 0, top: 0 }}>
-        <HeroText zh />
+        <HeroText language="en" />
       </div>
     </div>
   )

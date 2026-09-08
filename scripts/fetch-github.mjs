@@ -10,7 +10,7 @@ const EXCLUDE = ['zaimokuza']
 const raw = execFileSync(
   'gh',
   ['api', `users/${USER}/repos`, '--paginate', '-q',
-   `.[] | select(.fork == false) | select(.name as $n | ${JSON.stringify(EXCLUDE)} | index($n) | not) | {name, description, language, stars: .stargazers_count, forks: .forks_count, url: .html_url, homepage, topics, updatedAt: .updated_at}`],
+   `.[] | select(.fork == false) | select(.name as $n | ${JSON.stringify(EXCLUDE)} | index($n) | not) | {name, stars: .stargazers_count, url: .html_url, updatedAt: .updated_at}`],
   { encoding: 'utf8' },
 )
 
@@ -19,6 +19,8 @@ const projects = raw
   .split('\n')
   .map((line) => JSON.parse(line))
   .sort((a, b) => b.stars - a.stars || b.updatedAt.localeCompare(a.updatedAt))
+  // 更新时间仅用于生成时排序，页面只保留实际读取的字段。
+  .map(({ name, stars, url }) => ({ name, stars, url }))
 
 fs.mkdirSync('src/data', { recursive: true })
 fs.writeFileSync('src/data/projects.json', JSON.stringify(projects, null, 2) + '\n')

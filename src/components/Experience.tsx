@@ -1,16 +1,20 @@
 import { profile } from '../data/profile'
 import { SectionHeader } from './Projects'
+import BongoCat from './BongoCat'
 
 /** 经历时间线：左时间右内容的极简竖线结构，每段经历下含要点列表 */
 export default function Experience() {
   return (
     <section className="mx-auto w-[calc(100%-56px)] max-w-[1260px] py-[48px] md:py-[64px]">
-      <SectionHeader id="experience" title="经历" />
+      <div id="experience" className="projects-heading scroll-mt-[40px]">
+        <SectionHeader title={profile.experienceTitle} />
+        <BongoCat />
+      </div>
       <div className="mt-[36px] flex flex-col">
         {profile.experience.map((e, i) => (
           <div
             key={i}
-            className="reveal grid gap-[4px] border-l border-black/10 py-[24px] pl-[28px] md:grid-cols-[180px_1fr] md:gap-[24px]"
+            className="reveal experience-node grid gap-[4px] border-l border-border-warm py-[24px] pl-[28px] md:grid-cols-[180px_1fr] md:gap-[24px]"
             style={{ transitionDelay: `${i * 80}ms` }}
           >
             <div className="font-mono-num text-[13px] leading-[24px] text-text-secondary">{e.period}</div>
