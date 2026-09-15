@@ -3,8 +3,6 @@ import Hero from './components/Hero'
 import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Footer from './components/Footer'
-import CustomCursor from './components/CustomCursor'
-import HeroInvert from './components/HeroInvert'
 import { useRevealOnScroll } from './interactions'
 import Blog from './components/Blog'
 import { profile } from './data/profile'
@@ -33,8 +31,7 @@ export default function App() {
   return (
     <div className="flex min-h-full flex-col">
       <Nav blogPage={blogPage} />
-      {/* 自定义光标作用区（nav/footer 保留系统光标） */}
-      <main className="cursor-hidden-zone flex-1">
+      <main className="flex-1">
         {blogPage ? (slug ? <Suspense fallback={<p className="article-loading" role="status">{profile.articleUI.loading}</p>}><BlogArticle key={slug} slug={slug} /></Suspense> : <Blog archive />) : <>
           <Hero />
           <Blog />
@@ -43,8 +40,6 @@ export default function App() {
         </>}
       </main>
       <Footer />
-      {!blogPage && <HeroInvert />}
-      <CustomCursor />
     </div>
   )
 }

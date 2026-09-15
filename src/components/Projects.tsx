@@ -1,4 +1,3 @@
-import { useLayoutEffect, useRef, useState } from 'react'
 import projects from '../data/projects.json'
 import { profile } from '../data/profile'
 import { useGithubStars } from '../hooks/useGithubStars'
@@ -14,27 +13,14 @@ const displayedProjects = [
 export default function Projects() {
   const stars = useGithubStars()
   const copy = profile.projects
-  const [visibleCount, setVisibleCount] = useState(5)
-  const listRef = useRef<HTMLDivElement>(null)
-  const previousCount = useRef(5)
-  const shown = Math.min(visibleCount, displayedProjects.length)
-  useLayoutEffect(() => {
-    if (visibleCount <= previousCount.current) return
-    // 展开后从第一个新增作品继续阅读，键盘焦点也随之移动。
-    const firstNew = listRef.current?.children[previousCount.current] as HTMLAnchorElement | undefined
-    firstNew?.classList.add('visible')
-    firstNew?.focus({ preventScroll: true })
-    firstNew?.scrollIntoView({ block: 'nearest' })
-    previousCount.current = visibleCount
-  }, [visibleCount])
   return (
-    <section className="site-frame home-section">
+    <section className="site-frame home-section home-projects">
       <div id="projects" className="section-heading scroll-mt-[40px]">
         <SectionHeader title={copy.title} count={displayedProjects.length} />
       </div>
       <div className="section-content">
-        <div ref={listRef} id="project-list" className="project-list">
-          {displayedProjects.slice(0, visibleCount).map((p, i) => {
+        <div id="project-list" className="project-list">
+          {displayedProjects.map((p, i) => {
             const entry = copy.entries[p.name]
             return (
               <a
@@ -58,14 +44,6 @@ export default function Projects() {
               </a>
             )
           })}
-        </div>
-        <div className="collection-footer">
-          <p role="status">{profile.collections.shown} <span className="font-mono-num">{shown} / {displayedProjects.length}</span> {copy.unit}</p>
-          {shown < displayedProjects.length ? (
-            <button type="button" className="collection-link" aria-controls="project-list" onClick={() => setVisibleCount((count) => count + 5)}>
-              {profile.collections.more} <span className="font-mono-num">+{Math.min(5, displayedProjects.length - shown)}</span> <span aria-hidden="true">↓</span>
-            </button>
-          ) : <span>{profile.collections.allShown}</span>}
         </div>
       </div>
     </section>

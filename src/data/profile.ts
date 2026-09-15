@@ -4,12 +4,13 @@
 
 /** 一段工作或教育经历，仅保留时间、身份和机构。 */
 interface ExperienceItem {
+  kind: 'work' | 'education'
   period: string
   role: string
   org: string
 }
 
-/** 双语文案：页面默认中文，Hero 黑圈内显示英文 */
+/** 双语文案：保留中英文信息 */
 interface Bilingual {
   en: string
   zh: string
@@ -41,10 +42,10 @@ interface Profile {
     notFound: string
     posts: BlogPost[]
   }
-  heroTitle: Bilingual
   heroRole: Bilingual
-  bio: Bilingual
-  quoteSource: Bilingual
+  heroGreeting: string
+  heroName: string
+  heroPortraitAlt: string
   location: Bilingual
   projects: {
     unit: string
@@ -59,6 +60,7 @@ interface Profile {
   }
   experience: ExperienceItem[]
   experienceTitle: string
+  educationTitle: string
 }
 
 export const profile: Profile = {
@@ -91,18 +93,12 @@ export const profile: Profile = {
     }],
   },
   experienceTitle: '经历',
-  // 博客署名：默认中文，鼠标移入显示英文
-  heroTitle: { en: "Hi, I'm Zaimokuza", zh: '你好，我是 Zaimokuza' },
+  educationTitle: '教育',
+  // 首页身份信息
   heroRole: { en: 'Full-stack Engineer', zh: '全栈工程师' },
-  // 中文保留用户提供的引用原文；英文为对应译文
-  bio: {
-    en: 'Unless you have investigated a problem, you have no right to speak about it. … Get on your feet and walk through every part of your field of work; follow Confucius and ask about everything. However limited your ability, you can still solve problems: before going out, your mind was empty; on your return, it is no longer empty, but filled with the materials needed to solve the problem. This is how problems are solved.',
-    zh: "你对于某个问题没有调查，就停止你对于某个问题的发言权。……迈开你的两脚，到你的工作范围的各部分各地方去走走，学个孔夫子的'每事问'，任凭什么才力小也能解决问题，因为你未出门时脑子是空的，归来时脑子已经不是空的了，已经载来了解决问题的各种必要材料，问题就是这样子解决了。",
-  },
-  quoteSource: {
-    zh: '《反对本本主义》 · 1930',
-    en: 'Oppose Book Worship · 1930 / Translation',
-  },
+  heroGreeting: '你好，我是',
+  heroName: 'Zaimokuza',
+  heroPortraitAlt: '由稀疏粒子组成的金发卡通人物肖像',
   location: { en: 'Shanghai, China', zh: '中国 · 上海' },
 
   social: {
@@ -138,21 +134,25 @@ export const profile: Profile = {
   // 工作与教育经历按时间倒序排列。
   experience: [
     {
+      kind: 'work',
       period: '2021-07 — 至今',
       role: '全栈工程师',
       org: '华侨金信商业服务（深圳）有限公司上海分公司',
     },
     {
+      kind: 'work',
       period: '2019-03 — 2021-06',
       role: '全栈工程师',
       org: '沈阳东硕信息技术有限公司',
     },
     {
+      kind: 'work',
       period: '2017-08 — 2019-01',
       role: '研发工程师',
       org: '上海鲁班软件股份有限公司',
     },
     {
+      kind: 'education',
       period: '2014 — 2018',
       role: '本科 · 物联网工程',
       org: '宿州学院',

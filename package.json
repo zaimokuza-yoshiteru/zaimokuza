@@ -7,6 +7,7 @@
     "dev": "vite",
     "test:stars": "node --test scripts/test-github-stars.mjs",
     "test:blog": "node --test scripts/test-blog.mjs",
+    "test:particles": "node --test scripts/test-particles.mjs",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview"
   },

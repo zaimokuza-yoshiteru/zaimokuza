@@ -37,7 +37,7 @@ export default function Blog({ archive = false }: { archive?: boolean }) {
   const copy = profile.blog
   const entries = archive ? posts : posts.slice(0, 5)
   return (
-    <section className={`site-frame ${archive ? 'blog-archive' : 'home-section'}`}>
+    <section className={`site-frame ${archive ? 'blog-archive' : 'home-section home-blog'}`}>
       {archive && <a className="back-link" href={homeHref('blog')}><span aria-hidden="true">←</span> {profile.nav.home}</a>}
       <div id="blog" className="section-heading scroll-mt-[40px]">
         <SectionHeader title={archive ? copy.archiveTitle : copy.title} count={posts.length} level={archive ? 1 : 2} />

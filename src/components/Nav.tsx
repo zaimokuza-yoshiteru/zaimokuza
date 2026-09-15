@@ -5,7 +5,7 @@ import { blogHref, homeHref } from '../lib/navigation'
 export default function Nav({ blogPage = false }: { blogPage?: boolean }) {
   return (
     <nav className="w-full">
-      <div className="site-frame flex h-[72px] items-center justify-end border-b border-border-warm">
+      <div className="site-frame flex h-[72px] items-center justify-end">
         <div className="flex items-center gap-[16px] text-[13px] text-text-secondary md:gap-[28px] md:text-[14px]">
           <a href={homeHref()} aria-current={!blogPage ? 'page' : undefined} className="transition-colors hover:text-text-primary">{profile.nav.home}</a>
           <a href={blogHref()} aria-current={blogPage ? 'page' : undefined} className="transition-colors hover:text-text-primary">{profile.nav.blog}</a>
