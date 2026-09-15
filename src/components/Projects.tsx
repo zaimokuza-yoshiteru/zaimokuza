@@ -62,7 +62,7 @@ export default function Projects() {
         <div className="collection-footer">
           <p role="status">{profile.collections.shown} <span className="font-mono-num">{shown} / {displayedProjects.length}</span> {copy.unit}</p>
           {shown < displayedProjects.length ? (
-            <button type="button" className="collection-more" aria-controls="project-list" onClick={() => setVisibleCount((count) => count + 5)}>
+            <button type="button" className="collection-link" aria-controls="project-list" onClick={() => setVisibleCount((count) => count + 5)}>
               {profile.collections.more} <span className="font-mono-num">+{Math.min(5, displayedProjects.length - shown)}</span> <span aria-hidden="true">↓</span>
             </button>
           ) : <span>{profile.collections.allShown}</span>}

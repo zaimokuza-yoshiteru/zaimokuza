@@ -38,7 +38,7 @@ interface Profile {
   blog: {
     title: string; archiveTitle: string
     unit: string; emptyTitle: string; emptyDescription: string; back: string
-    read: string; notFound: string
+    notFound: string
     posts: BlogPost[]
   }
   heroTitle: Bilingual
@@ -78,7 +78,6 @@ export const profile: Profile = {
     emptyTitle: '故事，正在酝酿。',
     emptyDescription: '这里将记录技术实践、开源探索与日常思考。第一篇文章，敬请期待。',
     back: '返回博客列表',
-    read: '阅读全文',
     notFound: '这篇文章暂时不在这里。',
     // 长文正文独立维护，并在进入文章时加载；此处管理首页摘要。
     posts: [{
