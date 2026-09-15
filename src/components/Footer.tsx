@@ -1,26 +1,20 @@
 import { profile } from '../data/profile'
 
-/** 黑色页脚 */
+/** 与正文保持同一纸色和对齐线的页脚。 */
 export default function Footer() {
   const year = new Date().getFullYear()
   return (
-    <footer className="mt-[48px] bg-black text-white">
-      <div className="mx-auto flex w-[calc(100%-56px)] max-w-[1260px] justify-end py-[32px]">
-        <div className="flex items-center gap-[24px] text-[13px] text-white/70">
-          <a href={profile.social.github} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-white">
-            GitHub
+    <footer className="site-frame site-footer">
+      <p>© {year}. {profile.name}</p>
+      <div className="flex items-center gap-[24px] text-[13px]">
+        <a href={profile.social.github} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-text-primary">
+          GitHub
+        </a>
+        {profile.social.email && (
+          <a href={`mailto:${profile.social.email}`} className="transition-colors hover:text-text-primary">
+            Email
           </a>
-          {profile.social.email && (
-            <a href={`mailto:${profile.social.email}`} className="transition-colors hover:text-white">
-              Email
-            </a>
-          )}
-        </div>
-      </div>
-      <div className="border-t border-white/10">
-        <div className="mx-auto w-[calc(100%-56px)] max-w-[1260px] py-[20px] text-[12px] text-white/40">
-          © {year}. Built with React & Vite.
-        </div>
+        )}
       </div>
     </footer>
   )

@@ -2,20 +2,11 @@
  * 个人信息 —— 修改此文件即可更新全站内容。
  */
 
-/** 经历要点（每段经历下的项目条目） */
-interface Highlight {
-  period?: string
-  title: string
-  detail: string
-  tags?: string[]
-}
-
-/** 一段经历（教育经历的 highlights 为空数组） */
+/** 一段工作或教育经历，仅保留时间、身份和机构。 */
 interface ExperienceItem {
   period: string
   role: string
   org: string
-  highlights: Highlight[]
 }
 
 /** 双语文案：页面默认中文，Hero 黑圈内显示英文 */
@@ -24,17 +15,42 @@ interface Bilingual {
   zh: string
 }
 
+export interface BlogPost {
+  slug: string
+  title: string
+  date: string
+  category: string
+  excerpt: string
+  paragraphs?: string[]
+  article?: string
+  readingMinutes?: number
+}
+
 interface Profile {
+  name: string
+  nav: { home: string; blog: string }
+  collections: { shown: string; more: string; allShown: string }
+  articleUI: {
+    contents: string; examples: string; copy: string; copied: string; copyFailed: string
+    download: string; loading: string; loadFailed: string; retry: string; minutes: string
+    top: string; backToTop: string; comparison: string; sourceCode: string
+  }
+  blog: {
+    title: string; archiveTitle: string
+    unit: string; emptyTitle: string; emptyDescription: string; back: string
+    read: string; notFound: string
+    posts: BlogPost[]
+  }
   heroTitle: Bilingual
+  heroRole: Bilingual
   bio: Bilingual
   quoteSource: Bilingual
   location: Bilingual
   projects: {
+    unit: string
     title: string
-    intro: string
     linkLabel: string
     fallback: string
-    cat: { label: string; hint: string; greeting: string }
     entries: Record<string, { description: string }>
   }
   social: {
@@ -43,14 +59,42 @@ interface Profile {
   }
   experience: ExperienceItem[]
   experienceTitle: string
-  bongo: { label: string; hint: string; greeting: string }
 }
 
 export const profile: Profile = {
+  name: 'Zaimokuza',
+  nav: { home: '首页', blog: '博客' },
+  collections: { shown: '已展示', more: '查看更多', allShown: '已展示全部' },
+  articleUI: {
+    contents: '阅读路线', examples: '最小实现 · 同一机制，两种语言',
+    copy: '复制代码', copied: '已复制', copyFailed: '复制失败，请手动选择代码',
+    download: '下载源码', loading: '正在打开文章…', loadFailed: '文章暂时未能加载。',
+    retry: '重新加载', minutes: '分钟阅读', top: '回到开头', backToTop: '回到顶部', comparison: '框架对照', sourceCode: '代码片段',
+  },
+  blog: {
+    title: '博客',
+    archiveTitle: '全部文章',
+    unit: '篇',
+    emptyTitle: '故事，正在酝酿。',
+    emptyDescription: '这里将记录技术实践、开源探索与日常思考。第一篇文章，敬请期待。',
+    back: '返回博客列表',
+    read: '阅读全文',
+    notFound: '这篇文章暂时不在这里。',
+    // 长文正文独立维护，并在进入文章时加载；此处管理首页摘要。
+    posts: [{
+      slug: 'agent-context-management',
+      title: 'Agent 上下文管理：渐进式理解七个框架',
+      date: '2026-09-14',
+      category: 'Agent 工程 · 上下文管理',
+      excerpt: '从一次登录超时排查出发，对照 deepseek-harness、deer-flow、OpenClaw、Codex、Claude Code、pi 和 Hermes Agent，逐步理解上下文装配、预算、压缩与恢复。',
+      article: 'context-management',
+      readingMinutes: 60,
+    }],
+  },
   experienceTitle: '经历',
-  bongo: { label: '让 Bongo Cat 敲敲鼓', hint: '点一下 · 来点节奏', greeting: '咚哒，咚哒。' },
   // 博客署名：默认中文，鼠标移入显示英文
   heroTitle: { en: "Hi, I'm Zaimokuza", zh: '你好，我是 Zaimokuza' },
+  heroRole: { en: 'Full-stack Engineer', zh: '全栈工程师' },
   // 中文保留用户提供的引用原文；英文为对应译文
   bio: {
     en: 'Unless you have investigated a problem, you have no right to speak about it. … Get on your feet and walk through every part of your field of work; follow Confucius and ask about everything. However limited your ability, you can still solve problems: before going out, your mind was empty; on your return, it is no longer empty, but filled with the materials needed to solve the problem. This is how problems are solved.',
@@ -69,15 +113,10 @@ export const profile: Profile = {
 
   // 根据公开 README 归纳适用场景，不代表已在特定企业部署
   projects: {
+    unit: '个作品',
     title: '开源作品',
-    intro: '从研发协作到内部工具，让开源能力走进团队的日常工作。',
     linkLabel: '查看项目',
     fallback: '项目介绍整理中，点击查看仓库文档与使用说明。',
-    cat: {
-      label: '和咖波打个招呼',
-      hint: '点一下 · 摸摸咖波',
-      greeting: '喵，收到。',
-    },
     entries: {
       'dsh-acp-adapter': {
         description: '面向企业内模型访问受限、需要复用已采购编程产品（如 Devin）的场景，通过 ACP 协议将 Agent 接入 DeepSeek Harness，把分散的工作流程整合到统一工作台，并通过 Agent Loop 的钩子函数接入本地 AI 记忆等通用能力。',
@@ -97,66 +136,27 @@ export const profile: Profile = {
     },
   },
 
-  // 经历时间线 —— 按时间倒序；highlights 为每段经历下的要点
+  // 工作与教育经历按时间倒序排列。
   experience: [
     {
       period: '2021-07 — 至今',
-      role: '全栈开发工程师',
+      role: '全栈工程师',
       org: '华侨金信商业服务（深圳）有限公司上海分公司',
-      highlights: [
-        {
-          period: '2025-01 — 至今',
-          title: 'Teller Made Easy（新加坡华侨银行支行柜面系统）',
-          detail:
-            '柜员为客户办理转账、贷款等全量银行业务的核心系统，双屏通过 WebSocket 实时协同；承担前后端全栈开发（React + Spring Boot 4）。',
-          tags: ['React', 'Spring Boot 4', 'WebSocket'],
-        },
-        {
-          period: '2021-07 — 2024-12',
-          title: '企业基础服务（Base Service）维护',
-          detail:
-            '代理中间件（Apache + Spring Cloud Gateway）及其他通用服务（授权认证、客户资料、日历管理等）的维护及新功能迭代，支持公司个人零售业务和企业银行业务项目升级，并为其他新业务平台提供稳定支撑。',
-          tags: ['Apache', 'Spring Cloud Gateway', 'React + Webpack', 'Spring Boot 2/3', 'JDK 11/17/21'],
-        },
-      ],
     },
     {
       period: '2019-03 — 2021-06',
-      role: 'Java 开发工程师',
+      role: '全栈工程师',
       org: '沈阳东硕信息技术有限公司',
-      highlights: [
-        {
-          title: '快速物联平台',
-          detail:
-            '物联网设备接入与管理平台，负责后端（Spring Boot + MySQL）与前端（Vue 3 + Ant Design Vue + Less）的全栈开发。',
-          tags: ['Spring Boot', 'MySQL', 'Vue 3', 'Ant Design Vue', 'Less'],
-        },
-        {
-          title: '湛钢 / 武钢 / 马钢热轧智慧制造系统',
-          detail:
-            '参与多条钢铁产线的热轧智慧制造系统开发，负责生产数据采集、业务接口与可视化模块，覆盖 SSM、Dubbo、DB2 等技术栈。',
-          tags: ['SSM', 'Dubbo', 'DB2'],
-        },
-      ],
     },
     {
       period: '2017-08 — 2019-01',
       role: '研发工程师',
       org: '上海鲁班软件股份有限公司',
-      highlights: [
-        {
-          title: '鲁班开放平台 / 鲁班商城',
-          detail:
-            '参与建筑行业 SaaS 开放平台与商城系统的研发，负责业务接口开发与第三方系统对接。',
-          tags: ['Java', 'SSM', 'MySQL'],
-        },
-      ],
     },
     {
       period: '2014 — 2018',
       role: '本科 · 物联网工程',
       org: '宿州学院',
-      highlights: [],
     },
   ],
 }

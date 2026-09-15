@@ -9,7 +9,7 @@ export function HeroText({ language = 'zh' }: { language?: 'zh' | 'en' }) {
   return (
     <div lang={language === 'zh' ? 'zh-CN' : 'en'} className="hero-journal">
       <header className="hero-journal-meta hero-fade-in">
-        <h1>{profile.heroTitle[language]}</h1>
+        <div><h1>{profile.heroTitle[language]}</h1><p className="hero-role">{profile.heroRole[language]}</p></div>
         <p>{profile.location[language]}</p>
       </header>
       <figure className="hero-journal-figure hero-fade-in" style={{ animationDelay: '0.2s' }}>
@@ -78,8 +78,8 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="flex min-h-[calc(100vh-72px)] items-center py-[40px] md:py-[48px]">
-      <div className="mx-auto grid w-[calc(100%-56px)] max-w-[1260px] items-center gap-[36px] lg:grid-cols-[1.55fr_0.85fr] lg:gap-[64px]">
+    <section className="home-hero">
+      <div className="site-frame hero-layout">
         <div className="hero-content" data-cursor="hero">
           <HeroText />
         </div>

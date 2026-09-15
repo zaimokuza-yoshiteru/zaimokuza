@@ -17,7 +17,24 @@ export function useRevealOnScroll() {
       },
       { threshold: 0.15, rootMargin: '0px 0px -50px 0px' },
     )
-    document.querySelectorAll('.reveal').forEach((el) => io.observe(el))
-    return () => io.disconnect()
+    const observe = (root: ParentNode) => root.querySelectorAll('.reveal:not(.visible)').forEach((el) => io.observe(el))
+    observe(document)
+    // 追加作品和切换页面时，为新增节点注册一次性滚动动画。
+    const mutations = new MutationObserver((records) => {
+      for (const record of records) {
+        record.addedNodes.forEach((node) => {
+          if (!(node instanceof Element)) return
+          if (node.matches('.reveal:not(.visible)')) io.observe(node)
+          observe(node)
+        })
+        record.removedNodes.forEach((node) => {
+          if (!(node instanceof Element)) return
+          io.unobserve(node)
+          node.querySelectorAll('.reveal').forEach((el) => io.unobserve(el))
+        })
+      }
+    })
+    mutations.observe(document.querySelector('main') ?? document.body, { childList: true, subtree: true })
+    return () => { io.disconnect(); mutations.disconnect() }
   }, [])
 }

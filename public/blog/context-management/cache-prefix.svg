@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 450" role="img">
+<title>压缩改写历史，前面不变的内容仍有缓存机会</title>
+<defs><pattern id="paper" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#d9cfbb" opacity=".6"/></pattern></defs>
+<rect width="960" height="450" fill="#f8f3ea"/><rect width="960" height="450" fill="url(#paper)"/>
+<g font-family="Kaiti SC, STKaiti, KaiTi, serif" fill="#343c36">
+<text x="36" y="46" font-size="25">压缩后，先看哪里开始变化</text>
+<text x="36" y="77" font-size="16" fill="#737569">概念示意，长度不按比例；相同前缀不代表服务端一定已有可用缓存。</text>
+<text x="36" y="161" font-size="19">压缩前</text>
+<path d="M143 118Q285 114 433 119L432 194Q287 198 142 194Z" fill="#e4e9d9" stroke="#6d705e" stroke-width="1.7"/>
+<path d="M443 119Q676 115 917 119L919 195Q680 197 443 194Z" fill="#eee8d9" stroke="#6d705e" stroke-width="1.7"/>
+<text x="287" y="151" text-anchor="middle" font-size="21">稳定指令与工具</text><text x="287" y="178" text-anchor="middle" font-size="17">8192 token</text>
+<text x="680" y="151" text-anchor="middle" font-size="21">旧历史</text><text x="680" y="178" text-anchor="middle" font-size="17">20000 token</text>
+<text x="36" y="286" font-size="19">压缩后</text>
+<path d="M143 243Q285 240 433 244L432 319Q287 323 142 319Z" fill="#e4e9d9" stroke="#6d705e" stroke-width="1.7"/>
+<path d="M443 244Q556 239 669 244L670 319Q555 322 443 319Z" fill="#eadbd0" stroke="#956f58" stroke-width="1.7"/>
+<path d="M680 244Q796 240 917 244L919 319Q798 323 680 319Z" fill="#eee8d9" stroke="#6d705e" stroke-width="1.7"/>
+<text x="287" y="276" text-anchor="middle" font-size="21">仍相同的前缀</text><text x="287" y="303" text-anchor="middle" font-size="17">8192 token</text>
+<text x="556" y="276" text-anchor="middle" font-size="21">新摘要</text><text x="556" y="303" text-anchor="middle" font-size="17">2048 token</text>
+<text x="799" y="276" text-anchor="middle" font-size="21">保留的近期消息</text><text x="799" y="303" text-anchor="middle" font-size="17">1024 token</text>
+<path d="M438 105Q436 215 438 343" fill="none" stroke="#956f58" stroke-width="1.5" stroke-dasharray="5 6"/>
+<text x="287" y="356" text-anchor="middle" font-size="17" fill="#626c59">仍有前缀复用机会</text>
+<text x="682" y="356" text-anchor="middle" font-size="17" fill="#956f58">从变化点起，不能沿用旧前缀缓存</text>
+<text x="480" y="408" text-anchor="middle" font-size="20">总输入仍是 11264 token；缓存命中不会腾出上下文窗口。</text>
+</g></svg>

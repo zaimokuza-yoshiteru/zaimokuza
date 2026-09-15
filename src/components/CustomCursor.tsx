@@ -32,7 +32,6 @@ export default function CustomCursor() {
       const interactive = el.closest?.('a, button, [role="button"]')
       const hero = el.closest?.('[data-cursor="hero"]')
       ring.classList.toggle('cursor-button', !!interactive)
-      ring.classList.toggle('cursor-cat', !!el.closest?.('[data-cursor="cat"]'))
       // hero 区域由反色遮罩充当光标
       const hide = !!hero
       dot.style.opacity = hide ? '0' : '1'

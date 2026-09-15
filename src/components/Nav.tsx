@@ -1,13 +1,14 @@
 import { profile } from '../data/profile'
+import { blogHref, homeHref } from '../lib/navigation'
 
-/** 顶部导航：右侧锚点与 GitHub 入口。 */
-export default function Nav() {
+/** 顶部导航固定提供首页、博客列表和 GitHub 入口。 */
+export default function Nav({ blogPage = false }: { blogPage?: boolean }) {
   return (
-    <nav className="w-full border-b border-black/[0.06] shadow-[0_1px_16px_rgba(31,35,41,0.03)]">
-      <div className="mx-auto flex h-[72px] w-[calc(100%-56px)] max-w-[1260px] items-center justify-end">
+    <nav className="w-full">
+      <div className="site-frame flex h-[72px] items-center justify-end border-b border-border-warm">
         <div className="flex items-center gap-[16px] text-[13px] text-text-secondary md:gap-[28px] md:text-[14px]">
-          <a href="#projects" className="transition-colors hover:text-text-primary">作品</a>
-          <a href="#experience" className="transition-colors hover:text-text-primary">经历</a>
+          <a href={homeHref()} aria-current={!blogPage ? 'page' : undefined} className="transition-colors hover:text-text-primary">{profile.nav.home}</a>
+          <a href={blogHref()} aria-current={blogPage ? 'page' : undefined} className="transition-colors hover:text-text-primary">{profile.nav.blog}</a>
           <a
             href={profile.social.github}
             target="_blank"
