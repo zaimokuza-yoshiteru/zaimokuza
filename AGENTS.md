@@ -20,6 +20,7 @@ Personal blog of Zaimokuza: a particle portrait opening, blog, open-source works
 - Home displays all projects immediately, with a total in the section heading and no expansion control. Counts derive from data. `useRevealOnScroll` observes dynamically inserted content too.
 - `src/interactions.ts` — `useRevealOnScroll` hook (IntersectionObserver adds `.visible` to `.reveal` elements, once).
 - `src/index.css` — Tailwind v4 entry; design tokens live in `@theme`.
+- `src/assets/allura-regular.ttf` — signature font for the hero name, with its OFL license distributed in `public/fonts/allura-OFL.txt`.
 - `src/assets/geist-mono-regular.ttf` — self-hosted font behind `font-mono-num`.
 - `public/lottie/earth/` — Unused legacy Lottie assets from the former hero globe (`data.json` + `images/`).
 - `.github/workflows/deploy.yml` — builds on push to `main` and publishes `dist` to GitHub Pages.
@@ -51,7 +52,7 @@ Layering rule: `bg-section` (darkest) < `bg-page` < `bg-card` (lightest). Never 
 
 ## Homepage layout
 
-- Home shares a 960px `.site-frame` and one left alignment line. Hero uses a prominent serif name beside a subtle 300px particle portrait; on mobile the smaller portrait remains beside the name. Navigation and footer have no divider lines.
+- Home shares a 960px `.site-frame` and one left alignment line. Hero uses a self-hosted Allura signature name beside a subtle 300px particle portrait; on mobile the smaller portrait remains beside the name. Navigation and footer have no divider lines.
 - Blog and projects have headers above their content. Home blog entries use warm `bg-card` surfaces; projects use two columns of flat warm cards (one column below 640px). No section divider lines or subtitles. Preserve full descriptions and total counts. Projects display all entries; the home blog still shows up to five posts.
 - Work and education form two columns at the bottom, stacking on mobile. `experience.kind` identifies each group; entries retain only dates, organization and role. No timeline ornaments.
 
