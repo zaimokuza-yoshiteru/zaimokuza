@@ -87,7 +87,6 @@ interface Profile {
   }
   social: {
     github: string
-    email?: string
   }
   experience: ExperienceItem[]
   experienceKinds: Record<ExperienceItem['kind'], string>
@@ -132,7 +131,6 @@ export const profile: Profile = {
 
   social: {
     github: 'https://github.com/zaimokuza-yoshiteru',
-    email: 'heshuang6571@163.com',
   },
 
   // 根据公开 README 归纳适用场景，不代表已在特定企业部署
