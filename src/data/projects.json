@@ -20,39 +20,159 @@
     "defaultBranch": "main",
     "stars": 6,
     "forks": 0,
-    "openIssues": 1,
+    "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 104,
-    "sizeKb": 6496,
+    "commits": 111,
+    "sizeKb": 6513,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-09-18T07:40:59Z",
+    "pushedAt": "2026-09-18T10:05:41Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 1886954
-      },
-      {
-        "name": "JavaScript",
-        "bytes": 353562
+        "bytes": 2284648
       },
       {
         "name": "CSS",
         "bytes": 25971
       },
       {
+        "name": "JavaScript",
+        "bytes": 13528
+      },
+      {
         "name": "PowerShell",
-        "bytes": 5266
+        "bytes": 5265
       }
     ],
-    "languageTotal": 2271753,
+    "languageTotal": 2329412,
     "release": {
-      "tag": "v0.1.2-alpha.2",
-      "publishedAt": "2026-09-01T11:05:28Z",
+      "tag": "v0.1.6-alpha.2.0",
+      "publishedAt": "2026-09-18T09:33:26Z",
       "prerelease": true
     },
-    "releaseCount": 12,
+    "releaseCount": 32,
     "releases": [
+      {
+        "tag": "v0.1.6-alpha.2.0",
+        "name": "v0.1.6-alpha.2.0",
+        "publishedAt": "2026-09-18T09:33:26Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.6-alpha.1.6",
+        "name": "v0.1.6-alpha.1.6",
+        "publishedAt": "2026-09-18T09:33:21Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.6-alpha.1.5",
+        "name": "v0.1.6-alpha.1.5",
+        "publishedAt": "2026-09-18T09:33:16Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.6-alpha.1.4",
+        "name": "v0.1.6-alpha.1.4",
+        "publishedAt": "2026-09-18T09:33:09Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.6-alpha.1.3",
+        "name": "v0.1.6-alpha.1.3",
+        "publishedAt": "2026-09-18T09:33:02Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.6-alpha.1.2",
+        "name": "v0.1.6-alpha.1.2",
+        "publishedAt": "2026-09-18T09:32:57Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.6-alpha.1.1",
+        "name": "v0.1.6-alpha.1.1",
+        "publishedAt": "2026-09-18T09:32:53Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.5-rc.2.5",
+        "name": "v0.1.5-rc.2.5",
+        "publishedAt": "2026-09-18T09:32:48Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.5-rc.2.4",
+        "name": "v0.1.5-rc.2.4",
+        "publishedAt": "2026-09-18T09:32:43Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.5-rc.2.3",
+        "name": "v0.1.5-rc.2.3",
+        "publishedAt": "2026-09-18T09:32:38Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.5-rc.2.1",
+        "name": "v0.1.5-rc.2.1",
+        "publishedAt": "2026-09-18T09:32:33Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.5-rc.1",
+        "name": "v0.1.5-rc.1",
+        "publishedAt": "2026-09-18T09:32:29Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.5-alpha.2",
+        "name": "v0.1.5-alpha.2",
+        "publishedAt": "2026-09-18T09:32:24Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.5-alpha.1",
+        "name": "v0.1.5-alpha.1",
+        "publishedAt": "2026-09-18T09:32:18Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.3-alpha.2",
+        "name": "v0.1.3-alpha.2",
+        "publishedAt": "2026-09-18T09:32:13Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.3-alpha.1",
+        "name": "v0.1.3-alpha.1",
+        "publishedAt": "2026-09-18T09:32:07Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.2-rc.1.1",
+        "name": "v0.1.2-rc.1.1",
+        "publishedAt": "2026-09-18T09:32:02Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.2-alpha.5",
+        "name": "v0.1.2-alpha.5",
+        "publishedAt": "2026-09-18T09:31:56Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.2-alpha.4",
+        "name": "v0.1.2-alpha.4",
+        "publishedAt": "2026-09-18T09:31:50Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.2-alpha.3",
+        "name": "v0.1.2-alpha.3",
+        "publishedAt": "2026-09-18T09:31:45Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.1.2-alpha.2",
         "name": "v0.1.2-alpha.2",
@@ -130,10 +250,59 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 99
+        "contributions": 106
       }
     ],
     "commitList": [
+      {
+        "sha": "d8f3f79",
+        "message": "Merge pull request #18 from zaimokuza-yoshiteru/feature/0.1.6.alpha",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T10:05:41Z"
+      },
+      {
+        "sha": "f03aa03",
+        "message": "Merge pull request #17 from zaimokuza-yoshiteru/feature/ZAI-38",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T09:49:27Z"
+      },
+      {
+        "sha": "2346dec",
+        "message": "fix: backfill release notes and automate GitHub releases",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T09:32:27Z"
+      },
+      {
+        "sha": "e257904",
+        "message": "Merge pull request #16 from zaimokuza-yoshiteru/feature/0.1.6.alpha",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T09:10:18Z"
+      },
+      {
+        "sha": "452f7ed",
+        "message": "Merge pull request #15 from zaimokuza-yoshiteru/feature/ZAI-38",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T07:40:58Z"
+      },
+      {
+        "sha": "bd330ef",
+        "message": "refactor: typecheck development scripts and ACP regression fixtures",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T06:35:50Z"
+      },
+      {
+        "sha": "9deac75",
+        "message": "feat: refresh release registry with non-blocking fallback",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T05:44:17Z"
+      },
       {
         "sha": "cfce395",
         "message": "Merge pull request #13 from zaimokuza-yoshiteru/feature/0.1.6.alpha",
@@ -168,55 +337,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-18T03:48:51Z"
-      },
-      {
-        "sha": "6661901",
-        "message": "fix: harden alpha.2 session controls and regression coverage",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T03:48:43Z"
-      },
-      {
-        "sha": "7a5b0d5",
-        "message": "feat: integrate DSH alpha.2 and unify ACP native UI",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-17T19:43:01Z"
-      },
-      {
-        "sha": "4cf87ce",
-        "message": "Merge pull request #11 from zaimokuza-yoshiteru/codex/approval-fixes-alpha-1-6",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-17T11:28:30Z"
-      },
-      {
-        "sha": "b6978be",
-        "message": "fix: preserve approval identity and concurrent file creation",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-17T11:12:22Z"
-      },
-      {
-        "sha": "4e87695",
-        "message": "Merge pull request #10 from zaimokuza-yoshiteru/codex/registry-local-integration",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-17T09:14:07Z"
-      },
-      {
-        "sha": "0d41ca3",
-        "message": "release: prepare 0.1.6-alpha.1.5",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-17T08:57:14Z"
-      },
-      {
-        "sha": "e49f60c",
-        "message": "test: fix Windows ESM fixtures and ordinary-user CI summaries",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-17T08:35:55Z"
       }
     ],
     "activity": [
@@ -261,14 +381,14 @@
       },
       {
         "week": 1789257600,
-        "total": 28,
+        "total": 31,
         "days": [
           0,
           1,
           10,
           3,
           11,
-          3,
+          6,
           0
         ]
       }
@@ -407,11 +527,11 @@
       0,
       1,
       1,
+      1,
+      1,
       0,
       0,
-      0,
-      0,
-      0,
+      1,
       0,
       0,
       0,
@@ -1532,22 +1652,22 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 1,
-    "commits": 11,
-    "sizeKb": 669,
+    "commits": 18,
+    "sizeKb": 1002,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-09-15T16:19:59Z",
+    "pushedAt": "2026-09-18T09:05:32Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 59777
+        "bytes": 116599
       },
       {
         "name": "CSS",
-        "bytes": 14524
+        "bytes": 39459
       },
       {
         "name": "JavaScript",
-        "bytes": 12814
+        "bytes": 38373
       },
       {
         "name": "Python",
@@ -1555,10 +1675,10 @@
       },
       {
         "name": "HTML",
-        "bytes": 762
+        "bytes": 1244
       }
     ],
-    "languageTotal": 98557,
+    "languageTotal": 206355,
     "release": null,
     "releaseCount": 0,
     "releases": null,
@@ -1566,10 +1686,59 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 11
+        "contributions": 18
       }
     ],
     "commitList": [
+      {
+        "sha": "fdc84ba",
+        "message": "Merge pull request #2 from zaimokuza-yoshiteru/zaimokuza-yoshiteru-starred-repo-showcase",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T09:05:09Z"
+      },
+      {
+        "sha": "a3fd7c5",
+        "message": "simplify the footer and drop the email contact",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T09:04:19Z"
+      },
+      {
+        "sha": "c88e4d4",
+        "message": "Merge pull request #1 from zaimokuza-yoshiteru/zaimokuza-yoshiteru-starred-repo-showcase",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T08:51:24Z"
+      },
+      {
+        "sha": "e95922f",
+        "message": "refine hover motion, handwriting and page navigation",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T08:48:27Z"
+      },
+      {
+        "sha": "788eadf",
+        "message": "Refresh the observatory snapshot on a schedule",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T08:20:43Z"
+      },
+      {
+        "sha": "ebaa8ce",
+        "message": "Underline the active nav item and clean up dead code",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T08:09:39Z"
+      },
+      {
+        "sha": "0dad278",
+        "message": "Add repo observatory, rework blog cards and sticky nav",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T08:01:53Z"
+      },
       {
         "sha": "f3d9f63",
         "message": "Use signature typography and align hero portrait to the right",
@@ -1604,48 +1773,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-08T15:49:16Z"
-      },
-      {
-        "sha": "00303c9",
-        "message": "update info",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-08-25T08:38:41Z"
-      },
-      {
-        "sha": "3f776a4",
-        "message": "update info",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-08-25T08:33:05Z"
-      },
-      {
-        "sha": "d35c09c",
-        "message": "新增开源项目 atlassian-server-mcp 至作品列表",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-08-11T03:57:32Z"
-      },
-      {
-        "sha": "ba0c783",
-        "message": "修复 logo 链接在 Pages 子路径下 404：href 改用 BASE_URL",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-08-05T02:48:53Z"
-      },
-      {
-        "sha": "fb32c0e",
-        "message": "迁移至 TypeScript（strict 模式）+ fetch-github 排除个人站仓库",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-08-04T16:25:30Z"
-      },
-      {
-        "sha": "d9628e3",
-        "message": "init",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-08-04T16:01:14Z"
       }
     ],
     "activity": [
@@ -1729,14 +1856,14 @@
       },
       {
         "week": 1789257600,
-        "total": 4,
+        "total": 9,
         "days": [
           0,
           0,
           2,
           2,
           0,
-          0,
+          5,
           0
         ]
       }
@@ -1878,8 +2005,8 @@
       0,
       0,
       0,
-      0,
-      0,
+      4,
+      1,
       0,
       0,
       0,

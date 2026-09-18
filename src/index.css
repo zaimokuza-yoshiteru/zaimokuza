@@ -176,13 +176,13 @@ body {
 .starred-card { gap: 14px; }
 /* 名称占满整行、版本标签贴右上角。标题的 min-width: 0 让过长的仓库名换行，而不是把标签挤扁。 */
 .starred-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
-/* 标题 17px / 行高 30px，盒子底边在基线下 8.2px；上移 4px 后下划线落在基线下方约 4px，
-   与博客标题（6px / 26px 字号）的比例一致。 */
+/* 标题 16px / 行高 1.7（27.2px），与 .project-row h3 一致；盒子底边在基线下 8.1px，
+   上移 4px 后下划线落在基线下方 4.1px，与博客标题的比例一致。 */
 .starred-head h3 { --sweep-gap: 4px; min-width: 0; }
 .starred-card:hover .starred-head h3, .starred-card:focus-visible .starred-head h3 { background-size: 100% 1px; }
-/* 标签不参与压缩，并与标题首行（30px）垂直居中：标签盒高 23px（21px 行高 + 上下 1px 边框），
+/* 标签不参与压缩，并与标题首行（27.2px）垂直居中：标签盒高 23px（21px 行高 + 上下 1px 边框），
    行高差的一半就是上边距。 */
-.starred-head .starred-release { flex: 0 0 auto; margin-top: 3.5px; white-space: nowrap; }
+.starred-head .starred-release { flex: 0 0 auto; margin-top: 2.1px; white-space: nowrap; }
 .starred-release { display: inline-flex; align-items: baseline; gap: 5px; padding: 0 9px; border: 1px solid var(--color-border-warm); border-radius: var(--radius-chip); font-size: 11px; line-height: 21px; color: var(--color-text-secondary); }
 .starred-release-pre { color: #a89a7d; }
 .starred-activity { display: grid; gap: 7px; }
