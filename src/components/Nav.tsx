@@ -4,9 +4,9 @@ import { ExternalArrow } from './ExternalArrow'
 
 export type Page = 'home' | 'blog' | 'starred'
 
-/** 顶部导航固定提供首页、博客列表、观测和 GitHub 入口。 */
+/** 顶部导航固定提供首页、博客列表、观测和 GitHub 入口；当前页面通过 aria-current 标记并加下划线。 */
 export default function Nav({ page = 'home' }: { page?: Page }) {
-  const link = 'transition-colors hover:text-text-primary'
+  const link = 'nav-link transition-colors hover:text-text-primary'
   return (
     <nav className="sticky top-0 z-50 h-[var(--nav-h)] w-full border-b border-border-warm bg-bg-page">
       <div className="site-frame flex h-full items-center justify-end">

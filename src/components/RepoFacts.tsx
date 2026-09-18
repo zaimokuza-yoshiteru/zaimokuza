@@ -41,12 +41,10 @@ export function ReleaseChip({ release }: { release: NonNullable<RepoSnapshot['re
  * 仓库卡片正文：描述、提交活动、语言构成与规模指标。
  * 「开源作品」的两列卡片共用这份 DOM，外观差异全部交给外层容器。
  */
-export default function RepoFacts({ repo, description, metrics, showPushed = false }: {
+export default function RepoFacts({ repo, description, metrics }: {
   repo: RepoSnapshot
   description: string
   metrics: RepoMetrics
-  /** 卡片只保留规模指标，「最近提交」留到观测的整页详情里再给。 */
-  showPushed?: boolean
 }) {
   const copy = profile.repoUI
   const weeks = repo.activity.map((week) => week.total)
@@ -87,7 +85,6 @@ export default function RepoFacts({ repo, description, metrics, showPushed = fal
         <span aria-label={`${NUMBER.format(metrics.forks)} GitHub Forks`}>{`${copy.forksLabel} ${NUMBER.format(metrics.forks)}`}</span>
         <span aria-label={`${NUMBER.format(metrics.openIssues)} open issues`}>{`${copy.issuesLabel} ${NUMBER.format(metrics.openIssues)}`}</span>
         <span>{`${copy.contributorsLabel} ${NUMBER.format(repo.contributors)}`}</span>
-        {showPushed && <span>{`${copy.pushedLabel} ${repo.pushedAt.slice(0, 10)}`}</span>}
       </div>
     </>
   )

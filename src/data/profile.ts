@@ -10,12 +10,6 @@ interface ExperienceItem {
   org: string
 }
 
-/** 双语文案：保留中英文信息 */
-interface Bilingual {
-  en: string
-  zh: string
-}
-
 export interface BlogPost {
   slug: string
   title: string
@@ -30,7 +24,7 @@ export interface BlogPost {
 interface Profile {
   name: string
   nav: { home: string; blog: string; starred: string; github: string }
-  collections: { shown: string; more: string; allShown: string }
+  collections: { shown: string; more: string }
   articleUI: {
     contents: string; examples: string; copy: string; copied: string; copyFailed: string
     download: string; loading: string; loadFailed: string; retry: string; minutes: string
@@ -42,18 +36,14 @@ interface Profile {
     notFound: string
     posts: BlogPost[]
   }
-  heroRole: Bilingual
   heroGreeting: string
   heroName: string
   heroPortraitAlt: string
-  location: Bilingual
   projects: {
-    unit: string
     title: string
     entries: Record<string, { description: string }>
   }
   starred: {
-    unit: string
     title: string
     switchLabel: string
     notFound: string
@@ -72,7 +62,7 @@ interface Profile {
     }
     readings: {
       peakLabel: string; peakUnit: string
-      quietPrefix: string; quietHoursUnit: string; quietSharePrefix: string; quietHoursSuffix: string
+      quietPrefix: string; quietHoursUnit: string; quietSharePrefix: string
       weekendLabel: string; weekendValue: string
       workLabel: string; workValue: string
       sampleLabel: string; sampleValue: string; sampleUnit: string
@@ -95,7 +85,6 @@ interface Profile {
     forksLabel: string
     issuesLabel: string
     contributorsLabel: string
-    pushedLabel: string
   }
   social: {
     github: string
@@ -109,7 +98,7 @@ interface Profile {
 export const profile: Profile = {
   name: 'Zaimokuza',
   nav: { home: '首页', blog: '博客', starred: '观测', github: 'GitHub' },
-  collections: { shown: '已展示', more: '博客列表', allShown: '已展示全部' },
+  collections: { shown: '已展示', more: '博客列表' },
   articleUI: {
     contents: '阅读路线', examples: '最小实现 · 同一机制，两种语言',
     copy: '复制代码', copied: '已复制', copyFailed: '复制失败，请手动选择代码',
@@ -138,11 +127,9 @@ export const profile: Profile = {
   experienceTitle: '经历',
   experienceKinds: { work: '工作', education: '教育' },
   // 首页身份信息
-  heroRole: { en: 'Full-stack Engineer', zh: '全栈工程师' },
   heroGreeting: '你好，我是',
   heroName: 'Zaimokuza',
   heroPortraitAlt: '由稀疏粒子组成的金发卡通人物肖像',
-  location: { en: 'Shanghai, China', zh: '中国 · 上海' },
 
   social: {
     github: 'https://github.com/zaimokuza-yoshiteru',
@@ -152,7 +139,6 @@ export const profile: Profile = {
   // 根据公开 README 归纳适用场景，不代表已在特定企业部署
   // 展示清单与顺序取自 GitHub 个人主页的置顶仓库
   projects: {
-    unit: '个作品',
     title: '开源作品',
     entries: {
       'dsh-acp-adapter': {
@@ -175,7 +161,6 @@ export const profile: Profile = {
 
   // 从星标仓库中挑出的展示清单，介绍同样根据公开 README 归纳
   starred: {
-    unit: '个仓库',
     title: '观测',
     switchLabel: '仓库列表',
     notFound: '没有找到这个仓库。',
@@ -232,7 +217,6 @@ export const profile: Profile = {
       quietPrefix: '最安静的',
       quietHoursUnit: '小时',
       quietSharePrefix: '仅占',
-      quietHoursSuffix: '点',
       weekendLabel: '周末提交',
       weekendValue: '周六 + 周日',
       workLabel: '工作时间段',
@@ -298,7 +282,6 @@ export const profile: Profile = {
     forksLabel: 'Forks',
     issuesLabel: 'Issues',
     contributorsLabel: '贡献者',
-    pushedLabel: '最近提交',
   },
 
   // 工作与教育经历按时间倒序排列。

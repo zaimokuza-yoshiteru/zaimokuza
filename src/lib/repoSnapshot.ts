@@ -1,7 +1,7 @@
 import type { ActivityWeek } from './repoActivity'
 
 /** 观测「06 贡献者」用的样本：按提交数降序的前 100 名。 */
-export interface RepoContributor {
+interface RepoContributor {
   login: string
   avatarUrl: string
   contributions: number
@@ -16,7 +16,7 @@ export interface RepoRelease {
 }
 
 /** 观测「08 最近提交」用的样本：默认分支上的最近 12 次提交。 */
-export interface RepoCommit {
+interface RepoCommit {
   sha: string
   message: string
   author: string

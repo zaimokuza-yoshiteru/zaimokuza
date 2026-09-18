@@ -2,8 +2,6 @@ import type { RepoMetrics } from '../lib/repoMetrics'
 import type { RepoSnapshot } from '../lib/repoSnapshot'
 import RepoFacts, { ReleaseChip } from './RepoFacts'
 
-export type RepoCardRepo = RepoSnapshot
-
 interface RepoCardProps {
   repo: RepoSnapshot
   /** 卡片标题：作品区用仓库名。 */

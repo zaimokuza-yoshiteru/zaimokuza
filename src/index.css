@@ -60,6 +60,15 @@ body {
   top: -0.42em;
 }
 
+/* ---------- 顶部导航 ---------- */
+/* 当前页面的入口转为正文色并加一条下划线，划线位置与博客标题的 hover 一致 */
+.nav-link[aria-current='page'] {
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
+
 /* ---------- 滚动 reveal ---------- */
 .reveal {
   opacity: 0;

@@ -10,13 +10,13 @@ export interface ActivityWeek {
   days: number[]
 }
 
-export interface ActivityDay {
+interface ActivityDay {
   /** YYYY-MM-DD（UTC），与 GitHub 的统计口径一致。 */
   date: string
   commits: number
 }
 
-export interface ActivityStats {
+interface ActivityStats {
   /** 采集到的周数，也是日历的列数。 */
   weeks: number
   /** 这段区间内的提交总数。 */
@@ -39,7 +39,7 @@ const DAY_SECONDS = 86_400
 const DAY_MS = DAY_SECONDS * 1000
 const KB = 1024
 /** 贡献日历固定 53 列，与 GitHub 的年度网格一致。 */
-export const CALENDAR_WEEKS = 53
+const CALENDAR_WEEKS = 53
 
 function isoDate(unixSeconds: number): string {
   return new Date(unixSeconds * 1000).toISOString().slice(0, 10)
@@ -164,7 +164,7 @@ export function daysSince(iso: string, now = Date.now()): number {
 }
 
 /** 提交节律的读数：高峰格、最安静的连续几小时、周末与工作时段占比。 */
-export interface RhythmStats {
+interface RhythmStats {
   /** 参与统计的提交数，punch card 的样本上限是 2 万。 */
   total: number
   /** 单格最大值，用来定热力色阶。 */
@@ -184,8 +184,8 @@ const QUIET_HOURS = 6
 const WORK_FROM = 9
 const WORK_TO = 18
 /** 7×24 的直方图下标是 星期 * 24 + 小时，星期 0 为周日。 */
-export const HOURS_PER_DAY = 24
-export const DAYS_PER_WEEK = 7
+const HOURS_PER_DAY = 24
+const DAYS_PER_WEEK = 7
 
 function cellsOf(card: number[]): number[] {
   const size = DAYS_PER_WEEK * HOURS_PER_DAY
