@@ -5,15 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "test:stars": "node --test scripts/test-github-stars.mjs",
+    "test:metrics": "node --test scripts/test-repo-metrics.mjs scripts/test-repo-activity.mjs",
     "test:blog": "node --test scripts/test-blog.mjs",
     "test:particles": "node --test scripts/test-particles.mjs",
+    "test:starred": "node --test scripts/test-starred-source.mjs",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
-    "lottie-web": "^5.13.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^10.1.0",

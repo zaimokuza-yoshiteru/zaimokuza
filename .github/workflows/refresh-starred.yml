@@ -1,0 +1,58 @@
+name: Refresh starred snapshot
+
+# 观测数据由访客浏览器在打开观测页时直接读取本仓库的 src/data/starred.json，
+# 因此这里只需要刷新并提交文件，不需要重新构建或部署。
+# 注意：GITHUB_TOKEN 的推送不会触发其它 workflow，这是刻意的——
+# 站点读的是这个文件本身，不依赖部署产物。
+
+on:
+  schedule:
+    # 每天 00:17 与 12:17 UTC（北京时间 08:17 / 20:17），避开整点的高峰。
+    - cron: '17 */12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-starred
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # 采集脚本本身只用 node 内置模块与 runner 预装的 gh；
+      # 这里装依赖是为了下一步能用上真正的校验器。
+      # GITHUB_TOKEN 由平台现场签发，只用于本次运行，不会写进仓库或站点。
+      - name: Fetch snapshot
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/fetch-github-starred.mjs
+
+      # 用与站点完全相同的校验器过一遍新快照，再决定是否提交。
+      # 采集部分失败时脚本会跳过个别仓库；万一写出空数组或字段缺失，
+      # 校验会失败，于是不提交，上一份好快照留在原地。
+      - name: Validate snapshot
+        run: npm run test:starred
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- src/data/starred.json; then
+            echo 'snapshot unchanged, nothing to commit'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src/data/starred.json
+          git commit -m 'Refresh starred snapshot'
+          git push

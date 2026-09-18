@@ -1,27 +1,30 @@
-// 构建时拉取 GitHub 公开仓库数据 → src/data/projects.json
+// 构建时拉取 GitHub 置顶仓库数据 → src/data/projects.json
 // 用法: node scripts/fetch-github.mjs   （依赖本机 gh CLI 授权）
-// 排除 fork 与个人站仓库本身（避免「开源作品」自引用）
-import { execFileSync } from 'node:child_process'
-import fs from 'node:fs'
+// 展示清单以个人主页的置顶仓库为准，顺序即置顶顺序；置顶最多 6 个。
+import { collectRepo, gh, writeJson } from './lib/repo-metrics.mjs'
 
 const USER = 'zaimokuza-yoshiteru'
-const EXCLUDE = ['zaimokuza']
+// 需要从作品集里隐藏的仓库；本站仓库已按置顶顺序正常展示，这里暂时留空，需要隐藏时把 fullName 加进来即可。
+const EXCLUDE = []
 
-const raw = execFileSync(
-  'gh',
-  ['api', `users/${USER}/repos`, '--paginate', '-q',
-   `.[] | select(.fork == false) | select(.name as $n | ${JSON.stringify(EXCLUDE)} | index($n) | not) | {name, stars: .stargazers_count, url: .html_url, updatedAt: .updated_at}`],
-  { encoding: 'utf8' },
+const pinned = JSON.parse(
+  gh(['api', 'graphql', '-f', `query={ user(login:"${USER}") { pinnedItems(first:6, types:REPOSITORY) { nodes { ... on Repository { nameWithOwner } } } } }`]),
 )
 
-const projects = raw
-  .trim()
-  .split('\n')
-  .map((line) => JSON.parse(line))
-  .sort((a, b) => b.stars - a.stars || b.updatedAt.localeCompare(a.updatedAt))
-  // 更新时间仅用于生成时排序，页面只保留实际读取的字段。
-  .map(({ name, stars, url }) => ({ name, stars, url }))
+const projects = []
+for (const node of pinned.data.user.pinnedItems.nodes) {
+  const fullName = node.nameWithOwner
+  if (EXCLUDE.includes(fullName)) {
+    console.warn(`skipped ${fullName}: excluded`)
+    continue
+  }
+  const repo = collectRepo(fullName)
+  if (!repo) {
+    console.warn(`skipped ${fullName}: repository unavailable`)
+    continue
+  }
+  projects.push(repo)
+}
 
-fs.mkdirSync('src/data', { recursive: true })
-fs.writeFileSync('src/data/projects.json', JSON.stringify(projects, null, 2) + '\n')
-console.log(`fetched ${projects.length} projects -> src/data/projects.json`)
+writeJson('src/data/projects.json', projects)
+console.log(`fetched ${projects.length} pinned projects -> src/data/projects.json`)
