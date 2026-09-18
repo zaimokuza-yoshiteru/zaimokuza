@@ -326,7 +326,9 @@ body {
 .experience-date { font-size: 11px; line-height: 22px; color: var(--color-text-secondary); }
 .experience-org { margin-top: 12px; font-size: 14px; font-weight: 400; line-height: 1.8; overflow-wrap: anywhere; }
 .experience-role { margin-top: 4px; font-size: 12px; line-height: 1.8; color: var(--color-text-secondary); }
-.site-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding-block: 24px 32px; font-size: 12px; color: var(--color-text-secondary); }
+/* 页脚只剩右下角的手写签名，与 GitHub 入口共用 Kalam 与 17px，让首尾读成同一种笔迹。 */
+.site-footer { display: flex; justify-content: flex-end; padding-block: 24px 32px; }
+.footer-sign { font-family: 'Kalam', cursive; font-size: 17px; line-height: 1; color: var(--color-text-secondary); }
 @media (max-width: 900px) {
   .hero-portrait { max-width: 260px; }
   .hero-identity h1 { font-size: clamp(42px, 6vw, 54px); }
