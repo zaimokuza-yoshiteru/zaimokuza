@@ -4,17 +4,19 @@ import { createPortraitParticles, portraitOutline, portraitClipPath, stepParticl
 
 const portraitUrl = `${import.meta.env.BASE_URL}images/hero-portrait.jpg`
 
-/** 原图仅用于取色，最终形象由各自拥有位置、速度和归位点的粒子绘制。 */
+/** 原图仅用于取色，最终形象由各自拥有位置、速度和归位点的粒子绘制；
+ *  只有在取色或 Canvas 不可用时才退回原图，避免正常加载时先看到照片。 */
 export default function HeroParticles() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [ready, setReady] = useState(false)
+  const [fallback, setFallback] = useState(false)
 
   useEffect(() => {
     const canvas = canvasRef.current
     const container = canvas?.parentElement
-    if (!canvas || !container) return
+    if (!canvas || !container) { setFallback(true); return }
     const context = canvas.getContext('2d')
-    if (!context) return
+    if (!context) { setFallback(true); return }
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)')
     const coarse = window.matchMedia('(hover: none), (pointer: coarse)')
     const image = new Image()
@@ -66,7 +68,7 @@ export default function HeroParticles() {
       const sample = document.createElement('canvas')
       sample.width = sample.height = resolution
       const sampler = sample.getContext('2d', { willReadFrequently: true })
-      if (!sampler) return
+      if (!sampler) { setFallback(true); return }
       // 花朵和纹理位于轮廓外，不进入粒子采样；回退图片也使用同一轮廓。
       sampler.beginPath()
       portraitOutline.forEach(([x, y], index) => {
@@ -120,11 +122,13 @@ export default function HeroParticles() {
       visible = bounds.bottom > 0 && bounds.top < window.innerHeight
       resize()
     }
-    // 加载或 Canvas 失败时保留原图，避免空白首屏。
+    image.onerror = () => setFallback(true)
+    // 原图只在粒子不可用时兜底显示，正常路径下由 Canvas 绘制。
     image.src = portraitUrl
     return () => {
       disposed = true
       image.onload = null
+      image.onerror = null
       stop()
       observer.disconnect()
       resizeObserver.disconnect()
@@ -140,7 +144,7 @@ export default function HeroParticles() {
   }, [])
 
   return (
-    <div className="hero-portrait" data-ready={ready} role="img" aria-label={profile.heroPortraitAlt}>
+    <div className="hero-portrait" data-ready={ready} data-fallback={fallback} role="img" aria-label={profile.heroPortraitAlt}>
       <img src={portraitUrl} alt="" aria-hidden="true" style={{ clipPath: portraitClipPath }} />
       <canvas ref={canvasRef} aria-hidden="true" />
     </div>

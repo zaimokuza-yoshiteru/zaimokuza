@@ -1,5 +1,5 @@
 import { profile, type BlogPost } from '../data/profile'
-import { blogHref, homeHref } from '../lib/navigation'
+import { blogHref } from '../lib/navigation'
 import SectionHeader from './SectionHeader'
 
 const posts = [...profile.blog.posts].sort((a, b) => b.date.localeCompare(a.date))
@@ -29,7 +29,7 @@ function PostList({ entries }: { entries: BlogPost[] }) {
             <span className="text-[12px] text-text-secondary">{post.category}</span>
           </div>
           <div className="min-w-0">
-            <h3 className="mt-[7px] text-[20px] font-medium leading-[32px]"><span className="blog-title">{post.title}</span></h3>
+            <h3 className="mt-[7px] text-[20px] font-medium leading-[32px]"><span className="blog-title sweep-underline">{post.title}</span></h3>
             <p className="mt-[8px] text-[14px] leading-[26px] text-text-secondary">{post.excerpt}</p>
           </div>
         </a>
@@ -43,7 +43,6 @@ export default function Blog({ archive = false }: { archive?: boolean }) {
   const entries = archive ? posts : posts.slice(0, 5)
   return (
     <section className={`site-frame ${archive ? 'blog-archive' : 'home-section home-blog'}`}>
-      {archive && <a className="back-link" href={homeHref('blog')}><span aria-hidden="true">←</span> {profile.nav.home}</a>}
       <div id="blog" className="section-heading scroll-mt-[var(--nav-h)]">
         <SectionHeader title={archive ? copy.archiveTitle : copy.title} count={posts.length} level={archive ? 1 : 2} />
       </div>

@@ -47,7 +47,6 @@ interface Profile {
     title: string
     switchLabel: string
     notFound: string
-    openLabel: string
     panels: { calendar: string; weekly: string; languages: string; rhythm: string; readings: string; contributors: string; releases: string; commits: string }
     stats: { stars: string; perDay: string; forks: string; watchers: string; issues: string; commits: string; pushed: string }
     tags: { built: string; site: string }
@@ -164,7 +163,6 @@ export const profile: Profile = {
     title: '观测',
     switchLabel: '仓库列表',
     notFound: '没有找到这个仓库。',
-    openLabel: '前往 GitHub',
     // 观测八块面板的标题，概况数据直接放在顶部卡片里
     panels: {
       calendar: '贡献日历',

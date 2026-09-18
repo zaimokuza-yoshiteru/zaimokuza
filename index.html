@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zaimokuza — 个人博客</title>
     <meta name="description" content="Zaimokuza 的个人博客：记录探索、开源实践与经历。" />
+    <!-- 两个自托管字体都用在首屏：预加载让请求与 CSS、JS 并行，避免手写名字先用衬线体绘制一次 -->
+    <link rel="preload" href="%BASE_URL%fonts/allura-regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="%BASE_URL%fonts/geist-mono-regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="%BASE_URL%fonts/kalam-regular.ttf" as="font" type="font/ttf" crossorigin />
     <link
       rel="icon"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f2329'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-style='italic' font-size='18' fill='%23fcfaf8' text-anchor='middle'%3Ez%3C/text%3E%3C/svg%3E"

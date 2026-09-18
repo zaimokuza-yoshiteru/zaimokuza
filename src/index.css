@@ -23,17 +23,27 @@
 
 @font-face {
   font-family: 'Geist Mono';
-  src: url('./assets/geist-mono-regular.ttf') format('truetype');
+  src: url('/fonts/geist-mono-regular.ttf') format('truetype');
   font-weight: 400;
   font-display: swap;
 }
 
+/* 签名体只用于首屏的手写名字：block 让浏览器等字体到位再绘制，避免先画一遍衬线体再替换。 */
 @font-face {
   font-family: 'Allura';
-  src: url('./assets/allura-regular.ttf') format('truetype');
+  src: url('/fonts/allura-regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: block;
+}
+
+/* 手写体只用于 GitHub 入口：毛笔质感比 Allura 的连笔更收敛，墨迹更矮，不会盖过导航。 */
+@font-face {
+  font-family: 'Kalam';
+  src: url('/fonts/kalam-regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
 }
 
 html,
@@ -50,23 +60,72 @@ body {
 }
 
 /* ---------- 站外链接角标 ---------- */
-/* 相对定位上移，父级无论是 flex 还是 inline 都能生效，且不撑高行盒 */
+/* 自绘 SVG 而不是 ↗ 字符：字符的斜杆长度由字体决定，改不动；这里把墨迹放进 1em 的方盒
+   （viewBox 0 0 10 10），斜杆长度可以自由收短。
+   盒底压在基线上，墨迹按原字符相对基线的位置摆放（上缘 0.739em、下缘 -0.019em），
+   所以行内场景沿用字符时代的 top: -0.42em 就能落在同一位置。
+   两个坑：top 里的 em 取的是箭头自身的字号，不是宿主字号；宿主若是 flex 居中，
+   盒底不再落在基线上，必须按各自宿主单独折算（见 .gh-link / .obs-tags 下的覆写）。 */
 .ext-arrow {
   display: inline-block;
+  flex: 0 0 auto;
+  width: 1em;
+  height: 1em;
   margin-left: 2px;
   font-size: max(0.55em, 7px);
   line-height: 1;
+  overflow: visible;
   position: relative;
   top: -0.42em;
 }
 
 /* ---------- 顶部导航 ---------- */
-/* 当前页面的入口转为正文色并加一条下划线，划线位置与博客标题的 hover 一致 */
-.nav-link[aria-current='page'] {
-  color: var(--color-text-primary);
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 1px;
+/* 下划线用一层背景渐变而不是 text-decoration：hover 时从中间往两边展开，当前页面则常驻。
+   50% 的水平锚点让宽度从 0 增长时左右对称铺开，垂直位置与原来 text-underline-offset: 6px 基本重合。 */
+.nav-link {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  background-size: 0 1px;
+  transition:
+    background-size .35s var(--ease-out-strong),
+    color .3s var(--ease-out-strong);
+}
+.nav-link:hover, .nav-link:focus-visible, .nav-link[aria-current='page'] { background-size: 100% 1px; }
+.nav-link[aria-current='page'] { color: var(--color-text-primary); }
+
+/* ---------- GitHub 跳转 ---------- */
+/* 站内所有 GitHub 入口共用签名体：只有链接不同，形态完全一致。 */
+.gh-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+  font-family: 'Kalam', cursive;
+  /* 手写体只用于这一处入口，字号按字形墨迹高度定：Kalam 的墨迹约占字号的 88%，
+     17px 时「GitHub」的可见高度约 15px，与导航 14px 文字（约 13px）接近，
+     再大就会盖过导航本身。 */
+  font-size: 17px;
+  line-height: 1;
+  color: var(--color-text-secondary);
+  transition: color .3s var(--ease-out-strong);
+}
+.gh-link:hover { color: var(--color-text-primary); }
+.gh-link:focus-visible { outline: 2px solid var(--color-text-primary); outline-offset: 4px; }
+/* GitHub 入口是 flex 居中，盒底离开了基线，按 -0.669em 折算补回来（等价字符时代的 -0.5em）。 */
+.gh-link .ext-arrow { font-size: max(0.42em, 7px); top: -0.67em; }
+
+/* ---------- 标题下划线 ---------- */
+/* 一层背景渐变，hover 时从 0 铺到 100%，视觉上从左往右展开。
+   用渐变而不是伪元素，是因为标题的盒子宽度跟着文字走；行内标题折行时，
+   box-decoration-break: clone 还能让每一行各自从左边展开。
+   --sweep-gap 是线相对盒子底边的上移量，用来把线压到基线下方固定的位置。 */
+.sweep-underline {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: 0 calc(100% - var(--sweep-gap, 3px));
+  background-size: 0 1px;
+  box-decoration-break: clone;
+  transition: background-size .35s var(--ease-out-strong);
 }
 
 /* ---------- 滚动 reveal ---------- */
@@ -90,9 +149,11 @@ body {
 .hero-greeting { margin-bottom: 22px; font-size: 14px; color: var(--color-text-secondary); }
 .hero-portrait { position: relative; width: 100%; max-width: 300px; aspect-ratio: 1; justify-self: end; }
 .hero-portrait canvas, .hero-portrait img { display: block; width: 100%; height: 100%; }
-.hero-portrait canvas { position: absolute; inset: 0; pointer-events: none; }
-.hero-portrait img { object-fit: contain; opacity: .35; }
-.hero-portrait[data-ready="true"] img { visibility: hidden; }
+.hero-portrait canvas { position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .5s var(--ease-out-strong); }
+/* 原图只在粒子渲染不可用时兜底：正常路径下先隐藏，避免先看到照片再被粒子替换。 */
+.hero-portrait img { object-fit: contain; opacity: 0; transition: opacity .5s var(--ease-out-strong); }
+.hero-portrait[data-ready="true"] canvas { opacity: 1; }
+.hero-portrait[data-fallback="true"] img { opacity: .35; }
 .hero-fade-in { animation: .8s var(--ease-out-strong) both hero-fade; }
 @keyframes hero-fade { from { opacity: 0; } to { opacity: 1; } }
 .home-section { display: block; padding-block: 44px 52px; }
@@ -113,9 +174,15 @@ body {
 .project-row:focus-visible { outline: 2px solid var(--color-text-primary); outline-offset: 5px; }
 /* 观测卡片：在同样的浅底卡片里加入活跃度、语言构成与规模指标。 */
 .starred-card { gap: 14px; }
-/* 名称与版本各自成行：长仓库名不会把版本标签挤成多行。 */
-.starred-head { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; }
-.starred-head h3 { min-width: 0; }
+/* 名称占满整行、版本标签贴右上角。标题的 min-width: 0 让过长的仓库名换行，而不是把标签挤扁。 */
+.starred-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+/* 标题 17px / 行高 30px，盒子底边在基线下 8.2px；上移 4px 后下划线落在基线下方约 4px，
+   与博客标题（6px / 26px 字号）的比例一致。 */
+.starred-head h3 { --sweep-gap: 4px; min-width: 0; }
+.starred-card:hover .starred-head h3, .starred-card:focus-visible .starred-head h3 { background-size: 100% 1px; }
+/* 标签不参与压缩，并与标题首行（30px）垂直居中：标签盒高 23px（21px 行高 + 上下 1px 边框），
+   行高差的一半就是上边距。 */
+.starred-head .starred-release { flex: 0 0 auto; margin-top: 3.5px; white-space: nowrap; }
 .starred-release { display: inline-flex; align-items: baseline; gap: 5px; padding: 0 9px; border: 1px solid var(--color-border-warm); border-radius: var(--radius-chip); font-size: 11px; line-height: 21px; color: var(--color-text-secondary); }
 .starred-release-pre { color: #a89a7d; }
 .starred-activity { display: grid; gap: 7px; }
@@ -150,15 +217,14 @@ body {
 .obs-repo-name { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 6px; font-family: var(--font-mono-num); font-size: 19px; font-weight: 500; line-height: 1.5; letter-spacing: -.01em; overflow-wrap: anywhere; }
 .obs-owner { color: var(--color-text-secondary); }
 .obs-slash { color: #c6baa3; }
-.obs-open { flex: none; margin-left: auto; display: inline-flex; align-items: center; gap: 2px; padding: 7px 15px; border: 1px solid var(--color-border-warm); border-radius: var(--radius-chip); font-size: 12px; line-height: 22px; color: var(--color-text-secondary); transition: background .3s var(--ease-out-strong), border-color .3s var(--ease-out-strong), color .3s var(--ease-out-strong); }
-.obs-open:hover { background: var(--color-bg-section); border-color: #c6baa3; color: var(--color-text-primary); }
-.obs-open:focus-visible { outline: 2px solid var(--color-text-primary); outline-offset: 3px; }
 .obs-repo-desc { max-width: 78ch; font-size: 14px; line-height: 1.95; }
 .obs-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; font-size: 11px; line-height: 22px; color: var(--color-text-secondary); }
 .obs-tags > span, .obs-tags > a { display: inline-flex; align-items: center; gap: 2px; padding: 0 10px; border: 1px solid var(--color-border-warm); border-radius: var(--radius-chip); }
 .obs-tags > a { transition: color .3s var(--ease-out-strong), border-color .3s var(--ease-out-strong); }
 .obs-tags > a:hover { color: var(--color-text-primary); border-color: #c6baa3; }
 .obs-tags > a:focus-visible { outline: 2px solid var(--color-text-primary); outline-offset: 3px; }
+/* 标签也是 flex 居中，同样折算：-0.589em 等价字符时代的 -0.42em。 */
+.obs-tags .ext-arrow { top: -0.59em; }
 .obs-tags .obs-topic { border-color: transparent; background: var(--color-bg-section); }
 .obs-stats { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); margin: 0; padding: 22px 0 0; border-top: 1px solid var(--color-border-warm); list-style: none; }
 .obs-stats li { display: flex; flex-direction: column; gap: 5px; padding-left: 18px; border-left: 1px solid var(--color-border-warm); }
@@ -294,7 +360,6 @@ body {
   .obs-repo { gap: 16px; padding: 24px 20px; }
   .obs-repo-top { flex-wrap: wrap; gap: 12px; }
   .obs-repo-name { font-size: 17px; }
-  .obs-open { order: 3; flex: 1 1 100%; justify-content: center; margin-left: 0; }
   .obs-repo-desc { font-size: 13px; line-height: 1.9; }
   .obs-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 16px; }
   .obs-stats li:nth-child(n) { padding-left: 0; border-left: 0; }
@@ -340,7 +405,9 @@ body {
 .blog-empty-mark { flex: 0 0 auto; font-size: 52px; line-height: 1; color: #a4ad94; }
 .blog-list { min-width: 0; }
 .blog-row { display: block; padding: 28px 0; border-bottom: 1px solid var(--color-border-warm); transition: background .3s var(--ease-out-strong), transform .8s var(--ease-out-strong), opacity .8s var(--ease-out-strong); }
-.blog-row:hover .blog-title { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 1px; }
+/* 博客标题 26px / 行高 41.6px，盒子底边在基线下 9px；上移 3px 后正好落在原来 text-underline-offset: 6px 的位置。 */
+.blog-title { --sweep-gap: 3px; }
+.blog-row:hover .blog-title, .blog-row:focus-visible .blog-title { background-size: 100% 1px; }
 .blog-archive .blog-row:first-child { padding-top: 0; }
 /* 归档页是细分隔线列表：整行可点，hover 铺一层卡片底色；底色与分隔线各自内缩，文字仍落在同一条左对齐线上。 */
 .blog-archive .blog-row { position: relative; padding: 26px 16px; margin-inline: -16px; border-bottom: 0; border-radius: var(--radius-card); }

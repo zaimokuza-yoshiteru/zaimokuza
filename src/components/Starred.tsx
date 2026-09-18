@@ -1,7 +1,7 @@
 import { profile } from '../data/profile'
 import type { RepoMetricsMap } from '../lib/repoMetrics'
 import type { RepoSnapshot } from '../lib/repoSnapshot'
-import { homeHref, starredHref } from '../lib/navigation'
+import { starredHref } from '../lib/navigation'
 import RepoObservatory from './RepoObservatory'
 import SectionHeader from './SectionHeader'
 
@@ -19,7 +19,6 @@ export default function Starred({ repos, metrics, slug }: {
   const current = slug ? repos.find((repo) => repo.fullName === slug) : repos[0]
   return (
     <section className="site-frame starred-archive">
-      <a className="back-link" href={homeHref()}><span aria-hidden="true">←</span> {profile.nav.home}</a>
       <div className="section-heading">
         <SectionHeader title={copy.title} count={repos.length} level={1} />
       </div>

@@ -9,6 +9,7 @@ import type { RepoMetrics } from '../lib/repoMetrics'
 import type { RepoRelease, RepoSnapshot } from '../lib/repoSnapshot'
 import { ReleaseChip } from './RepoFacts'
 import { ExternalArrow } from './ExternalArrow'
+import { GithubLink } from './GithubLink'
 
 const NUMBER = new Intl.NumberFormat('en-US')
 /** 星期轴只给奇数行标签，与 GitHub 的稀疏排布一致。 */
@@ -179,10 +180,7 @@ export default function RepoObservatory({ repo, description, metrics }: {
             </h2>
             {repo.release && <ReleaseChip release={repo.release} />}
           </div>
-          <a className="obs-open" href={repo.url} target="_blank" rel="noopener noreferrer">
-            {copy.openLabel}
-            <ExternalArrow />
-          </a>
+          <span className="ml-auto"><GithubLink href={repo.url} /></span>
         </div>
         <p className="obs-repo-desc">{description}</p>
         <div className="obs-tags font-mono-num">
