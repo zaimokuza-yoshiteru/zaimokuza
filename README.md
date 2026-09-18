@@ -17,6 +17,7 @@ npm run build      # tsc --noEmit + production build
 npm run preview    # preview the production build
 node scripts/fetch-github.mjs   # refresh src/data/projects.json from GitHub (needs gh CLI)
 node scripts/fetch-github-starred.mjs   # refresh src/data/starred.json (needs gh CLI)
+npm run test:starred   # check the observatory snapshot against its runtime schema
 ```
 
 ## Content
@@ -33,9 +34,10 @@ The observatory opens on a repository hero card (avatar, `owner / name`, release
 
 The remaining five panels read the rhythm of a repository. **提交节律** plots a weekday × hour heatmap from GitHub's punch card, with the quietest six-hour window shaded behind the cells, and **节律读数** turns the same sample into five plain readings — the busiest cell, the quiet hours and their share, weekend share, weekday working-hours share, and the sample size. **贡献者** ranks contributors by commits with a share bar, marking how many people it takes to reach half the commits and what share the top three hold. **发布节奏** pairs a tick strip spread over the release timeline with the newest versions and their intervals, and **最近提交** lists the newest commits with short-sha links. Because GitHub caps its punch-card statistic at the most recent 20,000 commits, 提交节律 and 节律读数 label their sample as UTC and can report fewer commits than 贡献日历 does.
 
-Cards on 开源作品 carry a commit-activity sparkline, a language composition bar, cumulative commits, contributors, forks, open issues and the latest release; 最后推送 and the 最近提交 list appear in the observatory only. The data has two layers:
+Cards on 开源作品 carry a commit-activity sparkline, a language composition bar, cumulative commits, contributors, forks, open issues and the latest release; 最后推送 and the 最近提交 list appear in the observatory only. The data has three layers:
 
 - **Build-time snapshot** — `scripts/fetch-github.mjs` reads the pinned repositories via GraphQL and `scripts/fetch-github-starred.mjs` walks the curated `WATCHED` list; both enrich each repository through `scripts/lib/repo-metrics.mjs` and write `src/data/projects.json` / `src/data/starred.json`. Regenerating either needs an authenticated `gh` CLI and is a deliberate, reviewable change.
+- **Scheduled snapshot refresh** — `.github/workflows/refresh-starred.yml` re-collects `src/data/starred.json` every 12 hours, validates it with the same schema the browser uses, and commits it only if it changed. The observatory then reads that file at runtime, so a repository's numbers stay current without a redeploy; 开源作品 stays on its bundled snapshot, which is small and renders instantly. The workflow authenticates with the ephemeral `GITHUB_TOKEN` that Actions mints per run, so no token, key or backend is stored anywhere.
 - **Browser-side refresh** — `src/lib/repoMetrics.ts` re-reads only the volatile counters (stars, forks, open issues) from the public API, seeded from the snapshot, so the page is correct even before a snapshot refresh. It caches for 15 minutes, caps itself at 12 repositories to stay inside the anonymous 60 req/hr quota, and silently keeps the bundled values on any failure. `App.tsx` scopes the hook to the page on screen, so a visit only refreshes what it can actually display.
 
 No token or backend is required, and none is embedded. Run `npm run test:metrics` to verify caching, staleness, partial and total failure, and the request cap, plus the observatory's pure calculations (`src/lib/repoActivity.ts`) — calendar alignment, streaks, the half-over-half trend, heat levels, the quiet-hour window, release intervals, contributor shares, and byte and number formatting.
@@ -47,6 +49,8 @@ Because 开源作品 follows the pinned list, changing what appears there means 
 ## Deploy
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds and publishes `dist` to GitHub Pages. The site is served from the `/zaimokuza/` sub-path, so Vite sets `base` accordingly for builds — reference static assets through `import.meta.env.BASE_URL`, never with a leading `/`.
+
+`.github/workflows/refresh-starred.yml` runs on its own 12-hour schedule and never deploys. GitHub does not trigger workflows from a push made with `GITHUB_TOKEN`, so this job cannot start a deploy even indirectly — and it does not need to, because the observatory fetches `starred.json` from `raw.githubusercontent.com` in the browser. That keeps the whole refresh free of stored credentials and independent of the deploy pipeline.
 
 ## License
 

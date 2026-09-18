@@ -8,6 +8,7 @@
     "test:metrics": "node --test scripts/test-repo-metrics.mjs scripts/test-repo-activity.mjs",
     "test:blog": "node --test scripts/test-blog.mjs",
     "test:particles": "node --test scripts/test-particles.mjs",
+    "test:starred": "node --test scripts/test-starred-source.mjs",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview"
   },

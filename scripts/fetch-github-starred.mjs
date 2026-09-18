@@ -27,13 +27,15 @@ const starredNames = new Set(
 const starred = []
 for (const fullName of WATCHED) {
   if (!starredNames.has(fullName)) {
+    // 已取消星标是正常情况：跳过它，其余照常展示。
     console.warn(`skipped ${fullName}: not in starred list`)
     continue
   }
   const repo = collectRepo(fullName)
   if (!repo) {
-    console.warn(`skipped ${fullName}: repository unavailable`)
-    continue
+    // 这里必须中断而不是跳过。本脚本由 refresh-starred.yml 定时无人值守运行，
+    // 一次接口抖动若只是打条警告，就会把该仓库从快照里删掉并提交上去。
+    throw new Error(`failed to collect ${fullName}`)
   }
   starred.push(repo)
 }
