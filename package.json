@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "test:stars": "node --test scripts/test-github-stars.mjs",
+    "test:metrics": "node --test scripts/test-repo-metrics.mjs scripts/test-repo-activity.mjs",
     "test:blog": "node --test scripts/test-blog.mjs",
     "test:particles": "node --test scripts/test-particles.mjs",
     "build": "tsc --noEmit && vite build",

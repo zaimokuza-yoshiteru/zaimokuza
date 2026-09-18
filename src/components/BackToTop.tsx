@@ -41,7 +41,7 @@ export default function BackToTop({ label, focusTargetId }: BackToTopProps) {
     tabIndex={visible ? 0 : -1}
     disabled={!visible}
     onClick={backToTop}
-    className={`fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-[max(1.25rem,env(safe-area-inset-right))] z-40 flex h-12 w-12 items-center justify-center rounded-full border border-border-warm bg-bg-card text-text-primary shadow-[0_4px_20px_rgba(31,35,41,0.08)] transition-[opacity,transform,background-color,color,visibility] duration-300 ease-out-strong hover:-translate-y-1 hover:bg-text-primary hover:text-bg-card focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-text-primary motion-reduce:transform-none motion-reduce:transition-none ${visible ? 'visible translate-y-0 opacity-100' : 'invisible translate-y-2 opacity-0 pointer-events-none'}`}
+    className={`fixed bottom-[max(1.25rem,env(safe-area-inset-bottom))] right-[max(1.25rem,env(safe-area-inset-right))] z-40 flex h-12 w-12 items-center justify-center rounded-chip border border-border-warm bg-bg-card text-text-primary shadow-[0_4px_20px_rgba(31,35,41,0.08)] transition-[opacity,transform,background-color,color,visibility] duration-300 ease-out-strong hover:-translate-y-1 hover:bg-text-primary hover:text-bg-card focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-text-primary motion-reduce:transform-none motion-reduce:transition-none ${visible ? 'visible translate-y-0 opacity-100' : 'invisible translate-y-2 opacity-0 pointer-events-none'}`}
   >
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
       <path d="M12 19V5m-6 6 6-6 6 6" />
