@@ -26,13 +26,16 @@ function percent(bytes: number, total: number) {
   return Number(((bytes / total) * 100).toFixed(1))
 }
 
-/** 最新版本标签，卡片和观测详情共用。 */
-export function ReleaseChip({ release }: { release: NonNullable<RepoSnapshot['release']> }) {
+/** 最新版本标签，卡片和观测详情共用；首页卡片只给版本号，不缀预览标记。 */
+export function ReleaseChip({ release, showPrerelease = true }: {
+  release: NonNullable<RepoSnapshot['release']>
+  showPrerelease?: boolean
+}) {
   const copy = profile.repoUI
   return (
     <span className="starred-release font-mono-num" aria-label={`${copy.releaseLabel} ${release.tag}`}>
       {release.tag}
-      {release.prerelease && <span className="starred-release-pre">{copy.prereleaseLabel}</span>}
+      {showPrerelease && release.prerelease && <span className="starred-release-pre">{copy.prereleaseLabel}</span>}
     </span>
   )
 }

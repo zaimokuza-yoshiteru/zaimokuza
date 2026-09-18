@@ -22,8 +22,8 @@ export default function RepoCard({ repo, title, description, metrics, delayMs }:
       style={{ transitionDelay: `${delayMs}ms` }}
     >
       <div className="starred-head">
-        <h3 className="sweep-underline break-words font-mono-num text-[17px] font-medium leading-[30px] tracking-tight">{title}</h3>
-        {repo.release && <ReleaseChip release={repo.release} />}
+        <h3 className="sweep-underline break-words font-mono-num text-[16px] font-medium leading-[1.7] tracking-tight">{title}</h3>
+        {repo.release && <ReleaseChip release={repo.release} showPrerelease={false} />}
       </div>
       <RepoFacts repo={repo} description={description} metrics={metrics} />
     </a>
