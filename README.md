@@ -10,14 +10,18 @@ React 18 · TypeScript · Vite 6 · Tailwind CSS v4
 
 ## Develop
 
+Use Node.js 24.12+ (Node 24 LTS in CI). Data collectors and their tests run directly as TypeScript; `npm run typecheck` checks both the app and scripts with strict settings.
+
 ```bash
 npm install
 npm run dev        # dev server
 npm run build      # tsc --noEmit + production build
 npm run preview    # preview the production build
-node scripts/fetch-github.mjs   # refresh src/data/projects.json from GitHub (needs gh CLI)
-node scripts/fetch-github-starred.mjs   # refresh src/data/starred.json (needs gh CLI)
-npm run test:starred   # check the observatory snapshot against its runtime schema
+node scripts/fetch-github.ts   # refresh src/data/projects.json from GitHub (needs gh CLI)
+node scripts/fetch-github-starred.ts   # refresh src/data/starred.json (needs gh CLI)
+npm run sync:repos     # collect and validate both snapshots before writing either
+npm run test:snapshots # validate both snapshots, collectors and sync failure handling
+npm run typecheck      # strict app + script TypeScript checks
 ```
 
 ## Content
@@ -36,15 +40,15 @@ The remaining five panels read the rhythm of a repository. **提交节律** plot
 
 Cards on 开源作品 carry a commit-activity sparkline, a language composition bar, cumulative commits, contributors, forks, open issues and the latest release; 最后推送 and the 最近提交 list appear in the observatory only. The data has three layers:
 
-- **Build-time snapshot** — `scripts/fetch-github.mjs` reads the pinned repositories via GraphQL and `scripts/fetch-github-starred.mjs` walks the curated `WATCHED` list; both enrich each repository through `scripts/lib/repo-metrics.mjs` and write `src/data/projects.json` / `src/data/starred.json`. Regenerating either needs an authenticated `gh` CLI and is a deliberate, reviewable change.
-- **Scheduled snapshot refresh** — `.github/workflows/refresh-starred.yml` re-collects `src/data/starred.json` every 12 hours, validates it with the same schema the browser uses, and commits it only if it changed. The observatory then reads that file at runtime, so a repository's numbers stay current without a redeploy; 开源作品 stays on its bundled snapshot, which is small and renders instantly. The workflow authenticates with the ephemeral `GITHUB_TOKEN` that Actions mints per run, so no token, key or backend is stored anywhere.
-- **Browser-side refresh** — `src/lib/repoMetrics.ts` re-reads only the volatile counters (stars, forks, open issues) from the public API, seeded from the snapshot, so the page is correct even before a snapshot refresh. It caches for 15 minutes, caps itself at 12 repositories to stay inside the anonymous 60 req/hr quota, and silently keeps the bundled values on any failure. `App.tsx` scopes the hook to the page on screen, so a visit only refreshes what it can actually display.
+- **Build-time snapshot** — `scripts/fetch-github.ts` reads the pinned repositories via GraphQL and `scripts/fetch-github-starred.ts` walks the curated `WATCHED` list; both enrich each repository through `scripts/lib/repo-metrics.ts` and write `src/data/projects.json` / `src/data/starred.json`. Regenerating either needs an authenticated `gh` CLI and is a deliberate, reviewable change. Ordinary API failures abort collection before replacing the file; unavailable statistics retain the same repository's previous activity and punch-card samples with a warning. Successful empty responses still clear those samples. CLI calls have a 30-second timeout, and complete snapshots replace the file atomically.
+- **Scheduled snapshot refresh** — `.github/workflows/refresh-starred.yml` runs `npm run sync:repos` every 12 hours. It collects and validates both `projects.json` and `starred.json` before writing either, then commits them together only when changed. Home and the observatory use `useRepoSnapshots` and the shared `repoSource.ts` validator to load their own updated snapshot at runtime; languages, activity curves, versions and repository order can therefore update without another deployment. Collection failure leaves both old files intact; browser failures retain the bundled or last loaded snapshot. The workflow uses the ephemeral `GITHUB_TOKEN`, with no stored token or backend.
+- **Browser-side refresh** — `src/lib/repoMetrics.ts` re-reads only the volatile counters (stars, forks, open issues) from the public API, seeded from the snapshot. Each repository has its own 15-minute cache timestamp; moving between home and the observatory retains both sets of entries and fetches only missing or expired ones. Failed entries keep their old values and timestamps. Each refresh considers at most 12 distinct repositories and stops on a 403/429 response to avoid wasting the anonymous API quota. `App.tsx` scopes the hook to the page on screen, so a visit only refreshes what it can actually display.
 
 No token or backend is required, and none is embedded. Run `npm run test:metrics` to verify caching, staleness, partial and total failure, and the request cap, plus the observatory's pure calculations (`src/lib/repoActivity.ts`) — calendar alignment, streaks, the half-over-half trend, heat levels, the quiet-hour window, release intervals, contributor shares, and byte and number formatting.
 
 The sparkline covers only the weeks since a repository was created, so a young project does not draw a long dead tail, and the observatory's heatmap caps its cells at 25px for the same reason — a young repository shows a short calendar rather than one enormous square. Its box is always reserved, so a repository whose entire life fits a single weekly bucket still shows its activity caption on the same line as its neighbours. The language bar uses one ink at decreasing opacity instead of per-language colors, and percentages are measured against the total bytes of all languages, so the segments intentionally do not fill the bar. The refresh happens on page load, not continuous polling; requests time out after 12 seconds, and offline, rate-limited, or invalid responses retain the previous counts.
 
-Because 开源作品 follows the pinned list, changing what appears there means pinning or unpinning a repository on GitHub and regenerating `projects.json`. Chinese descriptions stay in `profile.projects`, so an already-described repository keeps its copy if it is re-pinned.
+Because 开源作品 follows the pinned list, changing what appears there means pinning or unpinning a repository on GitHub and waiting for the next sync (or dispatching the workflow manually). Empty snapshots are rejected to protect against accidental clearing; intentionally removing all entries needs a corresponding policy change. Chinese descriptions stay in `profile.projects`, so an already-described repository keeps its copy if it is re-pinned.
 
 ## Deploy
 
@@ -52,7 +56,7 @@ Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds and publ
 
 The self-hosted fonts are the one exception. They sit in `public/fonts/` instead of `src/assets/` because Vite hashes CSS-referenced assets, and a hashed filename can never be written into a `<link rel="preload">`. A stable path lets `index.html` preload all three faces with `%BASE_URL%`, and Vite rewrites the `@font-face` `url('/fonts/…')` with `base` at build time. The preloads are what stop the hero name and the GitHub links from painting in a fallback face before their fonts arrive; Allura and Kalam therefore also use `font-display: block`, while Geist Mono keeps `swap`.
 
-`.github/workflows/refresh-starred.yml` runs on its own 12-hour schedule and never deploys. GitHub does not trigger workflows from a push made with `GITHUB_TOKEN`, so this job cannot start a deploy even indirectly — and it does not need to, because the observatory fetches `starred.json` from `raw.githubusercontent.com` in the browser. That keeps the whole refresh free of stored credentials and independent of the deploy pipeline.
+`.github/workflows/refresh-starred.yml` runs on its own 12-hour schedule and never deploys. GitHub does not trigger workflows from a push made with `GITHUB_TOKEN`, so this job cannot start a deploy even indirectly — and it does not need to, because home fetches `projects.json` and the observatory fetches `starred.json` from `raw.githubusercontent.com` in the browser. The first deployment of this code enables home-page refresh; subsequent data-only updates need no deployment. That keeps the whole refresh free of stored credentials and independent of the deploy pipeline.
 
 ## License
 

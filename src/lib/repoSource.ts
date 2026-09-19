@@ -1,14 +1,11 @@
-import type { RepoSnapshot } from './repoSnapshot'
+import type { RepoSnapshot } from './repoSnapshot.ts'
 
-/**
- * 观测数据的规范地址。由 .github/workflows/refresh-starred.yml 每 12 小时刷新并提交，
- * 访客浏览器读到的因此比构建快照新；读取失败时静默退回构建快照。
- *
- * 指向 raw.githubusercontent.com 而不是本站路径：本站的文件只随部署更新，
- * 而这里要的正是「不重新部署也能拿到新数据」。
- */
-export const STARRED_REMOTE_URL =
-  'https://raw.githubusercontent.com/zaimokuza-yoshiteru/zaimokuza/main/src/data/starred.json'
+/** 首页与观测共用快照协议；定时同步直接更新 main 上的 JSON，无需再次部署。 */
+export type RepoSource = 'projects' | 'starred'
+export const REPO_REMOTE_URLS: Record<RepoSource, string> = {
+  projects: 'https://raw.githubusercontent.com/zaimokuza-yoshiteru/zaimokuza/main/src/data/projects.json',
+  starred: 'https://raw.githubusercontent.com/zaimokuza-yoshiteru/zaimokuza/main/src/data/starred.json',
+}
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value)
@@ -85,7 +82,7 @@ function isRepoSnapshot(value: unknown): value is RepoSnapshot {
 }
 
 /** 远端数据必须是非空数组且每一项都通过校验，否则返回 null 交由调用方保留快照。 */
-export function parseStarredSnapshot(payload: unknown): RepoSnapshot[] | null {
+export function parseRepoSnapshots(payload: unknown): RepoSnapshot[] | null {
   if (!Array.isArray(payload) || payload.length === 0) return null
   return payload.every(isRepoSnapshot) ? (payload as RepoSnapshot[]) : null
 }
@@ -94,11 +91,11 @@ export function parseStarredSnapshot(payload: unknown): RepoSnapshot[] | null {
  * 拉取最新快照。网络错误、被墙、超时、非 200、格式不符都返回 null，
  * 因此调用方不需要区分失败原因，一律保留构建快照即可。
  */
-export async function fetchStarredSnapshot(signal: AbortSignal): Promise<RepoSnapshot[] | null> {
+export async function fetchRepoSnapshots(source: RepoSource, signal: AbortSignal): Promise<RepoSnapshot[] | null> {
   try {
-    const response = await fetch(STARRED_REMOTE_URL, { signal, credentials: 'omit' })
+    const response = await fetch(REPO_REMOTE_URLS[source], { signal, credentials: 'omit' })
     if (!response.ok) return null
-    return parseStarredSnapshot(await response.json())
+    return parseRepoSnapshots(await response.json())
   } catch {
     return null
   }

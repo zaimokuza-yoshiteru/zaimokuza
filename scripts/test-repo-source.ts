@@ -1,20 +1,18 @@
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
 import { afterEach, beforeEach, test } from 'node:test'
-import { transformWithEsbuild } from 'vite'
 
-const source = await readFile(new URL('../src/lib/starredSource.ts', import.meta.url), 'utf8')
-const { code } = await transformWithEsbuild(source, 'starredSource.ts', { loader: 'ts' })
-const { STARRED_REMOTE_URL, fetchStarredSnapshot, parseStarredSnapshot } =
-  await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`)
+import { REPO_REMOTE_URLS, fetchRepoSnapshots, parseRepoSnapshots } from '../src/lib/repoSource.ts'
+import type { RepoSnapshot } from '../src/lib/repoSnapshot.ts'
 
-const real = JSON.parse(await readFile(new URL('../src/data/starred.json', import.meta.url), 'utf8'))
+const real: RepoSnapshot[] = JSON.parse(await readFile(new URL('../src/data/starred.json', import.meta.url), 'utf8'))
+const projects: RepoSnapshot[] = JSON.parse(await readFile(new URL('../src/data/projects.json', import.meta.url), 'utf8'))
 const originalFetch = globalThis.fetch
-let calls
-let respond
+let calls: { url: Parameters<typeof fetch>[0]; options?: RequestInit }[]
+let respond: () => Promise<Response>
 
 /** 取真实数据的一条作样板，改一个字段就能精确地只破坏那一处。 */
-const sample = (overrides = {}) => ({ ...real[0], ...overrides })
+const sample = (overrides: Record<string, unknown> = {}) => ({ ...real[0], ...overrides })
 
 beforeEach(() => {
   calls = []
@@ -32,28 +30,36 @@ afterEach(() => {
 test('提交在仓库里的真实快照必须通过校验', () => {
   // 这条是防呆的关键：校验器写得过严会让远端数据永远被丢弃，
   // 而且失败是静默的（只是数据不变新），所以必须用真实数据把边界钉住。
-  const parsed = parseStarredSnapshot(real)
-  assert.notEqual(parsed, null)
+  const parsed = parseRepoSnapshots(real)
+  assert.ok(parsed)
   assert.equal(parsed.length, real.length)
+  assert.equal(parseRepoSnapshots(projects)?.length, projects.length)
 })
 
 test('activity 允许为空数组：建站不足一周的仓库本来就没有整周数据', () => {
-  assert.ok(real.some((repo) => repo.activity.length === 0), '样例数据里应有一个 activity 为空的仓库')
-  assert.notEqual(parseStarredSnapshot([sample({ activity: [] })]), null)
+  assert.notEqual(parseRepoSnapshots([sample({ activity: [] })]), null)
+})
+
+test('所有仓库都有活动数据时仍可同步，不依赖真实快照恰好覆盖某个边界', () => {
+  const populated = real.map((repo) => ({
+    ...repo,
+    activity: [{ week: 1786233600, total: 3, days: [0, 1, 2, 0, 0, 0, 0] }],
+  }))
+  assert.equal(parseRepoSnapshots(populated)?.length, real.length)
 })
 
 test('可选样本为 null 时仍然合法', () => {
-  const parsed = parseStarredSnapshot([sample({
+  const parsed = parseRepoSnapshots([sample({
     release: null, punchCard: null, releases: null, contributorList: null, commitList: null,
   })])
-  assert.notEqual(parsed, null)
+  assert.ok(parsed)
 })
 
 test('非数组、空数组与非法条目一律作废', () => {
-  assert.equal(parseStarredSnapshot(null), null)
-  assert.equal(parseStarredSnapshot({}), null)
-  assert.equal(parseStarredSnapshot([]), null)
-  assert.equal(parseStarredSnapshot([real[0], null]), null)
+  assert.equal(parseRepoSnapshots(null), null)
+  assert.equal(parseRepoSnapshots({}), null)
+  assert.equal(parseRepoSnapshots([]), null)
+  assert.equal(parseRepoSnapshots([real[0], null]), null)
 })
 
 test('顶层字段缺失或类型不符时作废', () => {
@@ -69,7 +75,7 @@ test('顶层字段缺失或类型不符时作废', () => {
     'pushedAt 变成数字': sample({ pushedAt: 0 }),
   }
   for (const [label, value] of Object.entries(broken)) {
-    assert.equal(parseStarredSnapshot([value]), null, label)
+    assert.equal(parseRepoSnapshots([value]), null, label)
   }
 })
 
@@ -86,30 +92,31 @@ test('嵌套结构不合格时作废，避免渲染出 NaN', () => {
     'punchCard 混入 null': sample({ punchCard: [1, null] }),
   }
   for (const [label, value] of Object.entries(broken)) {
-    assert.equal(parseStarredSnapshot([value]), null, label)
+    assert.equal(parseRepoSnapshots([value]), null, label)
   }
 })
 
 test('成功时按规范地址取数据，且不携带凭据', async () => {
-  const parsed = await fetchStarredSnapshot(new AbortController().signal)
+  const parsed = await fetchRepoSnapshots('starred', new AbortController().signal)
+  assert.ok(parsed)
   assert.equal(calls.length, 1)
-  assert.equal(calls[0].url, STARRED_REMOTE_URL)
-  assert.equal(calls[0].options.credentials, 'omit')
+  assert.equal(calls[0].url, REPO_REMOTE_URLS.starred)
+  assert.equal(calls[0].options!.credentials, 'omit')
   assert.equal(parsed.length, real.length)
 })
 
 test('非 200、网络错误与格式不符都返回 null，交由调用方保留快照', async () => {
   respond = async () => new Response('nope', { status: 404 })
-  assert.equal(await fetchStarredSnapshot(new AbortController().signal), null)
+  assert.equal(await fetchRepoSnapshots('starred', new AbortController().signal), null)
 
   respond = async () => { throw new TypeError('fetch failed') }
-  assert.equal(await fetchStarredSnapshot(new AbortController().signal), null)
+  assert.equal(await fetchRepoSnapshots('starred', new AbortController().signal), null)
 
   respond = async () => new Response('<html>rate limited</html>', { status: 200 })
-  assert.equal(await fetchStarredSnapshot(new AbortController().signal), null)
+  assert.equal(await fetchRepoSnapshots('starred', new AbortController().signal), null)
 
   respond = async () => Response.json([])
-  assert.equal(await fetchStarredSnapshot(new AbortController().signal), null)
+  assert.equal(await fetchRepoSnapshots('starred', new AbortController().signal), null)
 })
 
 test('超时中止同样返回 null，不会抛出', async () => {
@@ -118,5 +125,24 @@ test('超时中止同样返回 null，不会抛出', async () => {
     controller.abort()
     throw new DOMException('aborted', 'AbortError')
   }
-  assert.equal(await fetchStarredSnapshot(controller.signal), null)
+  assert.equal(await fetchRepoSnapshots('starred', controller.signal), null)
+})
+
+test('首页从 projects 地址读取完整新快照，保留远端置顶顺序', async () => {
+  const latest = [...projects].reverse().map((repo) => ({
+    ...repo, languages: [{ name: 'Rust', bytes: 42 }], languageTotal: 42,
+    release: { tag: 'v9.0.0', publishedAt: null, prerelease: false },
+    activity: [{ week: 1786233600, total: 1, days: [1, 0, 0, 0, 0, 0, 0] }],
+  }))
+  respond = async () => Response.json(latest)
+  assert.deepEqual(await fetchRepoSnapshots('projects', new AbortController().signal), latest)
+  assert.equal(calls[0].url, REPO_REMOTE_URLS.projects)
+  assert.equal(calls[0].options?.credentials, 'omit')
+})
+
+test('首页读取失败或返回非法数据时保留已有快照', async () => {
+  respond = async () => { throw new TypeError('offline') }
+  assert.equal(await fetchRepoSnapshots('projects', new AbortController().signal), null)
+  respond = async () => Response.json([{ ...projects[0], languages: null }])
+  assert.equal(await fetchRepoSnapshots('projects', new AbortController().signal), null)
 })

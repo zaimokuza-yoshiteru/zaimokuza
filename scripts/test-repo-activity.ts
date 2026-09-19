@@ -1,21 +1,17 @@
 import assert from 'node:assert/strict'
-import { readFile } from 'node:fs/promises'
 import { test } from 'node:test'
-import { transformWithEsbuild } from 'vite'
 
-const source = await readFile(new URL('../src/lib/repoActivity.ts', import.meta.url), 'utf8')
-const { code } = await transformWithEsbuild(source, 'repoActivity.ts', { loader: 'ts' })
-const {
+import {
   activityStats, movingAverage, monthLabels, formatBytes, formatSize, daysSince,
   alignWeeks, contributorShare, formatCompact, formatInterval, formatShare,
   medianReleaseInterval, quietWindow, relativeTime, releaseTitle, rhythmStats,
-} = await import(`data:text/javascript;base64,${Buffer.from(code).toString('base64')}`)
+} from '../src/lib/repoActivity.ts'
 
 const WEEK = 604_800
 // 2026-01-04 是周日，正好是 GitHub 周窗口的起点。
 const base = Date.UTC(2026, 0, 4) / 1000
-const week = (offset, days) => ({ week: base + offset * WEEK, total: days.reduce((sum, n) => sum + n, 0), days })
-const dates = (stats) => stats.days.map((day) => day.date)
+const week = (offset: number, days: number[]) => ({ week: base + offset * WEEK, total: days.reduce((sum, n) => sum + n, 0), days })
+const dates = (stats: ReturnType<typeof activityStats>) => stats.days.map((day) => day.date)
 
 test('逐周展开成逐日，并统计总量、活跃天数与最忙的一天', () => {
   const stats = activityStats([
@@ -121,8 +117,8 @@ test('补空列让最新一周贴住右边缘，统计口径不受影响', () =>
 })
 
 // 下标是 星期 * 24 + 小时，星期 0 为周日。
-const cell = (weekday, hour) => weekday * 24 + hour
-const card = (entries) => {
+const cell = (weekday: number, hour: number) => weekday * 24 + hour
+const card = (entries: [number, number, number][]) => {
   const cells = new Array(168).fill(0)
   for (const [weekday, hour, count] of entries) cells[cell(weekday, hour)] = count
   return cells
@@ -157,7 +153,7 @@ test('最安静的窗口取连续六小时里提交最少的一段', () => {
 })
 
 test('中位间隔取相邻发布的中间值，发布不足两次时为 null', () => {
-  const at = (day) => ({ publishedAt: new Date(Date.UTC(2026, 0, 1 + day)).toISOString() })
+  const at = (day: number) => ({ publishedAt: new Date(Date.UTC(2026, 0, 1 + day)).toISOString() })
   // 间隔 1、2 天，偶数个取中间两个的平均。
   assert.equal(medianReleaseInterval([at(0), at(1), at(3)]), 1.5)
   // 间隔 2、2、6 天，奇数个取中间值。
@@ -182,7 +178,7 @@ test('攒够一半提交需要的人数与前三人占比', () => {
 
 test('相对时间与万位缩写', () => {
   const now = Date.UTC(2026, 5, 15, 12)
-  const ago = (ms) => new Date(now - ms).toISOString()
+  const ago = (ms: number) => new Date(now - ms).toISOString()
   assert.equal(relativeTime(ago(30_000), now), '刚刚')
   assert.equal(relativeTime(ago(5 * 60_000), now), '5 分钟前')
   assert.equal(relativeTime(ago(2 * 3_600_000), now), '2 小时前')

@@ -5,12 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "test:metrics": "node --test scripts/test-repo-metrics.mjs scripts/test-repo-activity.mjs",
+    "test:metrics": "node --test scripts/test-repo-metrics.ts scripts/test-repo-activity.ts",
     "test:blog": "node --test scripts/test-blog.mjs",
     "test:particles": "node --test scripts/test-particles.mjs",
-    "test:starred": "node --test scripts/test-starred-source.mjs",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "test:starred": "npm run test:snapshots",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.scripts.json",
+    "sync:repos": "node scripts/refresh-repos.ts",
+    "test:snapshots": "node --test scripts/test-repo-source.ts scripts/test-repo-collector.ts scripts/test-refresh-repos.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
@@ -21,10 +24,14 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@types/node": "^24.13.5",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^4.3.4",
     "typescript": "^7.0.2",
     "vite": "^6.0.7"
+  },
+  "engines": {
+    "node": ">=24.12.0"
   }
 }

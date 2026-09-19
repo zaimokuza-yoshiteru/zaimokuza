@@ -1,4 +1,4 @@
-import type { ActivityWeek } from './repoActivity'
+import type { ActivityWeek } from './repoActivity.ts'
 
 /** 观测「06 贡献者」用的样本：按提交数降序的前 100 名。 */
 interface RepoContributor {
@@ -25,7 +25,7 @@ interface RepoCommit {
 }
 
 /**
- * 构建时由 scripts/lib/repo-metrics.mjs 采集的仓库快照字段。
+ * 构建时由 scripts/lib/repo-metrics.ts 采集的仓库快照字段。
  * projects.json（开源作品）与 starred.json（观测）结构一致，因此共用这一个类型。
  */
 export interface RepoSnapshot {

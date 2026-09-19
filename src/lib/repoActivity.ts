@@ -1,6 +1,6 @@
 /**
  * 提交活动的纯计算：由构建时采集的逐周数据推导日历、连续天数与趋势。
- * 单独成文件是为了让 scripts/test-repo-metrics.mjs 能直接跑这些公式。
+ * 单独成文件是为了让 scripts/test-repo-activity.ts 能直接跑这些公式。
  */
 
 /** 一周的提交活动。`week` 是该周周日的 Unix 秒，`days` 按周日 → 周六排列。 */

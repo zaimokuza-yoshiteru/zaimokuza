@@ -1,6 +1,6 @@
-name: Refresh starred snapshot
+name: Refresh repository snapshots
 
-# 观测数据由访客浏览器在打开观测页时直接读取本仓库的 src/data/starred.json，
+# 首页与观测页按需读取本仓库的 projects.json 与 starred.json，
 # 因此这里只需要刷新并提交文件，不需要重新构建或部署。
 # 注意：GITHUB_TOKEN 的推送不会触发其它 workflow，这是刻意的——
 # 站点读的是这个文件本身，不依赖部署产物。
@@ -21,38 +21,43 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
 
       - run: npm ci
+      - run: npm run typecheck
 
       # 采集脚本本身只用 node 内置模块与 runner 预装的 gh；
       # 这里装依赖是为了下一步能用上真正的校验器。
       # GITHUB_TOKEN 由平台现场签发，只用于本次运行，不会写进仓库或站点。
-      - name: Fetch snapshot
+      - name: Fetch both snapshots
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: node scripts/fetch-github-starred.mjs
+        run: npm run sync:repos
 
       # 用与站点完全相同的校验器过一遍新快照，再决定是否提交。
-      # 采集部分失败时脚本会跳过个别仓库；万一写出空数组或字段缺失，
-      # 校验会失败，于是不提交，上一份好快照留在原地。
-      - name: Validate snapshot
-        run: npm run test:starred
+      # 普通接口失败会中止采集；统计接口暂不可用时沿用上一份样本。
+      # 再用运行时校验器把关，避免发布格式不符的数据。
+      - name: Validate both snapshots
+        run: npm run test:snapshots
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- src/data/starred.json; then
-            echo 'snapshot unchanged, nothing to commit'
+          if git diff --quiet -- src/data/projects.json src/data/starred.json; then
+            echo 'snapshots unchanged, nothing to commit'
             exit 0
           fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add src/data/starred.json
-          git commit -m 'Refresh starred snapshot'
-          git push
+          git add src/data/projects.json src/data/starred.json
+          git commit -m 'Refresh repository snapshots'
+          # 若采集期间 main 已更新，普通推送会安全失败；不能强推覆盖其他提交。
+          git push origin HEAD:main

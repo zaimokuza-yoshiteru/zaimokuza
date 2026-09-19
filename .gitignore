@@ -2,3 +2,14 @@ node_modules/
 dist/
 .DS_Store
 .idea/
+
+# 本地简历产物与研究缓存，避免误提交个人信息和临时签名链接。
+/output/
+/tmp/
+
+# 环境配置可能包含凭据；仅允许提交明确的示例文件。
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template

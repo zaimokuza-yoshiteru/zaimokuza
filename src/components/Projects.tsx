@@ -1,20 +1,20 @@
-import projects from '../data/projects.json'
+import type { RepoSnapshot } from '../lib/repoSnapshot'
 import { profile } from '../data/profile'
 import type { RepoMetricsMap } from '../lib/repoMetrics'
 import RepoCard from './RepoCard'
 import SectionHeader from './SectionHeader'
 
-/** 开源作品集：置顶仓库列表来自 scripts/fetch-github.mjs 生成的 projects.json */
-export default function Projects({ metrics }: { metrics: RepoMetricsMap }) {
+/** 开源作品集：置顶仓库列表来自 scripts/fetch-github.ts 生成的 projects.json */
+export default function Projects({ repos, metrics }: { repos: RepoSnapshot[]; metrics: RepoMetricsMap }) {
   const copy = profile.projects
   return (
     <section className="site-frame home-section home-projects">
       <div id="projects" className="section-heading scroll-mt-[var(--nav-h)]">
-        <SectionHeader title={copy.title} count={projects.length} />
+        <SectionHeader title={copy.title} count={repos.length} />
       </div>
       <div className="section-content">
         <div id="project-list" className="project-list">
-          {projects.map((repo, i) => (
+          {repos.map((repo, i) => (
             <RepoCard
               key={repo.fullName}
               repo={repo}
