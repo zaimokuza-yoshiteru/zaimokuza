@@ -1652,33 +1652,33 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 1,
-    "commits": 18,
-    "sizeKb": 1002,
+    "commits": 21,
+    "sizeKb": 1033,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-09-18T09:05:32Z",
+    "pushedAt": "2026-09-19T00:07:04Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 116599
+        "bytes": 166736
       },
       {
         "name": "CSS",
-        "bytes": 39459
-      },
-      {
-        "name": "JavaScript",
-        "bytes": 38373
+        "bytes": 39477
       },
       {
         "name": "Python",
         "bytes": 10680
       },
       {
+        "name": "JavaScript",
+        "bytes": 6936
+      },
+      {
         "name": "HTML",
         "bytes": 1244
       }
     ],
-    "languageTotal": 206355,
+    "languageTotal": 225073,
     "release": null,
     "releaseCount": 0,
     "releases": null,
@@ -1686,10 +1686,31 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 18
+        "contributions": 21
       }
     ],
     "commitList": [
+      {
+        "sha": "dd4d84a",
+        "message": "Sync homepage and observatory snapshots with TypeScript",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-19T00:06:57Z"
+      },
+      {
+        "sha": "a0ca818",
+        "message": "Merge pull request #3 from zaimokuza-yoshiteru/zaimokuza-yoshiteru-starred-repo-showcase",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T11:44:10Z"
+      },
+      {
+        "sha": "cbb771a",
+        "message": "Refresh the works snapshot and align the card title metrics",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-18T11:43:19Z"
+      },
       {
         "sha": "fdc84ba",
         "message": "Merge pull request #2 from zaimokuza-yoshiteru/zaimokuza-yoshiteru-starred-repo-showcase",
@@ -1752,27 +1773,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-15T16:02:48Z"
-      },
-      {
-        "sha": "846f7c2",
-        "message": "Unify collection links and simplify blog entry navigation",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-15T03:56:28Z"
-      },
-      {
-        "sha": "55c9f37",
-        "message": "Add context management blog and simplify personal homepage",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-15T03:50:10Z"
-      },
-      {
-        "sha": "07c781a",
-        "message": "Refresh personal blog layout, mascots and live GitHub stars",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-08T15:49:16Z"
       }
     ],
     "activity": [
@@ -2008,6 +2008,7 @@
       4,
       1,
       0,
+      1,
       0,
       0,
       0,
@@ -2020,8 +2021,7 @@
       0,
       0,
       0,
-      0,
-      0,
+      1,
       0,
       0,
       0,
