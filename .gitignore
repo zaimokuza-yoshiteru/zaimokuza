@@ -3,6 +3,13 @@ dist/
 .DS_Store
 .idea/
 
+# 测试、脚本缓存与开发日志均可重新生成。
+coverage/
+__pycache__/
+*.py[cod]
+*.tsbuildinfo
+*.log
+
 # 本地简历产物与研究缓存，避免误提交个人信息和临时签名链接。
 /output/
 /tmp/

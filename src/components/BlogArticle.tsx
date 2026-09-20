@@ -115,8 +115,8 @@ export default function BlogArticle({ slug }: { slug: string }) {
         {headings.length > 0 && <aside className="article-toc"><nav aria-label={ui.contents}><p>{ui.contents}</p>{toc}</nav></aside>}
         <div className="article-main">
           {headings.length > 0 && <details className="article-toc-mobile"><summary>{ui.contents}</summary><nav aria-label={ui.contents}>{toc}</nav></details>}
-          {failed ? <p role="alert">{ui.loadFailed} <button type="button" className="collection-more" onClick={() => setAttempt((value) => value + 1)}>{ui.retry}</button></p> : post.article && body === undefined ? <p role="status">{ui.loading}</p> : <div className="article-prose">
-            <Markdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{body ?? post.paragraphs?.join('\n\n') ?? ''}</Markdown>
+          {failed ? <p role="alert">{ui.loadFailed} <button type="button" className="collection-more" onClick={() => setAttempt((value) => value + 1)}>{ui.retry}</button></p> : body === undefined ? <p role="status">{ui.loading}</p> : <div className="article-prose">
+            <Markdown remarkPlugins={[remarkGfm]} components={markdownComponents}>{body}</Markdown>
           </div>}
           {body && <button type="button" className="collection-more article-back-top" onClick={() => jump('article-top')}>{ui.top} ↑</button>}
         </div>

@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
-  /* 全站设计 token（设计规范见根目录 AGENTS.md） */
+  /* 全站设计 token（设计规范见 docs/design.md） */
   --color-bg-page: #f5f0e6;
   --color-bg-card: #f8f3ea;
   --color-bg-section: #ebe3d2;

@@ -16,8 +16,7 @@ export interface BlogPost {
   date: string
   category: string
   excerpt: string
-  paragraphs?: string[]
-  article?: string
+  article: string
   readingMinutes?: number
 }
 

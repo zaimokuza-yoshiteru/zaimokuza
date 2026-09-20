@@ -23,14 +23,14 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 111,
-    "sizeKb": 6526,
+    "commits": 120,
+    "sizeKb": 6581,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-09-20T03:44:36Z",
+    "pushedAt": "2026-09-20T08:52:42Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 2284648
+        "bytes": 2306691
       },
       {
         "name": "CSS",
@@ -42,10 +42,10 @@
       },
       {
         "name": "PowerShell",
-        "bytes": 5265
+        "bytes": 6321
       }
     ],
-    "languageTotal": 2329412,
+    "languageTotal": 2352511,
     "release": {
       "tag": "v0.1.6-alpha.2.0",
       "publishedAt": "2026-09-18T09:33:26Z",
@@ -250,10 +250,73 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 106
+        "contributions": 115
       }
     ],
     "commitList": [
+      {
+        "sha": "27ad8c4",
+        "message": "Merge pull request #19 from zaimokuza-yoshiteru/feature/ZAI-43",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-20T07:16:09Z"
+      },
+      {
+        "sha": "33acd75",
+        "message": "test: wait for both teammate approvals before layout assertions",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-20T06:34:11Z"
+      },
+      {
+        "sha": "335e94c",
+        "message": "fix: recover concurrent MCP registration after process exit",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-20T06:14:44Z"
+      },
+      {
+        "sha": "39a67a4",
+        "message": "fix: register a session-isolated Devin MCP bridge (ZAI-43)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-20T06:09:16Z"
+      },
+      {
+        "sha": "fe998b3",
+        "message": "test: verify native Devin MCP registration and cleanup",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-20T05:09:55Z"
+      },
+      {
+        "sha": "ad0368c",
+        "message": "test: verify Devin reads native MCP config contents before testing overlays",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-20T03:44:34Z"
+      },
+      {
+        "sha": "b796f44",
+        "message": "fix(ci): use built-in file discovery on macOS",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-20T03:34:10Z"
+      },
+      {
+        "sha": "05de4e6",
+        "message": "test: compare real Devin MCP discovery on macOS and Windows",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-20T03:32:11Z"
+      },
+      {
+        "sha": "660897c",
+        "message": "test: verify real Devin MCP config discovery on Windows",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-20T03:12:49Z"
+      },
       {
         "sha": "d8f3f79",
         "message": "Merge pull request #18 from zaimokuza-yoshiteru/feature/0.1.6.alpha",
@@ -274,85 +337,9 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-18T09:32:27Z"
-      },
-      {
-        "sha": "e257904",
-        "message": "Merge pull request #16 from zaimokuza-yoshiteru/feature/0.1.6.alpha",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T09:10:18Z"
-      },
-      {
-        "sha": "452f7ed",
-        "message": "Merge pull request #15 from zaimokuza-yoshiteru/feature/ZAI-38",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T07:40:58Z"
-      },
-      {
-        "sha": "bd330ef",
-        "message": "refactor: typecheck development scripts and ACP regression fixtures",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T06:35:50Z"
-      },
-      {
-        "sha": "9deac75",
-        "message": "feat: refresh release registry with non-blocking fallback",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T05:44:17Z"
-      },
-      {
-        "sha": "cfce395",
-        "message": "Merge pull request #13 from zaimokuza-yoshiteru/feature/0.1.6.alpha",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T04:57:10Z"
-      },
-      {
-        "sha": "8cc6a23",
-        "message": "Merge pull request #14 from zaimokuza-yoshiteru/feature/ZAI-35",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T04:41:58Z"
-      },
-      {
-        "sha": "0c47e95",
-        "message": "test: scope team approval assertions to the member pane",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T04:26:11Z"
-      },
-      {
-        "sha": "f06ff97",
-        "message": "Merge pull request #12 from zaimokuza-yoshiteru/feature/ZAI-35",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T04:04:42Z"
-      },
-      {
-        "sha": "b75f366",
-        "message": "chore: reconcile alpha branch already integrated through squash",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T03:48:51Z"
       }
     ],
     "activity": [
-      {
-        "week": 1787443200,
-        "total": 26,
-        "days": [
-          0,
-          9,
-          0,
-          3,
-          3,
-          2,
-          9
-        ]
-      },
       {
         "week": 1788048000,
         "total": 17,
@@ -391,6 +378,19 @@
           6,
           0
         ]
+      },
+      {
+        "week": 1789862400,
+        "total": 8,
+        "days": [
+          8,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
       }
     ],
     "punchCard": [
@@ -405,10 +405,10 @@
       0,
       0,
       0,
-      3,
+      7,
       1,
-      0,
-      0,
+      1,
+      3,
       0,
       0,
       0,
@@ -654,15 +654,15 @@
     ],
     "activity": [
       {
-        "week": 1789257600,
-        "total": 4,
+        "week": 1789862400,
+        "total": 0,
         "days": [
           0,
           0,
           0,
-          2,
           0,
-          2,
+          0,
+          0,
           0
         ]
       }
@@ -995,19 +995,6 @@
     ],
     "activity": [
       {
-        "week": 1786233600,
-        "total": 21,
-        "days": [
-          0,
-          0,
-          10,
-          0,
-          6,
-          5,
-          0
-        ]
-      },
-      {
         "week": 1786838400,
         "total": 0,
         "days": [
@@ -1061,6 +1048,19 @@
       },
       {
         "week": 1789257600,
+        "total": 0,
+        "days": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "week": 1789862400,
         "total": 0,
         "days": [
           0,
@@ -1400,19 +1400,6 @@
     ],
     "activity": [
       {
-        "week": 1786838400,
-        "total": 6,
-        "days": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          6,
-          0
-        ]
-      },
-      {
         "week": 1787443200,
         "total": 0,
         "days": [
@@ -1458,6 +1445,19 @@
           0,
           0,
           1,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "week": 1789862400,
+        "total": 0,
+        "days": [
+          0,
+          0,
+          0,
           0,
           0,
           0,
@@ -1642,7 +1642,7 @@
     "owner": "zaimokuza-yoshiteru",
     "url": "https://github.com/zaimokuza-yoshiteru/zaimokuza",
     "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-    "description": "Personal website of Zaimokuza — design homage to the Xiaomi MiMo homepage",
+    "description": "Personal website of Zaimokuza",
     "homepage": "",
     "topics": [],
     "license": "",
@@ -1652,10 +1652,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 24,
-    "sizeKb": 1127,
+    "commits": 25,
+    "sizeKb": 1134,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-09-19T15:54:22Z",
+    "pushedAt": "2026-09-20T04:54:17Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -1691,10 +1691,17 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 3
+        "contributions": 4
       }
     ],
     "commitList": [
+      {
+        "sha": "a73ec1d",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-09-20T04:54:16Z"
+      },
       {
         "sha": "19e3c6f",
         "message": "Refresh repository snapshots",
@@ -1771,13 +1778,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-18T08:20:43Z"
-      },
-      {
-        "sha": "ebaa8ce",
-        "message": "Underline the active nav item and clean up dead code",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T08:09:39Z"
       }
     ],
     "activity": [
@@ -1861,9 +1861,9 @@
       },
       {
         "week": 1789862400,
-        "total": 0,
+        "total": 1,
         "days": [
-          0,
+          1,
           0,
           0,
           0,
@@ -1878,7 +1878,7 @@
       0,
       0,
       0,
-      0,
+      1,
       0,
       0,
       0,
