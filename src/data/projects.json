@@ -23,18 +23,18 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 122,
-    "sizeKb": 6929,
+    "commits": 136,
+    "sizeKb": 7490,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-09-22T17:57:58Z",
+    "pushedAt": "2026-09-23T13:14:22Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 2338694
+        "bytes": 2384378
       },
       {
         "name": "CSS",
-        "bytes": 25639
+        "bytes": 25781
       },
       {
         "name": "JavaScript",
@@ -42,17 +42,29 @@
       },
       {
         "name": "PowerShell",
-        "bytes": 6321
+        "bytes": 6741
       }
     ],
-    "languageTotal": 2384182,
+    "languageTotal": 2430428,
     "release": {
-      "tag": "v0.1.7-alpha.1.1",
-      "publishedAt": "2026-09-22T18:09:41Z",
+      "tag": "v0.1.7-alpha.2.1",
+      "publishedAt": "2026-09-23T13:22:58Z",
       "prerelease": true
     },
-    "releaseCount": 34,
+    "releaseCount": 36,
     "releases": [
+      {
+        "tag": "v0.1.7-alpha.2.1",
+        "name": "v0.1.7-alpha.2.1",
+        "publishedAt": "2026-09-23T13:22:58Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.7-alpha.2.0",
+        "name": "v0.1.7-alpha.2.0",
+        "publishedAt": "2026-09-23T10:26:46Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.1.7-alpha.1.1",
         "name": "v0.1.7-alpha.1.1",
@@ -262,93 +274,93 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 117
+        "contributions": 131
       }
     ],
     "commitList": [
       {
-        "sha": "d9e84d7",
-        "message": "fix: refresh Devin MCP Node mode for existing entries (#22)",
+        "sha": "0460b92",
+        "message": "Merge pull request #25 from zaimokuza-yoshiteru/feature/ZAI-88",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-22T17:57:36Z"
+        "date": "2026-09-23T13:13:38Z"
       },
       {
-        "sha": "f3ac966",
-        "message": "feat: adapt ACP to DSH 0.1.7-alpha.1 (ZAI-88) (#21)",
+        "sha": "4266a64",
+        "message": "Merge remote-tracking branch 'origin/main' into feature/ZAI-88",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-22T17:16:59Z"
+        "date": "2026-09-23T12:50:36Z"
       },
       {
-        "sha": "27ad8c4",
-        "message": "Merge pull request #19 from zaimokuza-yoshiteru/feature/ZAI-43",
+        "sha": "f1cccb4",
+        "message": "chore: release 0.1.7-alpha.2.1",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-20T07:16:09Z"
+        "date": "2026-09-23T12:42:43Z"
       },
       {
-        "sha": "33acd75",
-        "message": "test: wait for both teammate approvals before layout assertions",
+        "sha": "ff03d78",
+        "message": "fix: bind ACP tools and runtime state to session ownership",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-20T06:34:11Z"
+        "date": "2026-09-23T11:32:17Z"
       },
       {
-        "sha": "335e94c",
-        "message": "fix: recover concurrent MCP registration after process exit",
+        "sha": "a2f02ae",
+        "message": "Merge pull request #24 from zaimokuza-yoshiteru/feature/ZAI-88",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-20T06:14:44Z"
+        "date": "2026-09-23T10:17:41Z"
       },
       {
-        "sha": "39a67a4",
-        "message": "fix: register a session-isolated Devin MCP bridge (ZAI-43)",
+        "sha": "61c33a2",
+        "message": "Merge DSH alpha.2 integration and approval fixes into feature/ZAI-88",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-20T06:09:16Z"
+        "date": "2026-09-23T09:35:27Z"
       },
       {
-        "sha": "fe998b3",
-        "message": "test: verify native Devin MCP registration and cleanup",
+        "sha": "40a7bb4",
+        "message": "ci: allow pinned Devin 3000.3.27 integration runs [skip ci]",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-20T05:09:55Z"
+        "date": "2026-09-23T09:18:44Z"
       },
       {
-        "sha": "ad0368c",
-        "message": "test: verify Devin reads native MCP config contents before testing overlays",
+        "sha": "9b0d2f6",
+        "message": "fix: reject invalid Devin bridge calls before user approval",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-20T03:44:34Z"
+        "date": "2026-09-23T08:34:13Z"
       },
       {
-        "sha": "b796f44",
-        "message": "fix(ci): use built-in file discovery on macOS",
+        "sha": "6624ce6",
+        "message": "fix: route verified Codex member scopes through native approval",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-20T03:34:10Z"
+        "date": "2026-09-23T07:12:02Z"
       },
       {
-        "sha": "05de4e6",
-        "message": "test: compare real Devin MCP discovery on macOS and Windows",
+        "sha": "92a6cd8",
+        "message": "test: locate live team contents in the native dialog",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-20T03:32:11Z"
+        "date": "2026-09-23T06:50:06Z"
       },
       {
-        "sha": "660897c",
-        "message": "test: verify real Devin MCP config discovery on Windows",
+        "sha": "32691d3",
+        "message": "test: discover current DSH tool connections in live team checks",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-20T03:12:49Z"
+        "date": "2026-09-23T06:36:58Z"
       },
       {
-        "sha": "d8f3f79",
-        "message": "Merge pull request #18 from zaimokuza-yoshiteru/feature/0.1.6.alpha",
+        "sha": "f921a32",
+        "message": "feat: adapt to DSH alpha.2 and improve recovery and team controls",
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T10:05:41Z"
+        "date": "2026-09-23T06:27:42Z"
       }
     ],
     "activity": [
@@ -406,12 +418,12 @@
       },
       {
         "week": 1789862400,
-        "total": 10,
+        "total": 20,
         "days": [
           8,
           0,
           0,
-          2,
+          12,
           0,
           0,
           0
@@ -491,7 +503,7 @@
       0,
       3,
       2,
-      3,
+      5,
       2,
       0,
       0,
@@ -505,13 +517,13 @@
       0,
       0,
       2,
+      4,
+      1,
+      1,
       1,
       0,
-      0,
-      0,
-      0,
-      0,
-      0,
+      1,
+      1,
       0,
       0,
       2,
@@ -609,24 +621,30 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 1,
-    "commits": 5,
-    "sizeKb": 439,
+    "commits": 6,
+    "sizeKb": 455,
     "createdAt": "2026-09-16T15:27:21Z",
-    "pushedAt": "2026-09-22T14:20:24Z",
+    "pushedAt": "2026-09-23T13:39:23Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 214403
+        "bytes": 223003
       }
     ],
-    "languageTotal": 214403,
+    "languageTotal": 223003,
     "release": {
-      "tag": "v0.1.0-beta.3",
-      "publishedAt": "2026-09-22T14:23:50Z",
+      "tag": "v0.1.0-beta.4",
+      "publishedAt": "2026-09-23T13:43:37Z",
       "prerelease": true
     },
-    "releaseCount": 3,
+    "releaseCount": 4,
     "releases": [
+      {
+        "tag": "v0.1.0-beta.4",
+        "name": "v0.1.0-beta.4",
+        "publishedAt": "2026-09-23T13:43:37Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.1.0-beta.3",
         "name": "v0.1.0-beta.3",
@@ -650,10 +668,17 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 5
+        "contributions": 6
       }
     ],
     "commitList": [
+      {
+        "sha": "089a96e",
+        "message": "release: beta.4 with character following and DSH 0.1.7-alpha.2 support",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-23T13:39:10Z"
+      },
       {
         "sha": "18a33c4",
         "message": "release: beta.3 with DSH 0.1.7 compatibility",
@@ -692,13 +717,26 @@
     ],
     "activity": [
       {
+        "week": 1789257600,
+        "total": 4,
+        "days": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
+      {
         "week": 1789862400,
-        "total": 1,
+        "total": 2,
         "days": [
           0,
           0,
           1,
-          0,
+          1,
           0,
           0,
           0
@@ -799,7 +837,7 @@
       0,
       0,
       0,
-      0,
+      1,
       0,
       2,
       0,
@@ -1703,10 +1741,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 31,
-    "sizeKb": 1248,
+    "commits": 32,
+    "sizeKb": 1256,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-09-22T16:58:44Z",
+    "pushedAt": "2026-09-23T04:45:18Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -1742,10 +1780,17 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 9
+        "contributions": 10
       }
     ],
     "commitList": [
+      {
+        "sha": "0f84d82",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-09-23T04:45:17Z"
+      },
       {
         "sha": "f4ffb20",
         "message": "Refresh repository snapshots",
@@ -1822,13 +1867,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-19T00:06:57Z"
-      },
-      {
-        "sha": "a0ca818",
-        "message": "Merge pull request #3 from zaimokuza-yoshiteru/zaimokuza-yoshiteru-starred-repo-showcase",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T11:44:10Z"
       }
     ],
     "activity": [
@@ -1925,12 +1963,12 @@
       },
       {
         "week": 1789862400,
-        "total": 7,
+        "total": 8,
         "days": [
           3,
           2,
           2,
-          0,
+          1,
           0,
           0,
           0
@@ -2014,7 +2052,7 @@
       0,
       0,
       0,
-      0,
+      1,
       0,
       0,
       0,
