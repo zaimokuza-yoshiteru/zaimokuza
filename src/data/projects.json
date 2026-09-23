@@ -20,21 +20,21 @@
     "defaultBranch": "main",
     "stars": 6,
     "forks": 0,
-    "openIssues": 1,
+    "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 120,
-    "sizeKb": 6581,
+    "commits": 122,
+    "sizeKb": 6929,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-09-22T16:54:56Z",
+    "pushedAt": "2026-09-22T17:57:58Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 2306691
+        "bytes": 2338694
       },
       {
         "name": "CSS",
-        "bytes": 25971
+        "bytes": 25639
       },
       {
         "name": "JavaScript",
@@ -45,14 +45,26 @@
         "bytes": 6321
       }
     ],
-    "languageTotal": 2352511,
+    "languageTotal": 2384182,
     "release": {
-      "tag": "v0.1.6-alpha.2.0",
-      "publishedAt": "2026-09-18T09:33:26Z",
+      "tag": "v0.1.7-alpha.1.1",
+      "publishedAt": "2026-09-22T18:09:41Z",
       "prerelease": true
     },
-    "releaseCount": 32,
+    "releaseCount": 34,
     "releases": [
+      {
+        "tag": "v0.1.7-alpha.1.1",
+        "name": "v0.1.7-alpha.1.1",
+        "publishedAt": "2026-09-22T18:09:41Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.7-alpha.1.0",
+        "name": "v0.1.7-alpha.1.0",
+        "publishedAt": "2026-09-22T17:25:53Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.1.6-alpha.2.0",
         "name": "v0.1.6-alpha.2.0",
@@ -250,10 +262,24 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 115
+        "contributions": 117
       }
     ],
     "commitList": [
+      {
+        "sha": "d9e84d7",
+        "message": "fix: refresh Devin MCP Node mode for existing entries (#22)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-22T17:57:36Z"
+      },
+      {
+        "sha": "f3ac966",
+        "message": "feat: adapt ACP to DSH 0.1.7-alpha.1 (ZAI-88) (#21)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-22T17:16:59Z"
+      },
       {
         "sha": "27ad8c4",
         "message": "Merge pull request #19 from zaimokuza-yoshiteru/feature/ZAI-43",
@@ -323,20 +349,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-18T10:05:41Z"
-      },
-      {
-        "sha": "f03aa03",
-        "message": "Merge pull request #17 from zaimokuza-yoshiteru/feature/ZAI-38",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T09:49:27Z"
-      },
-      {
-        "sha": "2346dec",
-        "message": "fix: backfill release notes and automate GitHub releases",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T09:32:27Z"
       }
     ],
     "activity": [
@@ -394,12 +406,12 @@
       },
       {
         "week": 1789862400,
-        "total": 8,
+        "total": 10,
         "days": [
           8,
           0,
           0,
-          0,
+          2,
           0,
           0,
           0
@@ -480,7 +492,7 @@
       3,
       2,
       3,
-      0,
+      2,
       0,
       0,
       0,
@@ -1691,10 +1703,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 30,
-    "sizeKb": 1239,
+    "commits": 31,
+    "sizeKb": 1248,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-09-22T04:55:33Z",
+    "pushedAt": "2026-09-22T16:58:44Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -1730,10 +1742,17 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 8
+        "contributions": 9
       }
     ],
     "commitList": [
+      {
+        "sha": "f4ffb20",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-09-22T16:58:43Z"
+      },
       {
         "sha": "7e76db2",
         "message": "Refresh repository snapshots",
@@ -1810,13 +1829,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-18T11:44:10Z"
-      },
-      {
-        "sha": "cbb771a",
-        "message": "Refresh the works snapshot and align the card title metrics",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-18T11:43:19Z"
       }
     ],
     "activity": [
@@ -1913,11 +1925,11 @@
       },
       {
         "week": 1789862400,
-        "total": 6,
+        "total": 7,
         "days": [
           3,
           2,
-          1,
+          2,
           0,
           0,
           0,
@@ -1990,7 +2002,7 @@
       0,
       0,
       0,
-      2,
+      3,
       0,
       0,
       0,
