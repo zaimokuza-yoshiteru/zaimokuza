@@ -20,13 +20,13 @@
     "defaultBranch": "main",
     "stars": 6,
     "forks": 0,
-    "openIssues": 0,
+    "openIssues": 1,
     "watchers": 0,
     "contributors": 2,
     "commits": 136,
-    "sizeKb": 7490,
+    "sizeKb": 7780,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-09-23T13:14:22Z",
+    "pushedAt": "2026-09-24T03:21:50Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -621,24 +621,30 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 1,
-    "commits": 6,
-    "sizeKb": 455,
+    "commits": 7,
+    "sizeKb": 475,
     "createdAt": "2026-09-16T15:27:21Z",
-    "pushedAt": "2026-09-23T13:39:23Z",
+    "pushedAt": "2026-09-24T03:11:15Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 223003
+        "bytes": 223058
       }
     ],
-    "languageTotal": 223003,
+    "languageTotal": 223058,
     "release": {
-      "tag": "v0.1.0-beta.4",
-      "publishedAt": "2026-09-23T13:43:37Z",
+      "tag": "v0.1.0-beta.5",
+      "publishedAt": "2026-09-24T03:13:19Z",
       "prerelease": true
     },
-    "releaseCount": 4,
+    "releaseCount": 5,
     "releases": [
+      {
+        "tag": "v0.1.0-beta.5",
+        "name": "v0.1.0-beta.5",
+        "publishedAt": "2026-09-24T03:13:19Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.1.0-beta.4",
         "name": "v0.1.0-beta.4",
@@ -668,10 +674,17 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 6
+        "contributions": 7
       }
     ],
     "commitList": [
+      {
+        "sha": "1cbc6c7",
+        "message": "release: beta.5 with DSH 0.1.7-rc.1 compatibility",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-24T03:03:14Z"
+      },
       {
         "sha": "089a96e",
         "message": "release: beta.4 with character following and DSH 0.1.7-alpha.2 support",
@@ -731,13 +744,13 @@
       },
       {
         "week": 1789862400,
-        "total": 2,
+        "total": 3,
         "days": [
           0,
           0,
           1,
           1,
-          0,
+          1,
           0,
           0
         ]
@@ -851,7 +864,7 @@
       0,
       0,
       0,
-      0,
+      1,
       0,
       0,
       0,
@@ -1741,10 +1754,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 32,
-    "sizeKb": 1256,
+    "commits": 33,
+    "sizeKb": 1265,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-09-23T04:45:18Z",
+    "pushedAt": "2026-09-23T16:58:29Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -1780,10 +1793,17 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 10
+        "contributions": 11
       }
     ],
     "commitList": [
+      {
+        "sha": "81b7b56",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-09-23T16:58:28Z"
+      },
       {
         "sha": "0f84d82",
         "message": "Refresh repository snapshots",
@@ -1860,13 +1880,6 @@
         "author": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "date": "2026-09-19T00:08:58Z"
-      },
-      {
-        "sha": "dd4d84a",
-        "message": "Sync homepage and observatory snapshots with TypeScript",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-19T00:06:57Z"
       }
     ],
     "activity": [
@@ -1963,12 +1976,12 @@
       },
       {
         "week": 1789862400,
-        "total": 8,
+        "total": 9,
         "days": [
           3,
           2,
           2,
-          1,
+          2,
           0,
           0,
           0
@@ -2064,7 +2077,7 @@
       0,
       0,
       0,
-      0,
+      1,
       0,
       0,
       0,
