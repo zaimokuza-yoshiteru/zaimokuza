@@ -15,10 +15,10 @@
     ],
     "license": "MIT",
     "defaultBranch": "master",
-    "stars": 235037,
-    "forks": 28275,
+    "stars": 235348,
+    "forks": 28309,
     "openIssues": 0,
-    "watchers": 1012,
+    "watchers": 1015,
     "contributors": 54,
     "commits": 20022,
     "sizeKb": 234260,
@@ -755,23 +755,23 @@
     "topics": [],
     "license": "MIT",
     "defaultBranch": "main",
-    "stars": 109141,
+    "stars": 109209,
     "forks": 13874,
     "openIssues": 215,
     "watchers": 336,
     "contributors": 296,
-    "commits": 6524,
-    "sizeKb": 76199,
+    "commits": 6531,
+    "sizeKb": 76400,
     "createdAt": "2025-08-09T14:03:50Z",
-    "pushedAt": "2026-09-24T16:50:27Z",
+    "pushedAt": "2026-09-24T22:09:55Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 12721780
+        "bytes": 12874787
       },
       {
         "name": "JavaScript",
-        "bytes": 485547
+        "bytes": 487665
       },
       {
         "name": "C",
@@ -783,10 +783,10 @@
       },
       {
         "name": "CSS",
-        "bytes": 22724
+        "bytes": 22952
       }
     ],
-    "languageTotal": 13306761,
+    "languageTotal": 13462114,
     "release": {
       "tag": "v0.87.1",
       "publishedAt": "2026-09-22T19:43:43Z",
@@ -1399,7 +1399,7 @@
       {
         "login": "badlogic",
         "avatarUrl": "https://avatars.githubusercontent.com/u/514052?v=4",
-        "contributions": 3761
+        "contributions": 3766
       },
       {
         "login": "mitsuhiko",
@@ -1464,7 +1464,7 @@
       {
         "login": "rwachtler",
         "avatarUrl": "https://avatars.githubusercontent.com/u/7475150?v=4",
-        "contributions": 25
+        "contributions": 27
       },
       {
         "login": "xl0",
@@ -1899,6 +1899,55 @@
     ],
     "commitList": [
       {
+        "sha": "5fd446c",
+        "message": "feat(durable): optimize document replay",
+        "author": "badlogic",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/514052?v=4",
+        "date": "2026-09-24T22:08:51Z"
+      },
+      {
+        "sha": "9e70c3d",
+        "message": "feat(chord): optimize immutable batch application",
+        "author": "badlogic",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/514052?v=4",
+        "date": "2026-09-24T22:08:32Z"
+      },
+      {
+        "sha": "b2bd111",
+        "message": "feat(coding-agent): add hidden-message toggle to HTML exports (#10020)",
+        "author": "rwachtler",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/7475150?v=4",
+        "date": "2026-09-24T21:18:25Z"
+      },
+      {
+        "sha": "5d4de95",
+        "message": "feat(durable): add checkpoints and document migrations",
+        "author": "badlogic",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/514052?v=4",
+        "date": "2026-09-24T21:09:15Z"
+      },
+      {
+        "sha": "19a0361",
+        "message": "feat(durable): add transactional sessions and documents",
+        "author": "badlogic",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/514052?v=4",
+        "date": "2026-09-24T20:23:36Z"
+      },
+      {
+        "sha": "7cf037c",
+        "message": "fix(tui): choose Kitty image dimensions by aspect distortion (#9957)",
+        "author": "rwachtler",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/7475150?v=4",
+        "date": "2026-09-24T18:51:10Z"
+      },
+      {
+        "sha": "6966636",
+        "message": "fix(chord): allow promise probes on settled drafts",
+        "author": "badlogic",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/514052?v=4",
+        "date": "2026-09-24T17:33:02Z"
+      },
+      {
         "sha": "d5629e2",
         "message": "fix(tui): autocomplete paths after opening wrappers like ( and backticks",
         "author": "mitsuhiko",
@@ -1932,55 +1981,6 @@
         "author": "badlogic",
         "avatarUrl": "https://avatars.githubusercontent.com/u/514052?v=4",
         "date": "2026-09-24T12:11:10Z"
-      },
-      {
-        "sha": "481c723",
-        "message": "docs(durable): align Pico5 with canonical immutable tracker",
-        "author": "badlogic",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/514052?v=4",
-        "date": "2026-09-24T11:50:10Z"
-      },
-      {
-        "sha": "601437d",
-        "message": "fix(durable): test execution environment and fix output truncation metadata",
-        "author": "badlogic",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/514052?v=4",
-        "date": "2026-09-24T11:34:46Z"
-      },
-      {
-        "sha": "a7d17e3",
-        "message": "feat(ai): serve Jev classifier through OpenRouter and Cloudflare Workers AI",
-        "author": "mitsuhiko",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7396?v=4",
-        "date": "2026-09-24T10:13:51Z"
-      },
-      {
-        "sha": "7c696c0",
-        "message": "docs: revise Pico5 immutable revision design",
-        "author": "badlogic",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/514052?v=4",
-        "date": "2026-09-24T09:33:12Z"
-      },
-      {
-        "sha": "8676a0d",
-        "message": "fix(coding-agent): require advertised X11 clipboard images",
-        "author": "mitsuhiko",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7396?v=4",
-        "date": "2026-09-24T07:15:58Z"
-      },
-      {
-        "sha": "b455975",
-        "message": "feat(durable): export scoped storage conformance suite (#9977)",
-        "author": "christianklotz",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/69443?v=4",
-        "date": "2026-09-23T21:21:15Z"
-      },
-      {
-        "sha": "7fd564c",
-        "message": "feat: share model catalog protocol with pi.dev (#9763)",
-        "author": "mitsuhiko",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7396?v=4",
-        "date": "2026-09-23T18:08:05Z"
       }
     ],
     "activity": [
@@ -2649,14 +2649,14 @@
       },
       {
         "week": 1789862400,
-        "total": 80,
+        "total": 87,
         "days": [
           23,
           17,
           17,
           13,
-          10,
-          0,
+          15,
+          2,
           0
         ]
       }
@@ -2777,12 +2777,12 @@
       41,
       42,
       53,
-      32,
-      81,
+      33,
+      82,
       88,
-      90,
-      100,
+      91,
       102,
+      104,
       51,
       29,
       25,
@@ -2851,38 +2851,38 @@
     ],
     "license": "",
     "defaultBranch": "main",
-    "stars": 390378,
-    "forks": 82136,
-    "openIssues": 8522,
-    "watchers": 1729,
-    "contributors": 3420,
-    "commits": 99581,
-    "sizeKb": 6279437,
+    "stars": 390444,
+    "forks": 82141,
+    "openIssues": 8592,
+    "watchers": 1730,
+    "contributors": 3423,
+    "commits": 99848,
+    "sizeKb": 6330663,
     "createdAt": "2025-11-24T10:16:47Z",
-    "pushedAt": "2026-09-24T17:11:06Z",
+    "pushedAt": "2026-09-25T04:56:48Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 430222970
+        "bytes": 432639994
       },
       {
         "name": "Swift",
-        "bytes": 18296151
+        "bytes": 18320057
       },
       {
         "name": "Kotlin",
-        "bytes": 9431518
+        "bytes": 9573023
       },
       {
         "name": "JavaScript",
-        "bytes": 5479738
+        "bytes": 5544903
       },
       {
         "name": "Shell",
-        "bytes": 2565766
+        "bytes": 2572008
       }
     ],
-    "languageTotal": 471890712,
+    "languageTotal": 474546398,
     "release": {
       "tag": "v2026.9.6",
       "publishedAt": "2026-09-23T23:21:10Z",
@@ -3495,32 +3495,32 @@
       {
         "login": "steipete",
         "avatarUrl": "https://avatars.githubusercontent.com/u/58493?v=4",
-        "contributions": 53454
+        "contributions": 53571
       },
       {
         "login": "vincentkoc",
         "avatarUrl": "https://avatars.githubusercontent.com/u/25068?v=4",
-        "contributions": 14091
+        "contributions": 14143
       },
       {
         "login": "shakkernerd",
         "avatarUrl": "https://avatars.githubusercontent.com/u/165377636?v=4",
-        "contributions": 4387
+        "contributions": 4390
       },
       {
         "login": "obviyus",
         "avatarUrl": "https://avatars.githubusercontent.com/u/22031114?v=4",
-        "contributions": 2434
+        "contributions": 2441
       },
       {
         "login": "RomneyDa",
         "avatarUrl": "https://avatars.githubusercontent.com/u/6581799?v=4",
-        "contributions": 1199
+        "contributions": 1219
       },
       {
         "login": "joshavant",
         "avatarUrl": "https://avatars.githubusercontent.com/u/830519?v=4",
-        "contributions": 1059
+        "contributions": 1065
       },
       {
         "login": "github-actions[bot]",
@@ -3540,7 +3540,7 @@
       {
         "login": "roboclaw-bot",
         "avatarUrl": "https://avatars.githubusercontent.com/u/309084314?v=4",
-        "contributions": 596
+        "contributions": 613
       },
       {
         "login": "vignesh07",
@@ -3550,7 +3550,7 @@
       {
         "login": "fuller-stack-dev",
         "avatarUrl": "https://avatars.githubusercontent.com/u/263060202?v=4",
-        "contributions": 444
+        "contributions": 450
       },
       {
         "login": "vyctorbrzezowski",
@@ -3560,7 +3560,7 @@
       {
         "login": "openclaw-mantis[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/3588624?v=4",
-        "contributions": 355
+        "contributions": 359
       },
       {
         "login": "jalehman",
@@ -3595,7 +3595,7 @@
       {
         "login": "giodl73-repo",
         "avatarUrl": "https://avatars.githubusercontent.com/u/235387111?v=4",
-        "contributions": 232
+        "contributions": 233
       },
       {
         "login": "BunsDev",
@@ -3678,14 +3678,14 @@
         "contributions": 121
       },
       {
+        "login": "masatohoshino",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/246810661?v=4",
+        "contributions": 119
+      },
+      {
         "login": "amknight",
         "avatarUrl": "https://avatars.githubusercontent.com/u/15041791?v=4",
         "contributions": 117
-      },
-      {
-        "login": "masatohoshino",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/246810661?v=4",
-        "contributions": 115
       },
       {
         "login": "IWhatsskill",
@@ -3768,6 +3768,11 @@
         "contributions": 85
       },
       {
+        "login": "TurboTheTurtle",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/35905412?v=4",
+        "contributions": 82
+      },
+      {
         "login": "edenfunf",
         "avatarUrl": "https://avatars.githubusercontent.com/u/146086744?v=4",
         "contributions": 82
@@ -3775,11 +3780,6 @@
       {
         "login": "sallyom",
         "avatarUrl": "https://avatars.githubusercontent.com/u/11166065?v=4",
-        "contributions": 82
-      },
-      {
-        "login": "TurboTheTurtle",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/35905412?v=4",
         "contributions": 82
       },
       {
@@ -3808,8 +3808,8 @@
         "contributions": 75
       },
       {
-        "login": "drobison00",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/5256797?v=4",
+        "login": "huntharo",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/5617868?v=4",
         "contributions": 70
       },
       {
@@ -3818,8 +3818,8 @@
         "contributions": 70
       },
       {
-        "login": "huntharo",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/5617868?v=4",
+        "login": "drobison00",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/5256797?v=4",
         "contributions": 70
       },
       {
@@ -3843,8 +3843,13 @@
         "contributions": 66
       },
       {
-        "login": "ly85206559",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/12526624?v=4",
+        "login": "Pick-cat",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/266665499?v=4",
+        "contributions": 65
+      },
+      {
+        "login": "samzong",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/13782141?v=4",
         "contributions": 65
       },
       {
@@ -3853,13 +3858,8 @@
         "contributions": 65
       },
       {
-        "login": "Pick-cat",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/266665499?v=4",
-        "contributions": 65
-      },
-      {
-        "login": "samzong",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/13782141?v=4",
+        "login": "ly85206559",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/12526624?v=4",
         "contributions": 65
       },
       {
@@ -3885,7 +3885,7 @@
       {
         "login": "hannesrudolph",
         "avatarUrl": "https://avatars.githubusercontent.com/u/49103247?v=4",
-        "contributions": 58
+        "contributions": 60
       },
       {
         "login": "Marvinthebored",
@@ -3910,7 +3910,7 @@
       {
         "login": "galiniliev",
         "avatarUrl": "https://avatars.githubusercontent.com/u/5711535?v=4",
-        "contributions": 50
+        "contributions": 51
       },
       {
         "login": "MonkeyLeeT",
@@ -3918,8 +3918,8 @@
         "contributions": 49
       },
       {
-        "login": "rubencu",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/4742789?v=4",
+        "login": "lsr911",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/18230762?v=4",
         "contributions": 46
       },
       {
@@ -3928,8 +3928,8 @@
         "contributions": 46
       },
       {
-        "login": "lsr911",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/18230762?v=4",
+        "login": "rubencu",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/4742789?v=4",
         "contributions": 46
       },
       {
@@ -3963,8 +3963,18 @@
         "contributions": 40
       },
       {
-        "login": "keshavbotagent",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/267154163?v=4",
+        "login": "sjf-oa",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/257630655?v=4",
+        "contributions": 40
+      },
+      {
+        "login": "hydro13",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6640526?v=4",
+        "contributions": 39
+      },
+      {
+        "login": "Yigtwxx",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/156921875?v=4",
         "contributions": 39
       },
       {
@@ -3973,110 +3983,100 @@
         "contributions": 39
       },
       {
-        "login": "hydro13",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6640526?v=4",
-        "contributions": 39
-      },
-      {
         "login": "wanyongstar",
         "avatarUrl": "https://avatars.githubusercontent.com/u/296346421?v=4",
         "contributions": 39
       },
       {
-        "login": "sjf-oa",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/257630655?v=4",
-        "contributions": 39
-      },
-      {
-        "login": "Yigtwxx",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/156921875?v=4",
+        "login": "liuhao1024",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/11816344?v=4",
         "contributions": 39
       }
     ],
     "commitList": [
       {
-        "sha": "6e8d068",
-        "message": "fix(ui): preserve dashboard padding when maximized (#157203)",
+        "sha": "956cca8",
+        "message": "perf(sessions): reuse participant facts when publishing entry writes (#157582)",
         "author": "steipete",
         "avatarUrl": "https://avatars.githubusercontent.com/u/58493?v=4",
-        "date": "2026-09-24T17:11:02Z"
+        "date": "2026-09-25T04:56:19Z"
       },
       {
-        "sha": "0ef73eb",
-        "message": "fix(android): keep translated Wear voice actions readable (#157358)",
-        "author": "roboclaw-bot",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/309084314?v=4",
-        "date": "2026-09-24T17:06:17Z"
-      },
-      {
-        "sha": "26b464f",
-        "message": "fix(ui): keep startup and diagram assets within budget (#157161)",
+        "sha": "18ce5c8",
+        "message": "test: preserve Gateway network proof in owner watch runs",
         "author": "steipete",
         "avatarUrl": "https://avatars.githubusercontent.com/u/58493?v=4",
-        "date": "2026-09-24T17:02:29Z"
+        "date": "2026-09-25T04:51:01Z"
       },
       {
-        "sha": "44421f7",
-        "message": "test(android): isolate obsolete localization drift fixture (#157397)",
+        "sha": "a759f77",
+        "message": "fix(sessions): isolate archive worker database bootstrap",
         "author": "steipete",
         "avatarUrl": "https://avatars.githubusercontent.com/u/58493?v=4",
-        "date": "2026-09-24T17:02:13Z"
+        "date": "2026-09-25T04:40:58Z"
       },
       {
-        "sha": "1aec8af",
-        "message": "refactor(matrix): share direct-room inspection projection (#157260)",
-        "author": "vincentkoc",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/25068?v=4",
-        "date": "2026-09-24T17:01:56Z"
+        "sha": "3fb4bdd",
+        "message": "fix(ui): keep plugin sidebar selection in sync with navigation (#157717)",
+        "author": "Patrick-Erichsen",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/20157849?v=4",
+        "date": "2026-09-25T04:52:29Z"
       },
       {
-        "sha": "9f9b4de",
-        "message": "fix(ci): stop pasted-text handoff tests racing excerpt loading (#157375)",
-        "author": "roboclaw-bot",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/309084314?v=4",
-        "date": "2026-09-24T17:01:50Z"
-      },
-      {
-        "sha": "f3c9e47",
-        "message": "test(agents): keep failover suites within line limits (#157406)",
-        "author": "steipete",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/58493?v=4",
-        "date": "2026-09-24T17:01:14Z"
-      },
-      {
-        "sha": "54bec77",
-        "message": "fix: honor model fallbacks in plugin background completions (#157398)",
+        "sha": "ef93dd6",
+        "message": "fix(memory-core): stop re-ingesting nested inline dreaming output (#157879)",
         "author": "obviyus",
         "avatarUrl": "https://avatars.githubusercontent.com/u/22031114?v=4",
-        "date": "2026-09-24T16:55:17Z"
+        "date": "2026-09-25T04:51:51Z"
       },
       {
-        "sha": "9a1a6f7",
-        "message": "fix(maintainer): restore cold PR worktree provisioning (#157394)",
-        "author": "vincentkoc",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/25068?v=4",
-        "date": "2026-09-24T16:53:01Z"
+        "sha": "ab4408c",
+        "message": "fix(models): retire host-only rows during native account renewal (#157772)",
+        "author": "roboclaw-bot",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/309084314?v=4",
+        "date": "2026-09-25T04:49:38Z"
       },
       {
-        "sha": "79cc65f",
-        "message": "feat(ios): establish native Cloudflare Access sign-in sessions (#146996)",
-        "author": "vincentkoc",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/25068?v=4",
-        "date": "2026-09-24T16:51:04Z"
+        "sha": "e4414b6",
+        "message": "fix(workshop): preserve review outcomes in selected stores (#157774)",
+        "author": "roboclaw-bot",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/309084314?v=4",
+        "date": "2026-09-25T04:47:43Z"
       },
       {
-        "sha": "51fcb7f",
-        "message": "fix: restore the Gateway after interrupted Doctor maintenance (#156854)",
-        "author": "steipete",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/58493?v=4",
-        "date": "2026-09-24T16:50:10Z"
+        "sha": "13c7a85",
+        "message": "fix: clarify plugin installation failures and recovery (#157721)",
+        "author": "Patrick-Erichsen",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/20157849?v=4",
+        "date": "2026-09-25T04:45:46Z"
       },
       {
-        "sha": "9f8b453",
-        "message": "refactor(line): retire the Express webhook adapter (#157369)",
-        "author": "steipete",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/58493?v=4",
-        "date": "2026-09-24T16:49:49Z"
+        "sha": "e531170",
+        "message": "fix(ui): remove redundant map headings in plugin settings (#157732)",
+        "author": "Patrick-Erichsen",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/20157849?v=4",
+        "date": "2026-09-25T04:45:17Z"
+      },
+      {
+        "sha": "85d4932",
+        "message": "fix(test): admit authenticated worktree successor fixture (#157785)",
+        "author": "roboclaw-bot",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/309084314?v=4",
+        "date": "2026-09-25T04:45:10Z"
+      },
+      {
+        "sha": "963089a",
+        "message": "fix(update): preserve already-current updates and OverlayFS retention (#157770)",
+        "author": "roboclaw-bot",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/309084314?v=4",
+        "date": "2026-09-25T04:43:27Z"
+      },
+      {
+        "sha": "711a6fd",
+        "message": "fix(ui): plugin settings flash and lose focus after saving (#157737)",
+        "author": "Patrick-Erichsen",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/20157849?v=4",
+        "date": "2026-09-25T04:43:03Z"
       }
     ],
     "activity": [
@@ -4628,12 +4628,12 @@
       },
       {
         "week": 1789257600,
-        "total": 4425,
+        "total": 4428,
         "days": [
           647,
           688,
-          576,
-          604,
+          577,
+          606,
           541,
           706,
           663
@@ -4641,34 +4641,34 @@
       },
       {
         "week": 1789862400,
-        "total": 2668,
+        "total": 2966,
         "days": [
           753,
           709,
           503,
           553,
-          147,
-          3,
+          372,
+          76,
           0
         ]
       }
     ],
     "punchCard": [
-      108,
-      104,
       102,
-      118,
-      97,
-      95,
-      100,
       99,
-      108,
+      99,
+      115,
+      90,
+      80,
+      75,
+      74,
+      91,
+      97,
+      104,
+      126,
       112,
-      114,
-      133,
-      113,
-      146,
-      149,
+      145,
+      148,
       139,
       161,
       140,
@@ -4676,10 +4676,10 @@
       152,
       147,
       170,
-      171,
+      170,
       220,
-      159,
-      116,
+      157,
+      115,
       136,
       123,
       109,
@@ -4699,7 +4699,7 @@
       153,
       111,
       131,
-      142,
+      141,
       137,
       128,
       120,
@@ -4715,7 +4715,7 @@
       105,
       116,
       158,
-      111,
+      112,
       129,
       170,
       148,
@@ -4732,7 +4732,7 @@
       108,
       80,
       100,
-      86,
+      88,
       95,
       89,
       95,
@@ -4760,33 +4760,33 @@
       102,
       97,
       107,
-      114,
-      118,
-      89,
-      117,
-      91,
-      87,
-      115,
-      109,
-      114,
-      91,
-      91,
-      93,
-      114,
-      122,
-      101,
-      113,
+      121,
+      133,
+      105,
+      143,
       104,
-      100,
-      73,
+      112,
+      133,
+      117,
+      118,
+      120,
+      102,
+      109,
+      118,
+      124,
+      102,
+      122,
+      117,
+      108,
+      76,
+      77,
       75,
-      69,
-      63,
+      68,
+      99,
       93,
       92,
-      84,
-      123,
-      142,
+      125,
+      148,
       134,
       120,
       124,
@@ -4809,19 +4809,19 @@
       105,
       90,
       95,
-      114,
-      85,
-      108,
       111,
-      117,
-      99,
-      123,
-      138,
-      129,
-      129,
-      123,
-      136,
-      135
+      82,
+      105,
+      107,
+      113,
+      97,
+      120,
+      124,
+      103,
+      107,
+      108,
+      124,
+      125
     ]
   },
   {
@@ -4849,38 +4849,38 @@
     ],
     "license": "MIT",
     "defaultBranch": "main",
-    "stars": 248651,
-    "forks": 52605,
-    "openIssues": 43673,
-    "watchers": 960,
-    "contributors": 3954,
-    "commits": 41941,
-    "sizeKb": 1047179,
+    "stars": 248769,
+    "forks": 52669,
+    "openIssues": 43561,
+    "watchers": 959,
+    "contributors": 3963,
+    "commits": 43609,
+    "sizeKb": 1068271,
     "createdAt": "2025-07-22T22:22:28Z",
-    "pushedAt": "2026-09-24T17:11:11Z",
+    "pushedAt": "2026-09-25T04:56:28Z",
     "languages": [
       {
         "name": "Python",
-        "bytes": 88164703
+        "bytes": 91093128
       },
       {
         "name": "TypeScript",
-        "bytes": 31399124
+        "bytes": 32218445
       },
       {
         "name": "JavaScript",
-        "bytes": 1140815
+        "bytes": 1751997
       },
       {
         "name": "Shell",
-        "bytes": 535029
+        "bytes": 671016
       },
       {
-        "name": "PowerShell",
-        "bytes": 469803
+        "name": "TeX",
+        "bytes": 434546
       }
     ],
-    "languageTotal": 123320718,
+    "languageTotal": 127758688,
     "release": {
       "tag": "v2026.9.24",
       "publishedAt": "2026-09-24T10:09:38Z",
@@ -5109,22 +5109,22 @@
       {
         "login": "teknium1",
         "avatarUrl": "https://avatars.githubusercontent.com/u/127238744?v=4",
-        "contributions": 18641
+        "contributions": 18642
       },
       {
         "login": "OutThisLife",
         "avatarUrl": "https://avatars.githubusercontent.com/u/770929?v=4",
-        "contributions": 3685
+        "contributions": 3724
       },
       {
         "login": "kshitijk4poor",
         "avatarUrl": "https://avatars.githubusercontent.com/u/82637225?v=4",
-        "contributions": 3372
+        "contributions": 3477
       },
       {
         "login": "ethernet8023",
         "avatarUrl": "https://avatars.githubusercontent.com/u/666465?v=4",
-        "contributions": 562
+        "contributions": 2049
       },
       {
         "login": "benbarclay",
@@ -5134,11 +5134,16 @@
       {
         "login": "liuhao1024",
         "avatarUrl": "https://avatars.githubusercontent.com/u/11816344?v=4",
-        "contributions": 413
+        "contributions": 425
       },
       {
         "login": "helix4u",
         "avatarUrl": "https://avatars.githubusercontent.com/u/4317663?v=4",
+        "contributions": 353
+      },
+      {
+        "login": "fangliquanflq",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/280272527?v=4",
         "contributions": 352
       },
       {
@@ -5147,19 +5152,14 @@
         "contributions": 351
       },
       {
-        "login": "fangliquanflq",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/280272527?v=4",
-        "contributions": 347
-      },
-      {
         "login": "alt-glitch",
         "avatarUrl": "https://avatars.githubusercontent.com/u/52913345?v=4",
-        "contributions": 272
+        "contributions": 282
       },
       {
         "login": "xxxigm",
         "avatarUrl": "https://avatars.githubusercontent.com/u/54813621?v=4",
-        "contributions": 268
+        "contributions": 269
       },
       {
         "login": "erosika",
@@ -5167,14 +5167,19 @@
         "contributions": 245
       },
       {
-        "login": "JoaoMarcos44",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/87440198?v=4",
-        "contributions": 236
+        "login": "jquesnelle",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/687076?v=4",
+        "contributions": 241
       },
       {
         "login": "austinpickett",
         "avatarUrl": "https://avatars.githubusercontent.com/u/260188?v=4",
-        "contributions": 234
+        "contributions": 238
+      },
+      {
+        "login": "JoaoMarcos44",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/87440198?v=4",
+        "contributions": 236
       },
       {
         "login": "0xbyt4",
@@ -5192,14 +5197,9 @@
         "contributions": 150
       },
       {
-        "login": "jquesnelle",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/687076?v=4",
-        "contributions": 148
-      },
-      {
         "login": "briandevans",
         "avatarUrl": "https://avatars.githubusercontent.com/u/252620095?v=4",
-        "contributions": 146
+        "contributions": 147
       },
       {
         "login": "yoniebans",
@@ -5214,7 +5214,7 @@
       {
         "login": "LeonSGP43",
         "avatarUrl": "https://avatars.githubusercontent.com/u/154585401?v=4",
-        "contributions": 105
+        "contributions": 106
       },
       {
         "login": "jonpol01",
@@ -5222,24 +5222,24 @@
         "contributions": 104
       },
       {
+        "login": "chelsealong",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/14966750?v=4",
+        "contributions": 91
+      },
+      {
         "login": "kokhlo",
         "avatarUrl": "https://avatars.githubusercontent.com/u/47825603?v=4",
         "contributions": 91
       },
       {
-        "login": "chelsealong",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/14966750?v=4",
-        "contributions": 90
+        "login": "DavidMetcalfe",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/80915?v=4",
+        "contributions": 88
       },
       {
         "login": "SHL0MS",
         "avatarUrl": "https://avatars.githubusercontent.com/u/131039422?v=4",
         "contributions": 85
-      },
-      {
-        "login": "DavidMetcalfe",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/80915?v=4",
-        "contributions": 83
       },
       {
         "login": "shannonsands",
@@ -5254,7 +5254,7 @@
       {
         "login": "Finn763",
         "avatarUrl": "https://avatars.githubusercontent.com/u/165816600?v=4",
-        "contributions": 74
+        "contributions": 76
       },
       {
         "login": "webtecnica",
@@ -5274,21 +5274,21 @@
       {
         "login": "konsisumer",
         "avatarUrl": "https://avatars.githubusercontent.com/u/11262660?v=4",
-        "contributions": 58
+        "contributions": 59
       },
       {
         "login": "Bartok9",
         "avatarUrl": "https://avatars.githubusercontent.com/u/259807879?v=4",
-        "contributions": 58
-      },
-      {
-        "login": "ehz0ah",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/130889443?v=4",
-        "contributions": 53
+        "contributions": 59
       },
       {
         "login": "beardthelion",
         "avatarUrl": "https://avatars.githubusercontent.com/u/56458543?v=4",
+        "contributions": 53
+      },
+      {
+        "login": "ehz0ah",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/130889443?v=4",
         "contributions": 53
       },
       {
@@ -5309,7 +5309,7 @@
       {
         "login": "rewbs",
         "avatarUrl": "https://avatars.githubusercontent.com/u/74455?v=4",
-        "contributions": 41
+        "contributions": 42
       },
       {
         "login": "srojk34",
@@ -5322,6 +5322,11 @@
         "contributions": 41
       },
       {
+        "login": "Frowtek",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/164990034?v=4",
+        "contributions": 40
+      },
+      {
         "login": "apoapostolov",
         "avatarUrl": "https://avatars.githubusercontent.com/u/4083812?v=4",
         "contributions": 40
@@ -5329,11 +5334,6 @@
       {
         "login": "wesleysimplicio",
         "avatarUrl": "https://avatars.githubusercontent.com/u/6108320?v=4",
-        "contributions": 40
-      },
-      {
-        "login": "Frowtek",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/164990034?v=4",
         "contributions": 40
       },
       {
@@ -5347,19 +5347,14 @@
         "contributions": 38
       },
       {
+        "login": "686f6c61",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6115107?v=4",
+        "contributions": 38
+      },
+      {
         "login": "rob-maron",
         "avatarUrl": "https://avatars.githubusercontent.com/u/132852777?v=4",
         "contributions": 37
-      },
-      {
-        "login": "686f6c61",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6115107?v=4",
-        "contributions": 37
-      },
-      {
-        "login": "frizikk",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/4850809?v=4",
-        "contributions": 36
       },
       {
         "login": "nftpoetrist",
@@ -5369,7 +5364,12 @@
       {
         "login": "embwl0x",
         "avatarUrl": "https://avatars.githubusercontent.com/u/262193448?v=4",
-        "contributions": 35
+        "contributions": 36
+      },
+      {
+        "login": "frizikk",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/4850809?v=4",
+        "contributions": 36
       },
       {
         "login": "nousbot-eng",
@@ -5417,13 +5417,18 @@
         "contributions": 31
       },
       {
+        "login": "pefontana",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/79212398?v=4",
+        "contributions": 30
+      },
+      {
         "login": "royalaid",
         "avatarUrl": "https://avatars.githubusercontent.com/u/2439803?v=4",
         "contributions": 30
       },
       {
-        "login": "pefontana",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/79212398?v=4",
+        "login": "Xipong",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/217837358?v=4",
         "contributions": 30
       },
       {
@@ -5442,8 +5447,8 @@
         "contributions": 29
       },
       {
-        "login": "Xipong",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/217837358?v=4",
+        "login": "Sahil-SS9",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/218421507?v=4",
         "contributions": 29
       },
       {
@@ -5462,6 +5467,11 @@
         "contributions": 28
       },
       {
+        "login": "Halldrix",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/12357213?v=4",
+        "contributions": 28
+      },
+      {
         "login": "infinitycrew39",
         "avatarUrl": "https://avatars.githubusercontent.com/u/185955571?v=4",
         "contributions": 28
@@ -5469,27 +5479,12 @@
       {
         "login": "Christopher-Schulze",
         "avatarUrl": "https://avatars.githubusercontent.com/u/210261288?v=4",
-        "contributions": 27
-      },
-      {
-        "login": "Sahil-SS9",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/218421507?v=4",
-        "contributions": 27
-      },
-      {
-        "login": "Halldrix",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/12357213?v=4",
-        "contributions": 27
+        "contributions": 28
       },
       {
         "login": "Enough1122",
         "avatarUrl": "https://avatars.githubusercontent.com/u/10966420?v=4",
         "contributions": 26
-      },
-      {
-        "login": "spfcraze",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/108240075?v=4",
-        "contributions": 25
       },
       {
         "login": "salch-cred",
@@ -5512,18 +5507,23 @@
         "contributions": 25
       },
       {
+        "login": "spfcraze",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/108240075?v=4",
+        "contributions": 25
+      },
+      {
         "login": "kvnloo",
         "avatarUrl": "https://avatars.githubusercontent.com/u/7121943?v=4",
         "contributions": 24
       },
       {
-        "login": "BearHuddleston",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/196404565?v=4",
+        "login": "Zeus-Deus",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/100132710?v=4",
         "contributions": 24
       },
       {
-        "login": "Zeus-Deus",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/100132710?v=4",
+        "login": "BearHuddleston",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/196404565?v=4",
         "contributions": 24
       },
       {
@@ -5537,13 +5537,13 @@
         "contributions": 23
       },
       {
-        "login": "KeyArgo",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/103297213?v=4",
+        "login": "izumi0uu",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/140379130?v=4",
         "contributions": 22
       },
       {
-        "login": "izumi0uu",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/140379130?v=4",
+        "login": "KeyArgo",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/103297213?v=4",
         "contributions": 22
       },
       {
@@ -5562,18 +5562,13 @@
         "contributions": 22
       },
       {
-        "login": "WideLee",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/2196814?v=4",
-        "contributions": 21
-      },
-      {
         "login": "steveonjava",
         "avatarUrl": "https://avatars.githubusercontent.com/u/1290231?v=4",
         "contributions": 21
       },
       {
-        "login": "unsupportedpastels",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/274530371?v=4",
+        "login": "WideLee",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/2196814?v=4",
         "contributions": 21
       },
       {
@@ -5582,8 +5577,8 @@
         "contributions": 21
       },
       {
-        "login": "GodsBoy",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/5792287?v=4",
+        "login": "unsupportedpastels",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/274530371?v=4",
         "contributions": 21
       },
       {
@@ -5594,6 +5589,11 @@
       {
         "login": "zakame",
         "avatarUrl": "https://avatars.githubusercontent.com/u/110625?v=4",
+        "contributions": 21
+      },
+      {
+        "login": "GodsBoy",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/5792287?v=4",
         "contributions": 21
       },
       {
@@ -5609,88 +5609,88 @@
     ],
     "commitList": [
       {
-        "sha": "c43eb76",
-        "message": "refactor(streaming): share interim visible/streamed normalization between prefix and exact verdicts",
-        "author": "kshitijk4poor",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/82637225?v=4",
-        "date": "2026-09-24T13:52:41Z"
+        "sha": "99a1615",
+        "message": "fix(desktop): decide image bytes vs path from the session owner's own backend",
+        "author": "Hermes Agent",
+        "avatarUrl": "",
+        "date": "2026-09-25T04:42:58Z"
       },
       {
-        "sha": "1f61f70",
-        "message": "docs(agent): pin prefix semantics at the previewed-mark call site (#88954)",
-        "author": "kshitijk4poor",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/82637225?v=4",
-        "date": "2026-09-24T11:22:39Z"
+        "sha": "c19a35d",
+        "message": "fix(desktop): keep pip downloads and cache files out of Artifacts",
+        "author": "Hermes Agent",
+        "avatarUrl": "",
+        "date": "2026-09-25T04:34:29Z"
       },
       {
-        "sha": "167f0ef",
-        "message": "fix(streaming): stop losing the tail of commentary truncated at a tool-call boundary",
-        "author": "liuhao1024",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/11816344?v=4",
-        "date": "2026-08-18T06:27:41Z"
+        "sha": "f216e44",
+        "message": "fix(desktop): list a compressed project chat once (#77591)",
+        "author": "Hermes Agent",
+        "avatarUrl": "",
+        "date": "2026-09-25T04:12:16Z"
       },
       {
-        "sha": "2ab2270",
-        "message": "fix(agent): hide MiniMax-M3 Chinese reasoning tags (#43827)",
-        "author": "kshitijk4poor",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/82637225?v=4",
-        "date": "2026-09-24T11:16:23Z"
+        "sha": "f9f1413",
+        "message": "fix(desktop): stop an entered project refetching on every tree refresh (#77591)",
+        "author": "Hermes Agent",
+        "avatarUrl": "",
+        "date": "2026-09-25T04:12:16Z"
       },
       {
-        "sha": "7fb8736",
-        "message": "refactor(codex): single source for app-server delta methods and delta text",
-        "author": "kshitijk4poor",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/82637225?v=4",
-        "date": "2026-09-24T12:27:55Z"
+        "sha": "138e33d",
+        "message": "Merge pull request #122244 from NousResearch/fix/restore-pm-merge-drops-current",
+        "author": "ethernet8023",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/666465?v=4",
+        "date": "2026-09-25T04:36:50Z"
       },
       {
-        "sha": "6c94f52",
-        "message": "fix(agent): keep local Responses endpoints out of hosted codex watchdog clamps",
-        "author": "kshitijk4poor",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/82637225?v=4",
-        "date": "2026-09-24T12:02:37Z"
+        "sha": "067934a",
+        "message": "Merge pull request #122093 from benbarclay/fix/pm-agent-browser-exec-bit",
+        "author": "ethernet8023",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/666465?v=4",
+        "date": "2026-09-25T04:35:56Z"
       },
       {
-        "sha": "d6d7798",
-        "message": "test: route codex summary mocks through _interruptible_api_call; strip trailing whitespace (codex-watchdogs)",
-        "author": "kshitijk4poor",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/82637225?v=4",
-        "date": "2026-09-24T11:09:35Z"
+        "sha": "502dd8d",
+        "message": "Merge pull request #122288 from NousResearch/fix/gateway-start-no-prompt-on-captured-stdout",
+        "author": "ethernet8023",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/666465?v=4",
+        "date": "2026-09-25T04:34:57Z"
       },
       {
-        "sha": "fe14267",
-        "message": "fix(cron): bound Codex max-iteration summaries",
-        "author": "yinkev",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/182213728?v=4",
-        "date": "2026-07-25T19:51:42Z"
+        "sha": "af3299a",
+        "message": "fix(gateway): don't ask the Windows login question when stdout is captured",
+        "author": "ethernet8023",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/666465?v=4",
+        "date": "2026-09-25T04:33:42Z"
       },
       {
-        "sha": "606eb23",
-        "message": "fix(agent): apply large-context watchdog accommodations to all codex_responses transports",
-        "author": "Christopher-Schulze",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/210261288?v=4",
-        "date": "2026-08-16T12:18:55Z"
+        "sha": "da931c9",
+        "message": "fix(desktop): ignore auto-repeat and post-focus Ctrl+W/Ctrl+R",
+        "author": "Hermes Agent",
+        "avatarUrl": "",
+        "date": "2026-09-25T04:12:30Z"
       },
       {
-        "sha": "9472789",
-        "message": "fix(codex): refresh turn liveness from app-server progress",
-        "author": "zxdvd",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/107175?v=4",
-        "date": "2026-09-21T17:34:57Z"
+        "sha": "2ef41d2",
+        "message": "Merge pull request #122103 from NousResearch/ethie/pm-evict-incompatible-plugins",
+        "author": "ethernet8023",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/666465?v=4",
+        "date": "2026-09-25T04:08:10Z"
       },
       {
-        "sha": "a677b83",
-        "message": "chore: map contributor emails for streaming salvage (codex-watchdogs)",
-        "author": "kshitijk4poor",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/82637225?v=4",
-        "date": "2026-09-24T10:57:20Z"
+        "sha": "e71f4dd",
+        "message": "Merge pull request #122221 from NousResearch/fix/anthropic-lazy-install",
+        "author": "ethernet8023",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/666465?v=4",
+        "date": "2026-09-25T04:05:51Z"
       },
       {
-        "sha": "5724463",
-        "message": "fix(agent): feed inline <think> text to the live reasoning pane (#89647)",
-        "author": "kshitijk4poor",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/82637225?v=4",
-        "date": "2026-09-24T16:12:06Z"
+        "sha": "a75d8b4",
+        "message": "Merge pull request #122234 from NousResearch/fix/handoff-noninteractive-steps",
+        "author": "ethernet8023",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/666465?v=4",
+        "date": "2026-09-25T04:05:41Z"
       }
     ],
     "activity": [
@@ -6255,14 +6255,14 @@
       },
       {
         "week": 1785024000,
-        "total": 1989,
+        "total": 1985,
         "days": [
           295,
           289,
           379,
-          359,
-          222,
-          211,
+          357,
+          221,
+          210,
           234
         ]
       },
@@ -6281,9 +6281,9 @@
       },
       {
         "week": 1786233600,
-        "total": 1617,
+        "total": 1618,
         "days": [
-          173,
+          174,
           212,
           144,
           225,
@@ -6294,7 +6294,7 @@
       },
       {
         "week": 1786838400,
-        "total": 1660,
+        "total": 1661,
         "days": [
           236,
           272,
@@ -6302,17 +6302,17 @@
           328,
           273,
           173,
-          148
+          149
         ]
       },
       {
         "week": 1787443200,
-        "total": 1523,
+        "total": 1525,
         "days": [
           266,
-          237,
+          238,
           206,
-          234,
+          235,
           193,
           194,
           193
@@ -6320,10 +6320,10 @@
       },
       {
         "week": 1788048000,
-        "total": 2055,
+        "total": 2056,
         "days": [
           95,
-          164,
+          165,
           196,
           671,
           636,
@@ -6333,11 +6333,11 @@
       },
       {
         "week": 1788652800,
-        "total": 2137,
+        "total": 2138,
         "days": [
           223,
           492,
-          190,
+          191,
           329,
           180,
           300,
@@ -6346,200 +6346,200 @@
       },
       {
         "week": 1789257600,
-        "total": 4813,
+        "total": 5104,
         "days": [
-          339,
-          567,
-          581,
-          804,
-          426,
-          957,
-          1139
+          389,
+          601,
+          601,
+          830,
+          478,
+          1015,
+          1190
         ]
       },
       {
         "week": 1789862400,
-        "total": 2317,
+        "total": 3126,
         "days": [
-          671,
-          374,
-          345,
-          625,
-          302,
-          0,
+          682,
+          559,
+          456,
+          759,
+          655,
+          15,
           0
         ]
       }
     ],
     "punchCard": [
-      114,
-      105,
-      59,
-      49,
-      58,
-      57,
-      40,
-      27,
+      115,
+      100,
+      51,
+      38,
+      54,
+      54,
+      32,
+      25,
       24,
       32,
-      57,
-      45,
-      151,
-      110,
-      133,
-      149,
-      130,
-      129,
-      106,
-      113,
-      141,
-      72,
-      69,
-      74,
-      143,
-      90,
-      220,
-      96,
-      53,
-      35,
-      46,
-      36,
       59,
-      79,
-      55,
-      86,
-      92,
-      87,
-      91,
-      114,
-      94,
-      103,
-      158,
-      147,
-      141,
-      188,
-      96,
-      99,
-      110,
-      57,
-      52,
-      44,
-      28,
-      28,
-      17,
-      28,
-      59,
-      75,
-      62,
-      207,
-      207,
-      98,
-      170,
-      128,
-      122,
-      103,
-      68,
       47,
-      87,
-      107,
-      108,
-      76,
-      82,
-      85,
-      155,
-      171,
-      185,
-      92,
-      69,
-      88,
-      53,
+      157,
       116,
-      285,
-      210,
-      250,
-      199,
-      139,
-      262,
-      371,
-      219,
-      442,
-      528,
-      515,
-      494,
-      544,
-      539,
-      275,
-      158,
-      188,
-      105,
-      95,
-      51,
-      26,
-      44,
-      48,
-      98,
-      84,
-      105,
-      80,
-      143,
-      121,
-      85,
+      149,
+      152,
       131,
-      129,
-      103,
-      103,
-      114,
-      83,
-      99,
-      64,
-      268,
+      131,
       119,
-      78,
-      121,
-      104,
-      56,
-      17,
-      48,
-      54,
-      51,
-      53,
-      72,
-      111,
-      102,
-      140,
-      106,
-      85,
-      53,
-      86,
+      114,
+      144,
+      75,
+      70,
+      74,
+      136,
+      92,
+      217,
+      91,
+      47,
+      26,
+      47,
+      35,
+      60,
       76,
-      58,
-      57,
-      88,
-      263,
-      251,
-      239,
-      90,
-      83,
-      43,
-      38,
-      86,
-      64,
-      58,
-      36,
-      57,
-      113,
-      100,
-      71,
-      88,
-      94,
-      69,
-      123,
-      161,
-      125,
+      51,
+      85,
+      81,
       98,
-      132,
-      160,
-      190
+      109,
+      115,
+      92,
+      96,
+      212,
+      156,
+      143,
+      191,
+      87,
+      101,
+      110,
+      59,
+      46,
+      42,
+      30,
+      27,
+      18,
+      25,
+      58,
+      75,
+      65,
+      199,
+      211,
+      93,
+      166,
+      121,
+      112,
+      85,
+      68,
+      48,
+      87,
+      105,
+      110,
+      73,
+      85,
+      84,
+      149,
+      167,
+      176,
+      90,
+      62,
+      85,
+      52,
+      122,
+      273,
+      214,
+      256,
+      187,
+      138,
+      268,
+      357,
+      199,
+      450,
+      532,
+      516,
+      482,
+      541,
+      538,
+      273,
+      157,
+      183,
+      100,
+      100,
+      56,
+      43,
+      54,
+      53,
+      105,
+      79,
+      133,
+      91,
+      166,
+      151,
+      102,
+      137,
+      133,
+      118,
+      119,
+      111,
+      69,
+      90,
+      78,
+      266,
+      131,
+      85,
+      126,
+      114,
+      59,
+      15,
+      46,
+      40,
+      51,
+      51,
+      82,
+      120,
+      92,
+      136,
+      110,
+      86,
+      42,
+      97,
+      88,
+      79,
+      59,
+      86,
+      266,
+      240,
+      241,
+      93,
+      86,
+      42,
+      27,
+      82,
+      62,
+      56,
+      36,
+      51,
+      95,
+      81,
+      60,
+      62,
+      76,
+      55,
+      103,
+      145,
+      142,
+      102,
+      133,
+      153,
+      186
     ]
   },
   {
@@ -6553,27 +6553,27 @@
     "topics": [],
     "license": "Apache-2.0",
     "defaultBranch": "main",
-    "stars": 126322,
-    "forks": 19696,
-    "openIssues": 18612,
+    "stars": 126362,
+    "forks": 19714,
+    "openIssues": 18660,
     "watchers": 651,
-    "contributors": 629,
-    "commits": 11350,
-    "sizeKb": 645021,
+    "contributors": 630,
+    "commits": 11401,
+    "sizeKb": 647126,
     "createdAt": "2025-04-13T05:37:54Z",
-    "pushedAt": "2026-09-24T17:05:07Z",
+    "pushedAt": "2026-09-25T04:42:59Z",
     "languages": [
       {
         "name": "Rust",
-        "bytes": 69321305
+        "bytes": 69727584
       },
       {
         "name": "Python",
-        "bytes": 1732108
+        "bytes": 1740174
       },
       {
         "name": "Starlark",
-        "bytes": 128651
+        "bytes": 132297
       },
       {
         "name": "TypeScript",
@@ -6584,14 +6584,56 @@
         "bytes": 77662
       }
     ],
-    "languageTotal": 71546257,
+    "languageTotal": 71964248,
     "release": {
-      "tag": "rust-v0.156.1",
-      "publishedAt": "2026-09-23T02:41:36Z",
+      "tag": "rust-v0.157.0",
+      "publishedAt": "2026-09-25T02:31:06Z",
       "prerelease": false
     },
-    "releaseCount": 1137,
+    "releaseCount": 1144,
     "releases": [
+      {
+        "tag": "rust-v0.158.0-alpha.13",
+        "name": "0.158.0-alpha.13",
+        "publishedAt": "2026-09-25T04:29:26Z",
+        "prerelease": true
+      },
+      {
+        "tag": "rust-v0.157.0",
+        "name": "0.157.0",
+        "publishedAt": "2026-09-25T02:31:06Z",
+        "prerelease": false
+      },
+      {
+        "tag": "rust-v0.158.0-alpha.12",
+        "name": "0.158.0-alpha.12",
+        "publishedAt": "2026-09-25T00:54:29Z",
+        "prerelease": true
+      },
+      {
+        "tag": "rust-v0.158.0-alpha.11",
+        "name": "0.158.0-alpha.11",
+        "publishedAt": "2026-09-24T23:23:08Z",
+        "prerelease": true
+      },
+      {
+        "tag": "rust-v0.157.0-alpha.11.1",
+        "name": "0.157.0-alpha.11.1",
+        "publishedAt": "2026-09-24T21:50:10Z",
+        "prerelease": true
+      },
+      {
+        "tag": "rust-v0.158.0-alpha.10",
+        "name": "0.158.0-alpha.10",
+        "publishedAt": "2026-09-24T20:58:11Z",
+        "prerelease": true
+      },
+      {
+        "tag": "rust-v0.158.0-alpha.9",
+        "name": "0.158.0-alpha.9",
+        "publishedAt": "2026-09-24T17:49:16Z",
+        "prerelease": true
+      },
       {
         "tag": "rust-v0.158.0-alpha.8",
         "name": "0.158.0-alpha.8",
@@ -7145,59 +7187,17 @@
         "prerelease": true
       },
       {
-        "tag": "rust-v0.153.0-alpha.2",
-        "name": "0.153.0-alpha.2",
-        "publishedAt": "2026-09-01T06:15:12Z",
-        "prerelease": true
-      },
-      {
-        "tag": "rust-v0.153.0-alpha.1",
-        "name": "0.153.0-alpha.1",
-        "publishedAt": "2026-09-01T04:40:58Z",
-        "prerelease": true
-      },
-      {
         "tag": "rust-v0.152.0",
         "name": "0.152.0",
         "publishedAt": "2026-09-01T01:58:32Z",
         "prerelease": false
-      },
-      {
-        "tag": "rust-v0.152.0-alpha.7.2",
-        "name": "0.152.0-alpha.7.2",
-        "publishedAt": "2026-09-01T00:30:15Z",
-        "prerelease": true
-      },
-      {
-        "tag": "rust-v0.152.0-alpha.7",
-        "name": "0.152.0-alpha.7",
-        "publishedAt": "2026-08-31T16:18:27Z",
-        "prerelease": true
-      },
-      {
-        "tag": "rust-v0.152.0-alpha.6",
-        "name": "0.152.0-alpha.6",
-        "publishedAt": "2026-08-31T02:12:53Z",
-        "prerelease": true
-      },
-      {
-        "tag": "rust-v0.152.0-alpha.5",
-        "name": "0.152.0-alpha.5",
-        "publishedAt": "2026-08-31T01:11:03Z",
-        "prerelease": true
-      },
-      {
-        "tag": "rust-v0.152.0-alpha.4",
-        "name": "0.152.0-alpha.4",
-        "publishedAt": "2026-08-30T13:56:08Z",
-        "prerelease": true
       }
     ],
     "contributorList": [
       {
         "login": "jif-oai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/230027070?v=4",
-        "contributions": 1734
+        "contributions": 1737
       },
       {
         "login": "bolinfest",
@@ -7207,12 +7207,12 @@
       {
         "login": "etraut-openai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/223546144?v=4",
-        "contributions": 824
+        "contributions": 831
       },
       {
         "login": "aibrahim-oai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/219906144?v=4",
-        "contributions": 609
+        "contributions": 613
       },
       {
         "login": "pakrym-oai",
@@ -7227,7 +7227,7 @@
       {
         "login": "owenlin0",
         "avatarUrl": "https://avatars.githubusercontent.com/u/947871?v=4",
-        "contributions": 253
+        "contributions": 255
       },
       {
         "login": "anp-oai",
@@ -7237,12 +7237,12 @@
       {
         "login": "iceweasel-oai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/234057055?v=4",
-        "contributions": 218
+        "contributions": 219
       },
       {
         "login": "felixxia-oai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/288149840?v=4",
-        "contributions": 216
+        "contributions": 217
       },
       {
         "login": "nornagon-openai",
@@ -7250,29 +7250,29 @@
         "contributions": 216
       },
       {
+        "login": "sayan-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/244841968?v=4",
+        "contributions": 191
+      },
+      {
         "login": "viyatb-oai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/234056686?v=4",
         "contributions": 189
       },
       {
-        "login": "sayan-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/244841968?v=4",
-        "contributions": 188
-      },
-      {
         "login": "fcoury-oai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/272635208?v=4",
-        "contributions": 184
+        "contributions": 186
       },
       {
         "login": "charliemarsh-oai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/282065134?v=4",
-        "contributions": 171
+        "contributions": 172
       },
       {
         "login": "celia-oai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/209693228?v=4",
-        "contributions": 151
+        "contributions": 153
       },
       {
         "login": "xl-openai",
@@ -7405,6 +7405,11 @@
         "contributions": 39
       },
       {
+        "login": "zm-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/215741035?v=4",
+        "contributions": 38
+      },
+      {
         "login": "wiltzius-openai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/176426546?v=4",
         "contributions": 37
@@ -7420,14 +7425,24 @@
         "contributions": 37
       },
       {
-        "login": "zm-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/215741035?v=4",
-        "contributions": 37
-      },
-      {
         "login": "dedrisian-oai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/226172230?v=4",
         "contributions": 33
+      },
+      {
+        "login": "imac-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/315518412?v=4",
+        "contributions": 30
+      },
+      {
+        "login": "chess-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/289791516?v=4",
+        "contributions": 29
+      },
+      {
+        "login": "seanh-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/309889850?v=4",
+        "contributions": 28
       },
       {
         "login": "efrazer-oai",
@@ -7440,16 +7455,6 @@
         "contributions": 28
       },
       {
-        "login": "chess-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/289791516?v=4",
-        "contributions": 28
-      },
-      {
-        "login": "imac-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/315518412?v=4",
-        "contributions": 26
-      },
-      {
         "login": "winston-openai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/177672674?v=4",
         "contributions": 26
@@ -7460,14 +7465,14 @@
         "contributions": 26
       },
       {
-        "login": "seanh-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/309889850?v=4",
-        "contributions": 26
-      },
-      {
         "login": "joeytrasatti-openai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/187452053?v=4",
         "contributions": 25
+      },
+      {
+        "login": "andrewgu-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/312661362?v=4",
+        "contributions": 24
       },
       {
         "login": "guinness-oai",
@@ -7475,8 +7480,8 @@
         "contributions": 24
       },
       {
-        "login": "andrewgu-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/312661362?v=4",
+        "login": "willwang-openai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/189043618?v=4",
         "contributions": 23
       },
       {
@@ -7485,14 +7490,9 @@
         "contributions": 22
       },
       {
-        "login": "willwang-openai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/189043618?v=4",
-        "contributions": 21
-      },
-      {
         "login": "ningyi-oai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/242065200?v=4",
-        "contributions": 21
+        "contributions": 22
       },
       {
         "login": "eternal-openai",
@@ -7502,6 +7502,11 @@
       {
         "login": "fcoury",
         "avatarUrl": "https://avatars.githubusercontent.com/u/1371?v=4",
+        "contributions": 19
+      },
+      {
+        "login": "kchainani-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/315518203?v=4",
         "contributions": 19
       },
       {
@@ -7527,11 +7532,6 @@
       {
         "login": "maxj-oai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/162359438?v=4",
-        "contributions": 18
-      },
-      {
-        "login": "kchainani-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/315518203?v=4",
         "contributions": 18
       },
       {
@@ -7615,18 +7615,8 @@
         "contributions": 13
       },
       {
-        "login": "ankushg",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/227041?v=4",
-        "contributions": 12
-      },
-      {
-        "login": "johnl-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/256203048?v=4",
-        "contributions": 12
-      },
-      {
-        "login": "marksteinbrick-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/219906558?v=4",
+        "login": "TAFOYA-OAI",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/295987026?v=4",
         "contributions": 12
       },
       {
@@ -7635,18 +7625,38 @@
         "contributions": 12
       },
       {
-        "login": "TAFOYA-OAI",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/295987026?v=4",
+        "login": "marksteinbrick-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/219906558?v=4",
         "contributions": 12
       },
       {
-        "login": "mchen-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/250037145?v=4",
+        "login": "johnl-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/256203048?v=4",
+        "contributions": 12
+      },
+      {
+        "login": "eddie-openai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/173840017?v=4",
+        "contributions": 12
+      },
+      {
+        "login": "ankushg",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/227041?v=4",
+        "contributions": 12
+      },
+      {
+        "login": "fc-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/269039706?v=4",
         "contributions": 11
       },
       {
-        "login": "jayp-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/286152634?v=4",
+        "login": "sdcoffey",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/3506415?v=4",
+        "contributions": 11
+      },
+      {
+        "login": "vivi",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/5145763?v=4",
         "contributions": 11
       },
       {
@@ -7655,28 +7665,18 @@
         "contributions": 11
       },
       {
-        "login": "fc-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/269039706?v=4",
+        "login": "jayp-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/286152634?v=4",
         "contributions": 11
       },
       {
-        "login": "eddie-openai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/173840017?v=4",
+        "login": "mchen-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/250037145?v=4",
         "contributions": 11
       },
       {
         "login": "zsol-openai",
         "avatarUrl": "https://avatars.githubusercontent.com/u/282072647?v=4",
-        "contributions": 10
-      },
-      {
-        "login": "vivi",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/5145763?v=4",
-        "contributions": 10
-      },
-      {
-        "login": "sdcoffey",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/3506415?v=4",
         "contributions": 10
       },
       {
@@ -7697,88 +7697,88 @@
     ],
     "commitList": [
       {
-        "sha": "3d64285",
-        "message": "Warn users when SQLite diagnostic log writes fail (#47887)",
-        "author": "dkovalenko-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/332204787?v=4",
-        "date": "2026-09-24T16:49:51Z"
+        "sha": "aa38089",
+        "message": "Add startup-only PID namespace inheritance to exec-server (#47989)",
+        "author": "open-matt",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/245021968?v=4",
+        "date": "2026-09-25T03:00:24Z"
       },
       {
-        "sha": "a285066",
-        "message": "Preserve diagnostic logs when SQLite logging fails (#47886)",
-        "author": "dkovalenko-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/332204787?v=4",
-        "date": "2026-09-24T16:49:50Z"
+        "sha": "0f0efab",
+        "message": "Reuse MCP handlers across equivalent bindings (#47988)",
+        "author": "hlevy-openai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/196844376?v=4",
+        "date": "2026-09-25T02:33:54Z"
       },
       {
-        "sha": "90b67c9",
-        "message": "Use Tokio's clock for TUI paste timing (#47881)",
-        "author": "charliemarsh-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/282065134?v=4",
-        "date": "2026-09-24T16:39:39Z"
+        "sha": "9ef08dc",
+        "message": "Add multi-agent spawn latency and failure metrics (#47984)",
+        "author": "owenlin0",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/947871?v=4",
+        "date": "2026-09-25T02:24:54Z"
       },
       {
-        "sha": "6f51c65",
-        "message": "Fix macOS system-alias matching in patch permission checks (#47879)",
-        "author": "felixxia-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/288149840?v=4",
-        "date": "2026-09-24T16:26:14Z"
+        "sha": "75e0e0a",
+        "message": "Prepare MCP calls directly from advertised tool identities (#47981)",
+        "author": "hlevy-openai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/196844376?v=4",
+        "date": "2026-09-25T01:32:29Z"
       },
       {
-        "sha": "4021746",
-        "message": "Measure deferred tool namespace fragments before and after truncation (#47873)",
-        "author": "mzeng-openai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/175741029?v=4",
-        "date": "2026-09-24T16:01:27Z"
+        "sha": "1f17a0a",
+        "message": "Prevent stale voice answers from reappearing during speech recovery (#47975)",
+        "author": "etraut-openai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/223546144?v=4",
+        "date": "2026-09-25T00:23:41Z"
       },
       {
-        "sha": "4226624",
-        "message": "Fix PID reservation test race and update guardian heartbeat snapshot (#47871)",
-        "author": "jif-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/230027070?v=4",
-        "date": "2026-09-24T15:55:28Z"
+        "sha": "a92ccbd",
+        "message": "Preserve Git directory protections across writable roots (#47974)",
+        "author": "aionescu-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/332247912?v=4",
+        "date": "2026-09-25T00:18:57Z"
       },
       {
-        "sha": "30758e5",
-        "message": "Add opt-in OTLP logging for Guardian assessments (#47870)",
-        "author": "jif-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/230027070?v=4",
-        "date": "2026-09-24T15:53:31Z"
+        "sha": "b725da3",
+        "message": "Add Pro Max plan support and update Pro display names (#47971)",
+        "author": "etraut-openai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/223546144?v=4",
+        "date": "2026-09-25T00:10:48Z"
       },
       {
-        "sha": "2deb542",
-        "message": "Render remote permission paths using executor context (#47867)",
-        "author": "iceweasel-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/234057055?v=4",
-        "date": "2026-09-24T15:46:28Z"
+        "sha": "97da50c",
+        "message": "Expose current environment selections for a running turn (#47970)",
+        "author": "sayan-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/244841968?v=4",
+        "date": "2026-09-24T23:55:22Z"
       },
       {
-        "sha": "3e9d1d2",
-        "message": "Avoid nested read locking when rendering browser sign-in (#47861)",
-        "author": "jif-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/230027070?v=4",
-        "date": "2026-09-24T15:11:06Z"
+        "sha": "a708fc6",
+        "message": "Handle Btrfs device mismatches when masking daemon sockets (#47968)",
+        "author": "etraut-openai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/223546144?v=4",
+        "date": "2026-09-24T23:15:05Z"
       },
       {
-        "sha": "58838df",
-        "message": "Validate loaded plugins outside the cache lock (#47858)",
-        "author": "jif-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/230027070?v=4",
-        "date": "2026-09-24T14:38:24Z"
+        "sha": "dafb133",
+        "message": "Surface Flex capacity failures as a distinct terminal error (#47967)",
+        "author": "sdcoffey",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/3506415?v=4",
+        "date": "2026-09-24T23:09:08Z"
       },
       {
-        "sha": "df06bb0",
-        "message": "Initialize media estimates outside the global cache lock (#47856)",
-        "author": "jif-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/230027070?v=4",
-        "date": "2026-09-24T14:37:54Z"
+        "sha": "8f10341",
+        "message": "Preserve the client-agent header for Amazon Bedrock Runtime (#47964)",
+        "author": "celia-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/209693228?v=4",
+        "date": "2026-09-24T22:58:51Z"
       },
       {
-        "sha": "421082e",
-        "message": "Avoid blocking async proxy resolution on the system proxy cache (#47852)",
-        "author": "jif-oai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/230027070?v=4",
-        "date": "2026-09-24T14:37:46Z"
+        "sha": "8dd0a08",
+        "message": "Request transparent huge pages for Cargo and eligible Bazel rustc jobs (#47962)",
+        "author": "aibrahim-oai",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/219906144?v=4",
+        "date": "2026-09-24T22:52:16Z"
       }
     ],
     "activity": [
@@ -8447,14 +8447,14 @@
       },
       {
         "week": 1789862400,
-        "total": 285,
+        "total": 334,
         "days": [
           36,
           67,
           69,
           75,
-          38,
-          0,
+          80,
+          7,
           0
         ]
       }
@@ -8572,18 +8572,18 @@
       114,
       167,
       144,
-      171,
-      155,
-      138,
-      93,
+      172,
+      166,
+      143,
+      100,
+      74,
+      80,
+      83,
+      73,
       68,
-      76,
-      76,
-      70,
-      65,
-      44,
-      33,
-      22,
+      45,
+      35,
+      23,
       11,
       13,
       19,
@@ -8641,19 +8641,19 @@
     "topics": [],
     "license": "",
     "defaultBranch": "main",
-    "stars": 147926,
-    "forks": 24322,
-    "openIssues": 12681,
-    "watchers": 897,
-    "contributors": 57,
-    "commits": 867,
-    "sizeKb": 31537,
+    "stars": 147994,
+    "forks": 24435,
+    "openIssues": 12789,
+    "watchers": 896,
+    "contributors": 58,
+    "commits": 878,
+    "sizeKb": 31592,
     "createdAt": "2025-02-22T17:41:21Z",
-    "pushedAt": "2026-09-24T02:54:38Z",
+    "pushedAt": "2026-09-25T02:35:26Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 579781
+        "bytes": 592263
       },
       {
         "name": "Python",
@@ -8672,14 +8672,20 @@
         "bytes": 2507
       }
     ],
-    "languageTotal": 1019775,
+    "languageTotal": 1032257,
     "release": {
-      "tag": "v2.1.281",
-      "publishedAt": "2026-09-23T19:19:15Z",
+      "tag": "v2.1.282",
+      "publishedAt": "2026-09-24T18:38:05Z",
       "prerelease": false
     },
-    "releaseCount": 226,
+    "releaseCount": 227,
     "releases": [
+      {
+        "tag": "v2.1.282",
+        "name": "v2.1.282",
+        "publishedAt": "2026-09-24T18:38:05Z",
+        "prerelease": false
+      },
       {
         "tag": "v2.1.281",
         "name": "v2.1.281",
@@ -9273,24 +9279,18 @@
         "name": "v2.1.161",
         "publishedAt": "2026-06-02T21:58:22Z",
         "prerelease": false
-      },
-      {
-        "tag": "v2.1.160",
-        "name": "v2.1.160",
-        "publishedAt": "2026-06-02T02:10:25Z",
-        "prerelease": false
       }
     ],
     "contributorList": [
       {
         "login": "actions-user",
         "avatarUrl": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "contributions": 445
+        "contributions": 447
       },
       {
         "login": "poteat",
         "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
-        "contributions": 95
+        "contributions": 102
       },
       {
         "login": "bcherny",
@@ -9403,6 +9403,11 @@
         "contributions": 3
       },
       {
+        "login": "sarahdeaton",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/247469330?v=4",
+        "contributions": 2
+      },
+      {
         "login": "ltawfik",
         "avatarUrl": "https://avatars.githubusercontent.com/u/11431944?v=4",
         "contributions": 2
@@ -9410,11 +9415,6 @@
       {
         "login": "jportner-ant",
         "avatarUrl": "https://avatars.githubusercontent.com/u/263973075?v=4",
-        "contributions": 2
-      },
-      {
-        "login": "sarahdeaton",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/247469330?v=4",
         "contributions": 2
       },
       {
@@ -9433,28 +9433,8 @@
         "contributions": 2
       },
       {
-        "login": "StephenGrider",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/5003903?v=4",
-        "contributions": 2
-      },
-      {
-        "login": "rquintino",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/10835742?v=4",
-        "contributions": 2
-      },
-      {
-        "login": "MadsRC",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/2797266?v=4",
-        "contributions": 2
-      },
-      {
-        "login": "grll",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/1738060?v=4",
-        "contributions": 2
-      },
-      {
-        "login": "dltn",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/6599399?v=4",
+        "login": "7487",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/35531877?v=4",
         "contributions": 2
       },
       {
@@ -9463,43 +9443,33 @@
         "contributions": 2
       },
       {
-        "login": "stbenjam",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/429763?v=4",
-        "contributions": 1
+        "login": "dltn",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/6599399?v=4",
+        "contributions": 2
       },
       {
-        "login": "gearcog",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7281635?v=4",
-        "contributions": 1
+        "login": "grll",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/1738060?v=4",
+        "contributions": 2
       },
       {
-        "login": "toshitanaa",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/86086730?v=4",
-        "contributions": 1
+        "login": "MadsRC",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/2797266?v=4",
+        "contributions": 2
       },
       {
-        "login": "backpaper0",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/209262?v=4",
-        "contributions": 1
+        "login": "rquintino",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/10835742?v=4",
+        "contributions": 2
       },
       {
-        "login": "williamhu99",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/32604217?v=4",
-        "contributions": 1
+        "login": "StephenGrider",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/5003903?v=4",
+        "contributions": 2
       },
       {
-        "login": "whu-ant",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/279151239?v=4",
-        "contributions": 1
-      },
-      {
-        "login": "claude[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/1236702?v=4",
-        "contributions": 1
-      },
-      {
-        "login": "nozokare",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/100529346?v=4",
+        "login": "toms74209200",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/46676792?v=4",
         "contributions": 1
       },
       {
@@ -9508,8 +9478,43 @@
         "contributions": 1
       },
       {
-        "login": "toms74209200",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/46676792?v=4",
+        "login": "nozokare",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/100529346?v=4",
+        "contributions": 1
+      },
+      {
+        "login": "claude[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/1236702?v=4",
+        "contributions": 1
+      },
+      {
+        "login": "whu-ant",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/279151239?v=4",
+        "contributions": 1
+      },
+      {
+        "login": "williamhu99",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/32604217?v=4",
+        "contributions": 1
+      },
+      {
+        "login": "backpaper0",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/209262?v=4",
+        "contributions": 1
+      },
+      {
+        "login": "toshitanaa",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/86086730?v=4",
+        "contributions": 1
+      },
+      {
+        "login": "gearcog",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/7281635?v=4",
+        "contributions": 1
+      },
+      {
+        "login": "stbenjam",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/429763?v=4",
         "contributions": 1
       },
       {
@@ -9560,88 +9565,88 @@
     ],
     "commitList": [
       {
+        "sha": "e1bb7b0",
+        "message": "telemetry, agents-md: the test plugins hook and call the collector stream by name, and stand in for telemetry through its events (#96930)",
+        "author": "poteat",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
+        "date": "2026-09-25T02:35:26Z"
+      },
+      {
+        "sha": "163ae3a",
+        "message": "chore: Update CHANGELOG.md and feed.xml",
+        "author": "actions-user",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/65916846?v=4",
+        "date": "2026-09-25T02:20:46Z"
+      },
+      {
+        "sha": "6557bbe",
+        "message": "telemetry: log and mark are what the mod's hooks do, the noun added only where the engine has none (#96917)",
+        "author": "poteat",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
+        "date": "2026-09-25T01:32:25Z"
+      },
+      {
+        "sha": "684ffc4",
+        "message": "agents-md: the truncated-read tests laid out as the formatter lays them",
+        "author": "poteat",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
+        "date": "2026-09-23T13:34:10Z"
+      },
+      {
+        "sha": "653d32f",
+        "message": "fix(agents-md): retain instructions after truncated reads",
+        "author": "7487",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/35531877?v=4",
+        "date": "2026-09-21T11:59:23Z"
+      },
+      {
+        "sha": "ddcb43a",
+        "message": "chore: Update CHANGELOG.md and feed.xml",
+        "author": "actions-user",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/65916846?v=4",
+        "date": "2026-09-24T18:37:49Z"
+      },
+      {
+        "sha": "32251d1",
+        "message": "diff: the shared diff arguments' doc says what --no-color pins",
+        "author": "poteat",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
+        "date": "2026-09-23T13:33:49Z"
+      },
+      {
+        "sha": "4536209",
+        "message": "fix(diff): preserve hunks when Git forces colored output",
+        "author": "7487",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/35531877?v=4",
+        "date": "2026-09-21T11:58:44Z"
+      },
+      {
+        "sha": "cbab6f4",
+        "message": "telemetry: rows carry the engine's version, base version and build time from $.session.version() (#96487)",
+        "author": "poteat",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
+        "date": "2026-09-24T17:49:26Z"
+      },
+      {
+        "sha": "6c6915e",
+        "message": "diff: a shell command the tool held read-only fetches nothing, as the built-in panel's touch is gated (#95423)",
+        "author": "poteat",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
+        "date": "2026-09-24T17:22:20Z"
+      },
+      {
+        "sha": "384e28e",
+        "message": "diff: the command.run hook names its command by the literal the engine's scan reads (#96570)",
+        "author": "poteat",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
+        "date": "2026-09-24T17:22:12Z"
+      },
+      {
         "sha": "d78be94",
         "message": "chore: Update CHANGELOG.md and feed.xml",
         "author": "actions-user",
         "avatarUrl": "https://avatars.githubusercontent.com/u/65916846?v=4",
         "date": "2026-09-23T19:18:58Z"
-      },
-      {
-        "sha": "56f3653",
-        "message": "chore: Update CHANGELOG.md and feed.xml",
-        "author": "actions-user",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "date": "2026-09-22T16:37:53Z"
-      },
-      {
-        "sha": "b486776",
-        "message": "Merge pull request #95932 from anthropics/add-github-connection-issue-template",
-        "author": "timgu0",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/213701943?v=4",
-        "date": "2026-09-21T22:23:27Z"
-      },
-      {
-        "sha": "411c240",
-        "message": "Add issue template for GitHub connection problems on claude.ai",
-        "author": "dicksontsai",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/3757768?v=4",
-        "date": "2026-09-21T22:01:17Z"
-      },
-      {
-        "sha": "8187baa",
-        "message": "chore: Update CHANGELOG.md and feed.xml",
-        "author": "actions-user",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "date": "2026-09-21T12:12:04Z"
-      },
-      {
-        "sha": "7974a70",
-        "message": "diff: a resumed session with edits opens the pane before any new edit, /clear leaves it up, and the session line follows the engine's start (#95587)",
-        "author": "poteat",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
-        "date": "2026-09-20T08:03:16Z"
-      },
-      {
-        "sha": "4564326",
-        "message": "telemetry: complete rows gathered through $, sent in batches, serving built-in plugins only (#95618)",
-        "author": "poteat",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
-        "date": "2026-09-20T08:02:49Z"
-      },
-      {
-        "sha": "bf7d404",
-        "message": "chore: Update CHANGELOG.md and feed.xml",
-        "author": "actions-user",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/65916846?v=4",
-        "date": "2026-09-19T03:10:24Z"
-      },
-      {
-        "sha": "92ec78f",
-        "message": "diff: a docked pane reads the repository before it opens, so it never lands on Loading diff (#95488)",
-        "author": "poteat",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
-        "date": "2026-09-19T00:39:54Z"
-      },
-      {
-        "sha": "2287e5d",
-        "message": "diff: the first edit opens the pane only from the main loop with checkpointing on, and an open the engine leaves waiting is withdrawn (#95476)",
-        "author": "poteat",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
-        "date": "2026-09-18T23:12:15Z"
-      },
-      {
-        "sha": "6ce37e9",
-        "message": "mods/diff: type openPane's answer as unknown so a richer $.ui.open result compiles (#95198)",
-        "author": "poteat",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
-        "date": "2026-09-18T19:28:00Z"
-      },
-      {
-        "sha": "2fc72b2",
-        "message": "mods/agents-md: a Read attaches no nested AGENTS.md where the engine attaches nothing to a turn (#95417)",
-        "author": "poteat",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/7668446?v=4",
-        "date": "2026-09-18T19:27:53Z"
       }
     ],
     "activity": [
@@ -10310,14 +10315,14 @@
       },
       {
         "week": 1789862400,
-        "total": 6,
+        "total": 17,
         "days": [
           2,
-          2,
+          4,
           1,
+          3,
+          6,
           1,
-          0,
-          0,
           0
         ]
       }
@@ -10366,7 +10371,7 @@
       3,
       5,
       5,
-      3,
+      5,
       5,
       7,
       10,
@@ -10401,7 +10406,7 @@
       2,
       3,
       1,
-      4,
+      6,
       2,
       8,
       4,
@@ -10429,7 +10434,7 @@
       2,
       4,
       7,
-      10,
+      13,
       8,
       3,
       3,
@@ -10437,15 +10442,15 @@
       4,
       8,
       13,
-      1,
-      4,
+      3,
+      5,
       7,
       14,
       15,
       18,
       9,
       13,
-      5,
+      6,
       1,
       2,
       1,
@@ -10523,27 +10528,27 @@
     ],
     "license": "MIT",
     "defaultBranch": "main",
-    "stars": 82941,
-    "forks": 11481,
-    "openIssues": 889,
+    "stars": 82953,
+    "forks": 11483,
+    "openIssues": 880,
     "watchers": 345,
-    "contributors": 471,
-    "commits": 3513,
-    "sizeKb": 70111,
+    "contributors": 473,
+    "commits": 3524,
+    "sizeKb": 70746,
     "createdAt": "2025-05-07T02:50:19Z",
-    "pushedAt": "2026-09-24T13:03:07Z",
+    "pushedAt": "2026-09-25T04:47:33Z",
     "languages": [
       {
         "name": "Python",
-        "bytes": 24424492
+        "bytes": 24486124
       },
       {
         "name": "TypeScript",
-        "bytes": 4570695
+        "bytes": 4573725
       },
       {
         "name": "MDX",
-        "bytes": 1020121
+        "bytes": 1329825
       },
       {
         "name": "HTML",
@@ -10554,7 +10559,7 @@
         "bytes": 154083
       }
     ],
-    "languageTotal": 30568103,
+    "languageTotal": 30942469,
     "release": {
       "tag": "v2.1.0",
       "publishedAt": "2026-09-24T10:40:44Z",
@@ -10654,7 +10659,7 @@
       {
         "login": "Vanzeren",
         "avatarUrl": "https://avatars.githubusercontent.com/u/53075619?v=4",
-        "contributions": 35
+        "contributions": 36
       },
       {
         "login": "LittleChenLiya",
@@ -10664,7 +10669,7 @@
       {
         "login": "hyeonsang010716",
         "avatarUrl": "https://avatars.githubusercontent.com/u/67507183?v=4",
-        "contributions": 29
+        "contributions": 30
       },
       {
         "login": "nankingjing",
@@ -10737,23 +10742,8 @@
         "contributions": 13
       },
       {
-        "login": "JasonOA888",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/101583541?v=4",
-        "contributions": 12
-      },
-      {
-        "login": "wutongyuonce",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/147830929?v=4",
-        "contributions": 12
-      },
-      {
-        "login": "tiammomo",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/26957354?v=4",
-        "contributions": 12
-      },
-      {
-        "login": "alanhuangyoo",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/263162109?v=4",
+        "login": "PeaceMaker-best",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/221849497?v=4",
         "contributions": 12
       },
       {
@@ -10762,8 +10752,23 @@
         "contributions": 12
       },
       {
-        "login": "PeaceMaker-best",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/221849497?v=4",
+        "login": "alanhuangyoo",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/263162109?v=4",
+        "contributions": 12
+      },
+      {
+        "login": "tiammomo",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/26957354?v=4",
+        "contributions": 12
+      },
+      {
+        "login": "wutongyuonce",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/147830929?v=4",
+        "contributions": 12
+      },
+      {
+        "login": "JasonOA888",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/101583541?v=4",
         "contributions": 12
       },
       {
@@ -10777,23 +10782,8 @@
         "contributions": 11
       },
       {
-        "login": "Baldwinzc",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/56501736?v=4",
-        "contributions": 10
-      },
-      {
-        "login": "whhe",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/27404407?v=4",
-        "contributions": 10
-      },
-      {
-        "login": "octo-patch",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/266937838?v=4",
-        "contributions": 10
-      },
-      {
-        "login": "ajayr",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/809529?v=4",
+        "login": "ech0hol",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/87688412?v=4",
         "contributions": 10
       },
       {
@@ -10802,18 +10792,28 @@
         "contributions": 10
       },
       {
-        "login": "ech0hol",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/87688412?v=4",
+        "login": "ajayr",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/809529?v=4",
         "contributions": 10
       },
       {
-        "login": "Copilot",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
-        "contributions": 9
+        "login": "octo-patch",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/266937838?v=4",
+        "contributions": 10
       },
       {
-        "login": "jamespud",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/92900806?v=4",
+        "login": "whhe",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/27404407?v=4",
+        "contributions": 10
+      },
+      {
+        "login": "Baldwinzc",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/56501736?v=4",
+        "contributions": 10
+      },
+      {
+        "login": "chetan655",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/173717093?v=4",
         "contributions": 9
       },
       {
@@ -10822,8 +10822,13 @@
         "contributions": 9
       },
       {
-        "login": "chetan655",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/173717093?v=4",
+        "login": "jamespud",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/92900806?v=4",
+        "contributions": 9
+      },
+      {
+        "login": "Copilot",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/1143301?v=4",
         "contributions": 9
       },
       {
@@ -10842,18 +10847,8 @@
         "contributions": 8
       },
       {
-        "login": "amszuidas",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/254873068?v=4",
-        "contributions": 8
-      },
-      {
-        "login": "Layau-code",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/213606337?v=4",
-        "contributions": 8
-      },
-      {
-        "login": "CorgiBoyG",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/111257566?v=4",
+        "login": "changxubo",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/11553012?v=4",
         "contributions": 8
       },
       {
@@ -10862,8 +10857,18 @@
         "contributions": 8
       },
       {
-        "login": "changxubo",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/11553012?v=4",
+        "login": "CorgiBoyG",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/111257566?v=4",
+        "contributions": 8
+      },
+      {
+        "login": "Layau-code",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/213606337?v=4",
+        "contributions": 8
+      },
+      {
+        "login": "amszuidas",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/254873068?v=4",
         "contributions": 8
       },
       {
@@ -10879,6 +10884,11 @@
       {
         "login": "zwj110610",
         "avatarUrl": "https://avatars.githubusercontent.com/u/184498352?v=4",
+        "contributions": 7
+      },
+      {
+        "login": "lihongyuan99",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/64824864?v=4",
         "contributions": 7
       },
       {
@@ -10937,11 +10947,6 @@
         "contributions": 6
       },
       {
-        "login": "lihongyuan99",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/64824864?v=4",
-        "contributions": 6
-      },
-      {
         "login": "wanghao-6",
         "avatarUrl": "https://avatars.githubusercontent.com/u/210654907?v=4",
         "contributions": 6
@@ -10949,6 +10954,11 @@
       {
         "login": "leohxj",
         "avatarUrl": "https://avatars.githubusercontent.com/u/1506900?v=4",
+        "contributions": 6
+      },
+      {
+        "login": "FanouZeng-TT",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/124567600?v=4",
         "contributions": 6
       },
       {
@@ -10962,13 +10972,18 @@
         "contributions": 6
       },
       {
+        "login": "zhangbububu",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/41133441?v=4",
+        "contributions": 5
+      },
+      {
         "login": "sunshine-lang",
         "avatarUrl": "https://avatars.githubusercontent.com/u/135408348?v=4",
         "contributions": 5
       },
       {
-        "login": "zhangbububu",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/41133441?v=4",
+        "login": "ruirui6946",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/142162413?v=4",
         "contributions": 5
       },
       {
@@ -10984,6 +10999,11 @@
       {
         "login": "jimmyuconn1982",
         "avatarUrl": "https://avatars.githubusercontent.com/u/234714353?v=4",
+        "contributions": 5
+      },
+      {
+        "login": "KevinAndrewDong",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/20911103?v=4",
         "contributions": 5
       },
       {
@@ -11012,11 +11032,6 @@
         "contributions": 5
       },
       {
-        "login": "FanouZeng-TT",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/124567600?v=4",
-        "contributions": 5
-      },
-      {
         "login": "zhuiyueya",
         "avatarUrl": "https://avatars.githubusercontent.com/u/143682773?v=4",
         "contributions": 5
@@ -11037,8 +11052,8 @@
         "contributions": 5
       },
       {
-        "login": "dcaldr",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/22105838?v=4",
+        "login": "georgelichen",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/4934563?v=4",
         "contributions": 4
       },
       {
@@ -11062,105 +11077,95 @@
         "contributions": 4
       },
       {
-        "login": "ruirui6946",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/142162413?v=4",
-        "contributions": 4
-      },
-      {
         "login": "zaoshangduziteng",
         "avatarUrl": "https://avatars.githubusercontent.com/u/309590849?v=4",
-        "contributions": 4
-      },
-      {
-        "login": "AZE98",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/29354442?v=4",
         "contributions": 4
       }
     ],
     "commitList": [
+      {
+        "sha": "3a86278",
+        "message": "fix(mcp): preserve backslash paths during bare-filename rewriting (#5815)",
+        "author": "lakers-abing",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/236384465?v=4",
+        "date": "2026-09-25T04:47:33Z"
+      },
+      {
+        "sha": "842f561",
+        "message": "fix(runtime): drain agent stream close across cancellation (#5806)",
+        "author": "CorgiBoyG",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/111257566?v=4",
+        "date": "2026-09-25T04:43:04Z"
+      },
+      {
+        "sha": "174c6f7",
+        "message": "fix(mcp): run lazy MCP discovery once when initialization itself raises (#5836)",
+        "author": "hyeonsang010716",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/67507183?v=4",
+        "date": "2026-09-25T02:28:28Z"
+      },
+      {
+        "sha": "c943d95",
+        "message": "docs(checkpoints): add a ten-chapter checkpoint storage manual in both languages (#5845)",
+        "author": "Vanzeren",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/53075619?v=4",
+        "date": "2026-09-25T02:23:36Z"
+      },
+      {
+        "sha": "55f5d6b",
+        "message": "fix(sandbox): clamp negative read_file range bounds (#5655)",
+        "author": "FanouZeng-TT",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/124567600?v=4",
+        "date": "2026-09-25T02:22:38Z"
+      },
+      {
+        "sha": "3d5cc1e",
+        "message": "fix(runtime): persist consumed middleware tool results (#5671)",
+        "author": "KevinAndrewDong",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/20911103?v=4",
+        "date": "2026-09-25T02:06:31Z"
+      },
+      {
+        "sha": "e68b4e1",
+        "message": "fix(gateway): treat a blank GATEWAY_WORKERS and Lark broker port/timeout as unset (#5840)",
+        "author": "huiq777",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/207747646?v=4",
+        "date": "2026-09-25T02:00:16Z"
+      },
+      {
+        "sha": "1da284b",
+        "message": "feat(prompts): add operator overlays for core system prompts (#5794)",
+        "author": "ruirui6946",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/142162413?v=4",
+        "date": "2026-09-25T01:51:11Z"
+      },
+      {
+        "sha": "71a115d",
+        "message": "fix(exa): coerce configured result limits before calling the SDK (#5839)",
+        "author": "huiq777",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/207747646?v=4",
+        "date": "2026-09-25T01:08:21Z"
+      },
+      {
+        "sha": "2a76c9d",
+        "message": "docs(harness): make the custom memory storage guide followable (#5844)",
+        "author": "lihongyuan99",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/64824864?v=4",
+        "date": "2026-09-25T00:58:03Z"
+      },
+      {
+        "sha": "bc26274",
+        "message": "fix(slack): log Socket Mode connect failures instead of dropping them (#5640)",
+        "author": "Linxiushen",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/142557582?v=4",
+        "date": "2026-09-25T00:56:39Z"
+      },
       {
         "sha": "29dbce4",
         "message": "fix(client): exclude prior turns from resumed stream events (#5811)",
         "author": "xbzz1018",
         "avatarUrl": "https://avatars.githubusercontent.com/u/186267668?v=4",
         "date": "2026-09-24T13:03:07Z"
-      },
-      {
-        "sha": "83c42a6",
-        "message": "fix(skills): strip trailing sentence punctuation from extracted resource refs (#5739)",
-        "author": "xjsns346",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/170005321?v=4",
-        "date": "2026-09-24T12:52:58Z"
-      },
-      {
-        "sha": "bcaf6db",
-        "message": "feat(models): add declarative reasoning capability contract (#5780)",
-        "author": "ggnnggez",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/88081804?v=4",
-        "date": "2026-09-24T12:39:30Z"
-      },
-      {
-        "sha": "7d9025c",
-        "message": "fix(sandbox): scope viewed image host reads to the current thread (#5824)",
-        "author": "YxinMiracle",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/56109594?v=4",
-        "date": "2026-09-24T12:38:12Z"
-      },
-      {
-        "sha": "c1149eb",
-        "message": "feat(tools): add stable pagination to historical upload discovery (#5570)",
-        "author": "ZJPex",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/144683084?v=4",
-        "date": "2026-09-24T12:30:45Z"
-      },
-      {
-        "sha": "f250d11",
-        "message": "fix(memory): reject a Honcho base_url that can never resolve (#5607)",
-        "author": "Lesereingrape",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/90967079?v=4",
-        "date": "2026-09-24T12:16:20Z"
-      },
-      {
-        "sha": "3972657",
-        "message": "docs: fix the documented skill and MCP enable/disable endpoints (#5778)",
-        "author": "Jinzhengxu",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/33077399?v=4",
-        "date": "2026-09-24T12:15:21Z"
-      },
-      {
-        "sha": "f83bc05",
-        "message": "fix(mcp): resolve generated file paths containing spaces (#5819)",
-        "author": "xbzz1018",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/186267668?v=4",
-        "date": "2026-09-24T12:13:18Z"
-      },
-      {
-        "sha": "df63139",
-        "message": "feat(plugins): add standalone Jev context pruning example (#5731)",
-        "author": "AnnaSuSu",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/64579968?v=4",
-        "date": "2026-09-24T12:02:36Z"
-      },
-      {
-        "sha": "f242164",
-        "message": "fix(uploads): preserve link errors during staged cleanup (#5756)",
-        "author": "DaoyuanLi2816",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/94409450?v=4",
-        "date": "2026-09-24T11:37:49Z"
-      },
-      {
-        "sha": "577c396",
-        "message": "feat(guardrails): add TypeSafe (Jev) pre-execution tool risk gate (#5712)",
-        "author": "Vanzeren",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/53075619?v=4",
-        "date": "2026-09-24T10:20:31Z"
-      },
-      {
-        "sha": "a89cd26",
-        "message": "fix(sandbox): reject overflowing ownership lease TTL (#5104)",
-        "author": "yu-xin-c",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/175149126?v=4",
-        "date": "2026-09-24T10:11:35Z"
       }
     ],
     "activity": [
@@ -11959,22 +11964,22 @@
       18,
       14,
       21,
-      24,
-      31,
+      25,
+      32,
       29,
       5,
       1,
       1,
       1,
-      2,
+      3,
       2,
       2,
       16,
-      22,
-      38,
-      26,
-      29,
-      4,
+      24,
+      39,
+      28,
+      30,
+      6,
       14,
       51,
       48,
