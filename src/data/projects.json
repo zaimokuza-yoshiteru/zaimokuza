@@ -23,14 +23,14 @@
     "openIssues": 1,
     "watchers": 0,
     "contributors": 2,
-    "commits": 142,
-    "sizeKb": 7272,
+    "commits": 143,
+    "sizeKb": 7287,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-09-25T00:21:23Z",
+    "pushedAt": "2026-09-25T09:12:18Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 2411956
+        "bytes": 2438559
       },
       {
         "name": "CSS",
@@ -45,14 +45,20 @@
         "bytes": 6741
       }
     ],
-    "languageTotal": 2458006,
+    "languageTotal": 2484609,
     "release": {
-      "tag": "v0.1.7-rc.1.0",
-      "publishedAt": "2026-09-24T06:55:15Z",
+      "tag": "v0.1.7-rc.2.0",
+      "publishedAt": "2026-09-25T08:50:24Z",
       "prerelease": true
     },
-    "releaseCount": 37,
+    "releaseCount": 38,
     "releases": [
+      {
+        "tag": "v0.1.7-rc.2.0",
+        "name": "v0.1.7-rc.2.0",
+        "publishedAt": "2026-09-25T08:50:24Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.1.7-rc.1.0",
         "name": "v0.1.7-rc.1.0",
@@ -280,10 +286,17 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 137
+        "contributions": 138
       }
     ],
     "commitList": [
+      {
+        "sha": "7b18ccf",
+        "message": "Upgrade to DSH RC2 and fix ACP approval and recovery boundaries (#27)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-25T08:40:15Z"
+      },
       {
         "sha": "591f8b0",
         "message": "Merge pull request #26 from zaimokuza-yoshiteru/codex/dsh-0.1.7-rc.1-compat",
@@ -360,13 +373,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-23T10:17:41Z"
-      },
-      {
-        "sha": "61c33a2",
-        "message": "Merge DSH alpha.2 integration and approval fixes into feature/ZAI-88",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-23T09:35:27Z"
       }
     ],
     "activity": [
@@ -424,14 +430,14 @@
       },
       {
         "week": 1789862400,
-        "total": 25,
+        "total": 26,
         "days": [
           8,
           0,
           0,
           12,
           5,
-          0,
+          1,
           0
         ]
       }
@@ -573,7 +579,7 @@
       1,
       1,
       0,
-      0,
+      1,
       1,
       0,
       0,
@@ -624,27 +630,33 @@
     "defaultBranch": "main",
     "stars": 0,
     "forks": 0,
-    "openIssues": 1,
+    "openIssues": 0,
     "watchers": 0,
     "contributors": 1,
-    "commits": 7,
-    "sizeKb": 488,
+    "commits": 9,
+    "sizeKb": 489,
     "createdAt": "2026-09-16T15:27:21Z",
-    "pushedAt": "2026-09-24T16:20:22Z",
+    "pushedAt": "2026-09-25T08:14:08Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 223058
+        "bytes": 223296
       }
     ],
-    "languageTotal": 223058,
+    "languageTotal": 223296,
     "release": {
-      "tag": "v0.1.0-beta.5",
-      "publishedAt": "2026-09-24T03:13:19Z",
+      "tag": "v0.1.0-beta.6",
+      "publishedAt": "2026-09-25T08:18:35Z",
       "prerelease": true
     },
-    "releaseCount": 5,
+    "releaseCount": 6,
     "releases": [
+      {
+        "tag": "v0.1.0-beta.6",
+        "name": "v0.1.0-beta.6",
+        "publishedAt": "2026-09-25T08:18:35Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.1.0-beta.5",
         "name": "v0.1.0-beta.5",
@@ -680,10 +692,24 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 7
+        "contributions": 9
       }
     ],
     "commitList": [
+      {
+        "sha": "150a838",
+        "message": "Merge pull request #1 from zaimokuza-yoshiteru/codex/dsh-rc2-compat",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-25T08:13:51Z"
+      },
+      {
+        "sha": "71a4b0a",
+        "message": "build: add DSH RC2 compatibility to Office",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-24T16:19:22Z"
+      },
       {
         "sha": "1cbc6c7",
         "message": "release: beta.5 with DSH 0.1.7-rc.1 compatibility",
@@ -750,14 +776,14 @@
       },
       {
         "week": 1789862400,
-        "total": 3,
+        "total": 4,
         "days": [
           0,
           0,
           1,
           1,
           1,
-          0,
+          1,
           0
         ]
       }
@@ -883,7 +909,7 @@
       0,
       0,
       0,
-      0,
+      1,
       0,
       0,
       2,
@@ -1773,10 +1799,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 35,
-    "sizeKb": 1283,
+    "commits": 36,
+    "sizeKb": 1292,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-09-24T17:11:56Z",
+    "pushedAt": "2026-09-25T04:58:17Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -1812,10 +1838,17 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 13
+        "contributions": 14
       }
     ],
     "commitList": [
+      {
+        "sha": "31f6247",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-09-25T04:58:16Z"
+      },
       {
         "sha": "ee8e318",
         "message": "Refresh repository snapshots",
@@ -1892,13 +1925,6 @@
         "author": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "date": "2026-09-20T04:54:16Z"
-      },
-      {
-        "sha": "19e3c6f",
-        "message": "Refresh repository snapshots",
-        "author": "github-actions[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "date": "2026-09-19T15:54:21Z"
       }
     ],
     "activity": [
@@ -1995,14 +2021,14 @@
       },
       {
         "week": 1789862400,
-        "total": 11,
+        "total": 12,
         "days": [
           3,
           2,
           2,
           2,
           2,
-          0,
+          1,
           0
         ]
       }
@@ -2132,7 +2158,7 @@
       0,
       0,
       0,
-      0,
+      1,
       0,
       0,
       0,
