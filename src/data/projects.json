@@ -20,39 +20,51 @@
     "defaultBranch": "main",
     "stars": 9,
     "forks": 0,
-    "openIssues": 1,
+    "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 146,
-    "sizeKb": 7495,
+    "commits": 149,
+    "sizeKb": 8352,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-09-28T03:51:30Z",
+    "pushedAt": "2026-09-28T16:45:41Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 2510560
+        "bytes": 2784793
       },
       {
         "name": "CSS",
-        "bytes": 30407
+        "bytes": 32891
       },
       {
         "name": "JavaScript",
-        "bytes": 13528
+        "bytes": 12922
       },
       {
         "name": "PowerShell",
         "bytes": 6741
       }
     ],
-    "languageTotal": 2561236,
+    "languageTotal": 2837347,
     "release": {
-      "tag": "v0.1.7-rc.2.3",
-      "publishedAt": "2026-09-27T16:08:29Z",
+      "tag": "v0.2.0-rc.1.0",
+      "publishedAt": "2026-09-28T16:19:56Z",
       "prerelease": true
     },
-    "releaseCount": 41,
+    "releaseCount": 43,
     "releases": [
+      {
+        "tag": "v0.2.0-rc.1.0",
+        "name": "v0.2.0-rc.1.0",
+        "publishedAt": "2026-09-28T16:19:56Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.1.7-rc.2.4",
+        "name": "v0.1.7-rc.2.4",
+        "publishedAt": "2026-09-28T08:05:24Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.1.7-rc.2.3",
         "name": "v0.1.7-rc.2.3",
@@ -304,10 +316,31 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 141
+        "contributions": 144
       }
     ],
     "commitList": [
+      {
+        "sha": "a14712e",
+        "message": "fix: bound release tag metadata to its commit SHA (#34)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-28T16:45:40Z"
+      },
+      {
+        "sha": "293cf59",
+        "message": "feat: adapt ACP to DSH 0.2.0-rc.1 and harden native integration (#33)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-28T16:01:02Z"
+      },
+      {
+        "sha": "19b5ade",
+        "message": "feat: add DSH tool approval policy and native picker styling (0.1.7-rc.2.4) (#32)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-28T07:48:27Z"
+      },
       {
         "sha": "98754d3",
         "message": "fix: accept host-confirmed teammate reports without extra text (#31)",
@@ -370,30 +403,22 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-24T03:00:23Z"
-      },
-      {
-        "sha": "f4b98db",
-        "message": "Support DSH 0.1.7-rc.1 native Teams and activity contracts",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-24T02:41:18Z"
-      },
-      {
-        "sha": "0460b92",
-        "message": "Merge pull request #25 from zaimokuza-yoshiteru/feature/ZAI-88",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-23T13:13:38Z"
-      },
-      {
-        "sha": "4266a64",
-        "message": "Merge remote-tracking branch 'origin/main' into feature/ZAI-88",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-23T12:50:36Z"
       }
     ],
     "activity": [
+      {
+        "week": 1787443200,
+        "total": 26,
+        "days": [
+          0,
+          9,
+          0,
+          3,
+          3,
+          2,
+          9
+        ]
+      },
       {
         "week": 1788048000,
         "total": 17,
@@ -448,11 +473,11 @@
       },
       {
         "week": 1790467200,
-        "total": 3,
+        "total": 6,
         "days": [
           3,
-          0,
-          0,
+          1,
+          2,
           0,
           0,
           0,
@@ -500,7 +525,7 @@
       0,
       0,
       0,
-      1,
+      2,
       0,
       1,
       0,
@@ -509,7 +534,7 @@
       0,
       4,
       6,
-      1,
+      3,
       1,
       1,
       1,
@@ -1159,6 +1184,19 @@
       }
     ],
     "activity": [
+      {
+        "week": 1786233600,
+        "total": 21,
+        "days": [
+          0,
+          0,
+          10,
+          0,
+          6,
+          5,
+          0
+        ]
+      },
       {
         "week": 1786838400,
         "total": 0,
@@ -1843,10 +1881,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 41,
-    "sizeKb": 1328,
+    "commits": 42,
+    "sizeKb": 1334,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-09-27T16:58:39Z",
+    "pushedAt": "2026-09-28T05:23:53Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -1882,10 +1920,17 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 19
+        "contributions": 20
       }
     ],
     "commitList": [
+      {
+        "sha": "4b0e8d7",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-09-28T05:23:52Z"
+      },
       {
         "sha": "9eadd55",
         "message": "Refresh repository snapshots",
@@ -1962,13 +2007,6 @@
         "author": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "date": "2026-09-22T16:58:43Z"
-      },
-      {
-        "sha": "7e76db2",
-        "message": "Refresh repository snapshots",
-        "author": "github-actions[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "date": "2026-09-22T04:55:32Z"
       }
     ],
     "activity": [
@@ -2065,10 +2103,10 @@
       },
       {
         "week": 1790467200,
-        "total": 2,
+        "total": 3,
         "days": [
           2,
-          0,
+          1,
           0,
           0,
           0,
@@ -2107,7 +2145,7 @@
       0,
       0,
       1,
-      0,
+      1,
       0,
       0,
       0,
