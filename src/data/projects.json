@@ -23,18 +23,18 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 149,
-    "sizeKb": 8352,
+    "commits": 150,
+    "sizeKb": 8452,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-09-28T16:45:41Z",
+    "pushedAt": "2026-09-29T16:52:05Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 2784793
+        "bytes": 2772589
       },
       {
         "name": "CSS",
-        "bytes": 32891
+        "bytes": 27676
       },
       {
         "name": "JavaScript",
@@ -45,14 +45,20 @@
         "bytes": 6741
       }
     ],
-    "languageTotal": 2837347,
+    "languageTotal": 2819928,
     "release": {
-      "tag": "v0.2.0-rc.1.0",
-      "publishedAt": "2026-09-28T16:19:56Z",
+      "tag": "v0.2.0-rc.2.0",
+      "publishedAt": "2026-09-29T17:01:54Z",
       "prerelease": true
     },
-    "releaseCount": 43,
+    "releaseCount": 44,
     "releases": [
+      {
+        "tag": "v0.2.0-rc.2.0",
+        "name": "v0.2.0-rc.2.0",
+        "publishedAt": "2026-09-29T17:01:54Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.2.0-rc.1.0",
         "name": "v0.2.0-rc.1.0",
@@ -316,10 +322,17 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 144
+        "contributions": 145
       }
     ],
     "commitList": [
+      {
+        "sha": "3403470",
+        "message": "Adapt ACP to DSH 0.2.0-rc.2 and SDK 1.5.1 (#35)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-29T16:29:09Z"
+      },
       {
         "sha": "a14712e",
         "message": "fix: bound release tag metadata to its commit SHA (#34)",
@@ -396,13 +409,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-24T03:21:35Z"
-      },
-      {
-        "sha": "1458f81",
-        "message": "Verify RC projection updates and native transcript presentation",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-24T03:00:23Z"
       }
     ],
     "activity": [
@@ -473,12 +479,12 @@
       },
       {
         "week": 1790467200,
-        "total": 6,
+        "total": 7,
         "days": [
           3,
           1,
           2,
-          0,
+          1,
           0,
           0,
           0
@@ -558,7 +564,7 @@
       0,
       3,
       2,
-      5,
+      6,
       2,
       0,
       0,
@@ -676,24 +682,30 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 1,
-    "commits": 11,
-    "sizeKb": 510,
+    "commits": 12,
+    "sizeKb": 527,
     "createdAt": "2026-09-16T15:27:21Z",
-    "pushedAt": "2026-09-27T14:08:36Z",
+    "pushedAt": "2026-09-29T14:09:21Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 230583
+        "bytes": 231649
       }
     ],
-    "languageTotal": 230583,
+    "languageTotal": 231649,
     "release": {
-      "tag": "v0.1.0-beta.8",
-      "publishedAt": "2026-09-27T14:10:38Z",
+      "tag": "v0.1.0-beta.9",
+      "publishedAt": "2026-09-29T14:12:16Z",
       "prerelease": true
     },
-    "releaseCount": 8,
+    "releaseCount": 9,
     "releases": [
+      {
+        "tag": "v0.1.0-beta.9",
+        "name": "v0.1.0-beta.9",
+        "publishedAt": "2026-09-29T14:12:16Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.1.0-beta.8",
         "name": "v0.1.0-beta.8",
@@ -747,10 +759,17 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 11
+        "contributions": 12
       }
     ],
     "commitList": [
+      {
+        "sha": "7ec25ca",
+        "message": "release: beta.9 with DSH 0.2.0 RC2 compatibility",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-09-29T14:09:00Z"
+      },
       {
         "sha": "d2f3bea",
         "message": "fix: preserve office activities during cache eviction",
@@ -845,11 +864,11 @@
       },
       {
         "week": 1790467200,
-        "total": 2,
+        "total": 3,
         "days": [
           2,
           0,
-          0,
+          1,
           0,
           0,
           0,
@@ -928,7 +947,7 @@
       0,
       0,
       0,
-      1,
+      2,
       0,
       0,
       0,
@@ -1881,10 +1900,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 43,
-    "sizeKb": 1344,
+    "commits": 44,
+    "sizeKb": 1350,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-09-28T19:42:40Z",
+    "pushedAt": "2026-09-29T05:44:00Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -1913,17 +1932,24 @@
     "releases": null,
     "contributorList": [
       {
-        "login": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "login": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "contributions": 22
       },
       {
-        "login": "github-actions[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 21
+        "login": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "contributions": 22
       }
     ],
     "commitList": [
+      {
+        "sha": "b06fe8d",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-09-29T05:43:59Z"
+      },
       {
         "sha": "ae847dc",
         "message": "Refresh repository snapshots",
@@ -2000,16 +2026,22 @@
         "author": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "date": "2026-09-23T16:58:28Z"
-      },
-      {
-        "sha": "0f84d82",
-        "message": "Refresh repository snapshots",
-        "author": "github-actions[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "date": "2026-09-23T04:45:17Z"
       }
     ],
     "activity": [
+      {
+        "week": 1785628800,
+        "total": 3,
+        "days": [
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
       {
         "week": 1786233600,
         "total": 1,
@@ -2103,11 +2135,11 @@
       },
       {
         "week": 1790467200,
-        "total": 4,
+        "total": 5,
         "days": [
           2,
           2,
-          0,
+          1,
           0,
           0,
           0,
@@ -2169,7 +2201,7 @@
       0,
       0,
       1,
-      0,
+      1,
       0,
       0,
       0,
