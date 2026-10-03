@@ -23,14 +23,14 @@
     "openIssues": 1,
     "watchers": 0,
     "contributors": 2,
-    "commits": 150,
-    "sizeKb": 7232,
+    "commits": 151,
+    "sizeKb": 7281,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-10-03T05:05:32Z",
+    "pushedAt": "2026-10-03T07:26:08Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 2772589
+        "bytes": 2862172
       },
       {
         "name": "CSS",
@@ -38,21 +38,27 @@
       },
       {
         "name": "JavaScript",
-        "bytes": 12922
+        "bytes": 13028
       },
       {
         "name": "PowerShell",
         "bytes": 6741
       }
     ],
-    "languageTotal": 2819928,
+    "languageTotal": 2909617,
     "release": {
-      "tag": "v0.2.0-rc.2.0",
-      "publishedAt": "2026-09-29T17:01:54Z",
+      "tag": "v0.2.0-rc.2.1",
+      "publishedAt": "2026-10-03T05:58:40Z",
       "prerelease": true
     },
-    "releaseCount": 44,
+    "releaseCount": 45,
     "releases": [
+      {
+        "tag": "v0.2.0-rc.2.1",
+        "name": "v0.2.0-rc.2.1",
+        "publishedAt": "2026-10-03T05:58:40Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.2.0-rc.2.0",
         "name": "v0.2.0-rc.2.0",
@@ -322,10 +328,17 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 145
+        "contributions": 146
       }
     ],
     "commitList": [
+      {
+        "sha": "60ba8dd",
+        "message": "fix: stabilize ACP streaming and steering lifecycle (#36)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-10-03T05:30:08Z"
+      },
       {
         "sha": "3403470",
         "message": "Adapt ACP to DSH 0.2.0-rc.2 and SDK 1.5.1 (#35)",
@@ -402,13 +415,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-24T05:34:14Z"
-      },
-      {
-        "sha": "8290f22",
-        "message": "Wait for rendered transcript policy before inspecting groups",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-24T03:21:35Z"
       }
     ],
     "activity": [
@@ -479,7 +485,7 @@
       },
       {
         "week": 1790467200,
-        "total": 7,
+        "total": 8,
         "days": [
           3,
           1,
@@ -487,7 +493,7 @@
           1,
           0,
           0,
-          0
+          1
         ]
       }
     ],
@@ -649,7 +655,7 @@
       0,
       0,
       2,
-      1,
+      2,
       4,
       3,
       0,
@@ -1926,10 +1932,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 50,
-    "sizeKb": 1399,
+    "commits": 51,
+    "sizeKb": 1203,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-10-02T17:53:53Z",
+    "pushedAt": "2026-10-03T05:18:44Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -1960,7 +1966,7 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 28
+        "contributions": 29
       },
       {
         "login": "zaimokuza-yoshiteru",
@@ -1969,6 +1975,13 @@
       }
     ],
     "commitList": [
+      {
+        "sha": "3e89bca",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-10-03T05:18:43Z"
+      },
       {
         "sha": "8e914de",
         "message": "Refresh repository snapshots",
@@ -2045,13 +2058,6 @@
         "author": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "date": "2026-09-27T05:18:58Z"
-      },
-      {
-        "sha": "adce398",
-        "message": "Refresh repository snapshots",
-        "author": "github-actions[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "date": "2026-09-26T16:24:16Z"
       }
     ],
     "activity": [
@@ -2161,7 +2167,7 @@
       },
       {
         "week": 1790467200,
-        "total": 11,
+        "total": 12,
         "days": [
           2,
           2,
@@ -2169,7 +2175,7 @@
           2,
           1,
           2,
-          0
+          1
         ]
       }
     ],
@@ -2323,7 +2329,7 @@
       0,
       0,
       2,
-      0,
+      1,
       0,
       0,
       1,
