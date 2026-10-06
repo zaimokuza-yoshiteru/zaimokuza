@@ -18,19 +18,19 @@
     ],
     "license": "MIT",
     "defaultBranch": "main",
-    "stars": 10,
+    "stars": 12,
     "forks": 0,
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 157,
-    "sizeKb": 7995,
+    "commits": 159,
+    "sizeKb": 8200,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-10-05T04:32:08Z",
+    "pushedAt": "2026-10-06T06:00:10Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 3633732
+        "bytes": 3724580
       },
       {
         "name": "CSS",
@@ -45,14 +45,20 @@
         "bytes": 9237
       }
     ],
-    "languageTotal": 3684952,
+    "languageTotal": 3775800,
     "release": {
-      "tag": "v0.2.0-rc.2.3",
-      "publishedAt": "2026-10-05T01:55:36Z",
+      "tag": "v0.2.0-rc.2.4",
+      "publishedAt": "2026-10-05T08:20:58Z",
       "prerelease": true
     },
-    "releaseCount": 47,
+    "releaseCount": 48,
     "releases": [
+      {
+        "tag": "v0.2.0-rc.2.4",
+        "name": "v0.2.0-rc.2.4",
+        "publishedAt": "2026-10-05T08:20:58Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.2.0-rc.2.3",
         "name": "v0.2.0-rc.2.3",
@@ -340,10 +346,24 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 152
+        "contributions": 154
       }
     ],
     "commitList": [
+      {
+        "sha": "5dc9c2d",
+        "message": "Release rc2.5: preserve replies after ACP cancellation (#44)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-10-06T06:00:09Z"
+      },
+      {
+        "sha": "7b919e7",
+        "message": "Release 0.2.0-rc.2.4: harden diagnostics and preserve legacy activity history (#43)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-10-05T07:48:17Z"
+      },
       {
         "sha": "108a6a3",
         "message": "Streamline plugin setup and attach verified release packages (#42)",
@@ -413,23 +433,22 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-28T16:01:02Z"
-      },
-      {
-        "sha": "19b5ade",
-        "message": "feat: add DSH tool approval policy and native picker styling (0.1.7-rc.2.4) (#32)",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-28T07:48:27Z"
-      },
-      {
-        "sha": "98754d3",
-        "message": "fix: accept host-confirmed teammate reports without extra text (#31)",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-27T15:50:20Z"
       }
     ],
     "activity": [
+      {
+        "week": 1787443200,
+        "total": 26,
+        "days": [
+          0,
+          9,
+          0,
+          3,
+          3,
+          2,
+          9
+        ]
+      },
       {
         "week": 1788048000,
         "total": 17,
@@ -497,11 +516,11 @@
       },
       {
         "week": 1791072000,
-        "total": 6,
+        "total": 8,
         "days": [
           3,
-          3,
-          0,
+          4,
+          1,
           0,
           0,
           0,
@@ -549,7 +568,7 @@
       1,
       0,
       0,
-      2,
+      3,
       0,
       1,
       0,
@@ -572,7 +591,7 @@
       3,
       0,
       0,
-      0,
+      1,
       0,
       1,
       0,
@@ -1234,6 +1253,19 @@
       }
     ],
     "activity": [
+      {
+        "week": 1786233600,
+        "total": 21,
+        "days": [
+          0,
+          0,
+          10,
+          0,
+          6,
+          5,
+          0
+        ]
+      },
       {
         "week": 1786838400,
         "total": 0,
@@ -1944,10 +1976,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 52,
-    "sizeKb": 1210,
+    "commits": 53,
+    "sizeKb": 1218,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-10-03T16:18:58Z",
+    "pushedAt": "2026-10-05T05:39:54Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -1978,7 +2010,7 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 30
+        "contributions": 31
       },
       {
         "login": "zaimokuza-yoshiteru",
@@ -1987,6 +2019,13 @@
       }
     ],
     "commitList": [
+      {
+        "sha": "5428477",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-10-05T05:39:53Z"
+      },
       {
         "sha": "51d1f5e",
         "message": "Refresh repository snapshots",
@@ -2063,13 +2102,6 @@
         "author": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "date": "2026-09-28T05:23:52Z"
-      },
-      {
-        "sha": "9eadd55",
-        "message": "Refresh repository snapshots",
-        "author": "github-actions[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "date": "2026-09-27T16:58:38Z"
       }
     ],
     "activity": [
@@ -2179,10 +2211,10 @@
       },
       {
         "week": 1791072000,
-        "total": 0,
+        "total": 1,
         "days": [
           0,
-          0,
+          1,
           0,
           0,
           0,
@@ -2221,7 +2253,7 @@
       0,
       0,
       1,
-      1,
+      2,
       0,
       0,
       0,
