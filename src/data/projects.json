@@ -19,18 +19,18 @@
     "license": "MIT",
     "defaultBranch": "main",
     "stars": 12,
-    "forks": 0,
-    "openIssues": 1,
+    "forks": 1,
+    "openIssues": 2,
     "watchers": 0,
     "contributors": 2,
-    "commits": 159,
-    "sizeKb": 8201,
+    "commits": 161,
+    "sizeKb": 8409,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-10-06T08:14:04Z",
+    "pushedAt": "2026-10-07T14:31:03Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 3724580
+        "bytes": 3969089
       },
       {
         "name": "CSS",
@@ -45,14 +45,26 @@
         "bytes": 9237
       }
     ],
-    "languageTotal": 3775800,
+    "languageTotal": 4020309,
     "release": {
-      "tag": "v0.2.0-rc.2.5",
-      "publishedAt": "2026-10-06T08:24:24Z",
+      "tag": "v0.2.0-rc.2.7",
+      "publishedAt": "2026-10-07T14:46:13Z",
       "prerelease": true
     },
-    "releaseCount": 49,
+    "releaseCount": 51,
     "releases": [
+      {
+        "tag": "v0.2.0-rc.2.7",
+        "name": "v0.2.0-rc.2.7",
+        "publishedAt": "2026-10-07T14:46:13Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.2.0-rc.2.6",
+        "name": "v0.2.0-rc.2.6",
+        "publishedAt": "2026-10-07T02:54:59Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.2.0-rc.2.5",
         "name": "v0.2.0-rc.2.5",
@@ -352,10 +364,24 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 154
+        "contributions": 156
       }
     ],
     "commitList": [
+      {
+        "sha": "8ffcd12",
+        "message": "test: add opt-in real ACP long-task regression for rc.2.7 (#48)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-10-07T14:29:29Z"
+      },
+      {
+        "sha": "513b7b9",
+        "message": "Fix ACP controls and activity persistence for rc.2.6 (#46)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-10-06T22:25:41Z"
+      },
       {
         "sha": "5dc9c2d",
         "message": "Release rc2.5: preserve replies after ACP cancellation (#44)",
@@ -425,20 +451,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-09-29T16:29:09Z"
-      },
-      {
-        "sha": "a14712e",
-        "message": "fix: bound release tag metadata to its commit SHA (#34)",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-28T16:45:40Z"
-      },
-      {
-        "sha": "293cf59",
-        "message": "feat: adapt ACP to DSH 0.2.0-rc.1 and harden native integration (#33)",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-28T16:01:02Z"
       }
     ],
     "activity": [
@@ -522,12 +534,12 @@
       },
       {
         "week": 1791072000,
-        "total": 8,
+        "total": 10,
         "days": [
           3,
           4,
           1,
-          0,
+          2,
           0,
           0,
           0
@@ -613,7 +625,7 @@
       0,
       0,
       0,
-      0,
+      1,
       1,
       0,
       0,
@@ -629,7 +641,7 @@
       1,
       1,
       0,
-      0,
+      1,
       2,
       2,
       3,
@@ -892,6 +904,19 @@
       }
     ],
     "activity": [
+      {
+        "week": 1789257600,
+        "total": 4,
+        "days": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
       {
         "week": 1789862400,
         "total": 4,
@@ -1982,10 +2007,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 54,
-    "sizeKb": 1227,
+    "commits": 55,
+    "sizeKb": 1235,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-10-06T06:20:57Z",
+    "pushedAt": "2026-10-06T18:23:11Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -2016,7 +2041,7 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 32
+        "contributions": 33
       },
       {
         "login": "zaimokuza-yoshiteru",
@@ -2025,6 +2050,13 @@
       }
     ],
     "commitList": [
+      {
+        "sha": "1d75d26",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-10-06T18:23:10Z"
+      },
       {
         "sha": "a6e5484",
         "message": "Refresh repository snapshots",
@@ -2101,13 +2133,6 @@
         "author": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "date": "2026-09-29T05:43:59Z"
-      },
-      {
-        "sha": "ae847dc",
-        "message": "Refresh repository snapshots",
-        "author": "github-actions[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "date": "2026-09-28T19:42:39Z"
       }
     ],
     "activity": [
@@ -2230,11 +2255,11 @@
       },
       {
         "week": 1791072000,
-        "total": 2,
+        "total": 3,
         "days": [
           0,
           1,
-          1,
+          2,
           0,
           0,
           0,
@@ -2309,7 +2334,7 @@
       0,
       3,
       0,
-      1,
+      2,
       0,
       0,
       0,
