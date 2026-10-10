@@ -18,41 +18,53 @@
     ],
     "license": "MIT",
     "defaultBranch": "main",
-    "stars": 12,
+    "stars": 13,
     "forks": 1,
-    "openIssues": 3,
+    "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 161,
-    "sizeKb": 8355,
+    "commits": 163,
+    "sizeKb": 8904,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-10-09T03:57:14Z",
+    "pushedAt": "2026-10-09T16:32:40Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 3969089
+        "bytes": 4247791
       },
       {
         "name": "CSS",
-        "bytes": 28955
+        "bytes": 33500
       },
       {
         "name": "JavaScript",
-        "bytes": 13028
+        "bytes": 13770
       },
       {
         "name": "PowerShell",
         "bytes": 9237
       }
     ],
-    "languageTotal": 4020309,
+    "languageTotal": 4304298,
     "release": {
-      "tag": "v0.2.0-rc.2.7",
-      "publishedAt": "2026-10-07T14:46:13Z",
+      "tag": "v0.2.0-rc.2.9",
+      "publishedAt": "2026-10-09T13:41:21Z",
       "prerelease": true
     },
-    "releaseCount": 51,
+    "releaseCount": 53,
     "releases": [
+      {
+        "tag": "v0.2.0-rc.2.9",
+        "name": "v0.2.0-rc.2.9",
+        "publishedAt": "2026-10-09T13:41:21Z",
+        "prerelease": true
+      },
+      {
+        "tag": "v0.2.0-rc.2.8",
+        "name": "v0.2.0-rc.2.8",
+        "publishedAt": "2026-10-09T12:48:57Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.2.0-rc.2.7",
         "name": "v0.2.0-rc.2.7",
@@ -364,10 +376,24 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 156
+        "contributions": 158
       }
     ],
     "commitList": [
+      {
+        "sha": "d9b9f0d",
+        "message": "Release 0.2.0-rc.2.9: scoped workflows and faster validation",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-10-09T13:32:19Z"
+      },
+      {
+        "sha": "48b5ca6",
+        "message": "Release 0.2.0-rc.2.8: Antigravity support and ACP interface fixes",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-10-09T11:36:05Z"
+      },
       {
         "sha": "8ffcd12",
         "message": "test: add opt-in real ACP long-task regression for rc.2.7 (#48)",
@@ -437,20 +463,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-10-03T20:30:19Z"
-      },
-      {
-        "sha": "60ba8dd",
-        "message": "fix: stabilize ACP streaming and steering lifecycle (#36)",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-10-03T05:30:08Z"
-      },
-      {
-        "sha": "3403470",
-        "message": "Adapt ACP to DSH 0.2.0-rc.2 and SDK 1.5.1 (#35)",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-09-29T16:29:09Z"
       }
     ],
     "activity": [
@@ -534,14 +546,14 @@
       },
       {
         "week": 1791072000,
-        "total": 10,
+        "total": 12,
         "days": [
           3,
           4,
           1,
           2,
           0,
-          0,
+          2,
           0
         ]
       }
@@ -686,9 +698,9 @@
       1,
       1,
       0,
+      1,
       0,
-      0,
-      0,
+      1,
       0,
       0,
       0,
@@ -2020,10 +2032,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 56,
-    "sizeKb": 1244,
+    "commits": 57,
+    "sizeKb": 1253,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-10-07T18:58:26Z",
+    "pushedAt": "2026-10-09T06:08:31Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -2054,7 +2066,7 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 34
+        "contributions": 35
       },
       {
         "login": "zaimokuza-yoshiteru",
@@ -2063,6 +2075,13 @@
       }
     ],
     "commitList": [
+      {
+        "sha": "e3b5c07",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-10-09T06:08:30Z"
+      },
       {
         "sha": "75d3f0e",
         "message": "Refresh repository snapshots",
@@ -2139,13 +2158,6 @@
         "author": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "date": "2026-09-30T05:32:45Z"
-      },
-      {
-        "sha": "a6d6380",
-        "message": "Refresh repository snapshots",
-        "author": "github-actions[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "date": "2026-09-29T18:06:33Z"
       }
     ],
     "activity": [
@@ -2268,14 +2280,14 @@
       },
       {
         "week": 1791072000,
-        "total": 4,
+        "total": 5,
         "days": [
           0,
           1,
           2,
           1,
           0,
-          0,
+          1,
           0
         ]
       }
@@ -2407,7 +2419,7 @@
       0,
       1,
       1,
-      0,
+      1,
       0,
       0,
       0,
