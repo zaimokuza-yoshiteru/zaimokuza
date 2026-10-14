@@ -20,17 +20,17 @@
     "defaultBranch": "main",
     "stars": 13,
     "forks": 2,
-    "openIssues": 1,
+    "openIssues": 0,
     "watchers": 0,
-    "contributors": 2,
-    "commits": 163,
-    "sizeKb": 9195,
+    "contributors": 3,
+    "commits": 166,
+    "sizeKb": 9167,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-10-11T05:30:47Z",
+    "pushedAt": "2026-10-14T07:20:07Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 4247791
+        "bytes": 4371646
       },
       {
         "name": "CSS",
@@ -45,14 +45,20 @@
         "bytes": 9237
       }
     ],
-    "languageTotal": 4304298,
+    "languageTotal": 4428153,
     "release": {
-      "tag": "v0.2.0-rc.2.9",
-      "publishedAt": "2026-10-09T13:41:21Z",
+      "tag": "v0.2.0-rc.2.10",
+      "publishedAt": "2026-10-14T07:25:54Z",
       "prerelease": true
     },
-    "releaseCount": 53,
+    "releaseCount": 54,
     "releases": [
+      {
+        "tag": "v0.2.0-rc.2.10",
+        "name": "v0.2.0-rc.2.10",
+        "publishedAt": "2026-10-14T07:25:54Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.2.0-rc.2.9",
         "name": "v0.2.0-rc.2.9",
@@ -376,10 +382,36 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 158
+        "contributions": 160
+      },
+      {
+        "login": "DenAbr",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/1344505?v=4",
+        "contributions": 1
       }
     ],
     "commitList": [
+      {
+        "sha": "74dfc5d",
+        "message": "Merge pull request #52 from zaimokuza-yoshiteru/codex/qwen-code-fixes",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-10-14T07:19:09Z"
+      },
+      {
+        "sha": "9c2a72a",
+        "message": "Fix Qwen turn settlement and preserve native inputs for 0.2.0-rc.2.10",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-10-14T07:05:14Z"
+      },
+      {
+        "sha": "43a32c2",
+        "message": "Qwen Code: questions, effort, background tasks and schedules",
+        "author": "DenAbr",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/1344505?v=4",
+        "date": "2026-10-12T18:55:27Z"
+      },
       {
         "sha": "d9b9f0d",
         "message": "Release 0.2.0-rc.2.9: scoped workflows and faster validation",
@@ -442,27 +474,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-10-04T17:58:26Z"
-      },
-      {
-        "sha": "395c212",
-        "message": "修复 ACP 工具交接、结果补存与诊断导出（0.2.0-rc.2.2） (#39)",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-10-04T15:09:11Z"
-      },
-      {
-        "sha": "b7b78b6",
-        "message": "Pin low-cost Devin live validation and retain request model evidence (#38)",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-10-04T03:03:34Z"
-      },
-      {
-        "sha": "6425b84",
-        "message": "Fix ACP activity and native controls; migrate MCP SDK v2 for DSH 0.2.0-rc.2 (#37)",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-10-03T20:30:19Z"
       }
     ],
     "activity": [
@@ -559,12 +570,12 @@
       },
       {
         "week": 1791676800,
-        "total": 0,
+        "total": 2,
         "days": [
           0,
+          1,
           0,
-          0,
-          0,
+          1,
           0,
           0,
           0
@@ -617,7 +628,7 @@
       0,
       0,
       0,
-      0,
+      1,
       4,
       6,
       3,
@@ -659,7 +670,7 @@
       0,
       2,
       4,
-      1,
+      2,
       1,
       1,
       0,
@@ -929,6 +940,19 @@
       }
     ],
     "activity": [
+      {
+        "week": 1789257600,
+        "total": 4,
+        "days": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          2,
+          0
+        ]
+      },
       {
         "week": 1789862400,
         "total": 4,
@@ -2058,10 +2082,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 61,
-    "sizeKb": 1286,
+    "commits": 62,
+    "sizeKb": 1293,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-10-13T19:18:19Z",
+    "pushedAt": "2026-10-14T04:53:17Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -2092,7 +2116,7 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 39
+        "contributions": 40
       },
       {
         "login": "zaimokuza-yoshiteru",
@@ -2101,6 +2125,13 @@
       }
     ],
     "commitList": [
+      {
+        "sha": "28f212e",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-10-14T04:53:15Z"
+      },
       {
         "sha": "50fc0d8",
         "message": "Refresh repository snapshots",
@@ -2177,13 +2208,6 @@
         "author": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "date": "2026-10-03T05:18:43Z"
-      },
-      {
-        "sha": "8e914de",
-        "message": "Refresh repository snapshots",
-        "author": "github-actions[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "date": "2026-10-02T17:53:52Z"
       }
     ],
     "activity": [
@@ -2319,12 +2343,12 @@
       },
       {
         "week": 1791676800,
-        "total": 3,
+        "total": 4,
         "days": [
           2,
           0,
           1,
-          0,
+          1,
           0,
           0,
           0
@@ -2408,7 +2432,7 @@
       0,
       0,
       0,
-      1,
+      2,
       1,
       0,
       0,
