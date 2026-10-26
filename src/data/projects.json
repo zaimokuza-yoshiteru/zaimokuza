@@ -19,18 +19,18 @@
     "license": "MIT",
     "defaultBranch": "main",
     "stars": 16,
-    "forks": 4,
-    "openIssues": 4,
+    "forks": 5,
+    "openIssues": 2,
     "watchers": 0,
     "contributors": 4,
-    "commits": 176,
-    "sizeKb": 9671,
+    "commits": 178,
+    "sizeKb": 10066,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-10-23T15:47:50Z",
+    "pushedAt": "2026-10-26T18:28:08Z",
     "languages": [
       {
         "name": "TypeScript",
-        "bytes": 5862550
+        "bytes": 6003539
       },
       {
         "name": "CSS",
@@ -45,7 +45,7 @@
         "bytes": 10930
       }
     ],
-    "languageTotal": 5925423,
+    "languageTotal": 6066412,
     "release": {
       "tag": "v0.2.1-rc.2.4",
       "publishedAt": "2026-10-20T16:02:32Z",
@@ -406,7 +406,7 @@
       {
         "login": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "contributions": 168
+        "contributions": 170
       },
       {
         "login": "lukstei",
@@ -420,6 +420,20 @@
       }
     ],
     "commitList": [
+      {
+        "sha": "872ffea",
+        "message": "fix: scoped permission policies and truthful unfinished tool status (#71)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-10-26T18:28:08Z"
+      },
+      {
+        "sha": "5456a21",
+        "message": "fix: preserve ACP approval and bridge boundaries on DSH RC.3 (#68)",
+        "author": "zaimokuza-yoshiteru",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
+        "date": "2026-10-24T16:48:53Z"
+      },
       {
         "sha": "6edacaf",
         "message": "fix: align ACP subagents, approvals and session UI with native DSH (#64)",
@@ -489,20 +503,6 @@
         "author": "zaimokuza-yoshiteru",
         "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
         "date": "2026-10-18T04:08:07Z"
-      },
-      {
-        "sha": "74dfc5d",
-        "message": "Merge pull request #52 from zaimokuza-yoshiteru/codex/qwen-code-fixes",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-10-14T07:19:09Z"
-      },
-      {
-        "sha": "9c2a72a",
-        "message": "Fix Qwen turn settlement and preserve native inputs for 0.2.0-rc.2.10",
-        "author": "zaimokuza-yoshiteru",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/43027054?v=4",
-        "date": "2026-10-14T07:05:14Z"
       }
     ],
     "activity": [
@@ -622,10 +622,23 @@
           1,
           0
         ]
+      },
+      {
+        "week": 1792886400,
+        "total": 2,
+        "days": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
       }
     ],
     "punchCard": [
-      0,
+      1,
       1,
       0,
       0,
@@ -675,7 +688,7 @@
       6,
       3,
       1,
-      1,
+      2,
       1,
       0,
       2,
@@ -983,19 +996,6 @@
     ],
     "activity": [
       {
-        "week": 1789257600,
-        "total": 4,
-        "days": [
-          0,
-          0,
-          0,
-          2,
-          0,
-          2,
-          0
-        ]
-      },
-      {
         "week": 1789862400,
         "total": 4,
         "days": [
@@ -1049,6 +1049,19 @@
       },
       {
         "week": 1792281600,
+        "total": 0,
+        "days": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "week": 1792886400,
         "total": 0,
         "days": [
           0,
@@ -1530,6 +1543,19 @@
           0,
           0
         ]
+      },
+      {
+        "week": 1792886400,
+        "total": 0,
+        "days": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
       }
     ],
     "punchCard": [
@@ -1859,19 +1885,6 @@
     ],
     "activity": [
       {
-        "week": 1786838400,
-        "total": 6,
-        "days": [
-          0,
-          0,
-          0,
-          0,
-          0,
-          6,
-          0
-        ]
-      },
-      {
         "week": 1787443200,
         "total": 0,
         "days": [
@@ -1977,6 +1990,19 @@
       },
       {
         "week": 1792281600,
+        "total": 0,
+        "days": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "week": 1792886400,
         "total": 0,
         "days": [
           0,
@@ -2176,10 +2202,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 71,
-    "sizeKb": 1367,
+    "commits": 72,
+    "sizeKb": 1378,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-10-22T04:44:25Z",
+    "pushedAt": "2026-10-24T04:36:14Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -2210,7 +2236,7 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 49
+        "contributions": 50
       },
       {
         "login": "zaimokuza-yoshiteru",
@@ -2219,6 +2245,13 @@
       }
     ],
     "commitList": [
+      {
+        "sha": "6e2c3f2",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-10-24T04:36:13Z"
+      },
       {
         "sha": "8ac25ec",
         "message": "Refresh repository snapshots",
@@ -2295,29 +2328,9 @@
         "author": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "date": "2026-10-13T19:18:18Z"
-      },
-      {
-        "sha": "38dcb36",
-        "message": "Refresh repository snapshots",
-        "author": "github-actions[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "date": "2026-10-11T17:43:07Z"
       }
     ],
     "activity": [
-      {
-        "week": 1785628800,
-        "total": 3,
-        "days": [
-          0,
-          0,
-          0,
-          3,
-          0,
-          0,
-          0
-        ]
-      },
       {
         "week": 1786233600,
         "total": 1,
@@ -2450,13 +2463,26 @@
       },
       {
         "week": 1792281600,
-        "total": 5,
+        "total": 6,
         "days": [
           1,
           0,
           2,
           1,
           1,
+          0,
+          1
+        ]
+      },
+      {
+        "week": 1792886400,
+        "total": 0,
+        "days": [
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0
         ]
@@ -2611,7 +2637,7 @@
       0,
       0,
       0,
-      2,
+      3,
       2,
       0,
       0,
