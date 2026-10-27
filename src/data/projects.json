@@ -24,9 +24,9 @@
     "watchers": 0,
     "contributors": 4,
     "commits": 178,
-    "sizeKb": 10066,
+    "sizeKb": 10067,
     "createdAt": "2026-08-24T14:13:01Z",
-    "pushedAt": "2026-10-26T18:28:08Z",
+    "pushedAt": "2026-10-26T22:36:46Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -47,12 +47,18 @@
     ],
     "languageTotal": 6066412,
     "release": {
-      "tag": "v0.2.1-rc.2.4",
-      "publishedAt": "2026-10-20T16:02:32Z",
+      "tag": "v0.2.1-rc.3.1",
+      "publishedAt": "2026-10-26T22:44:49Z",
       "prerelease": true
     },
-    "releaseCount": 58,
+    "releaseCount": 59,
     "releases": [
+      {
+        "tag": "v0.2.1-rc.3.1",
+        "name": "v0.2.1-rc.3.1",
+        "publishedAt": "2026-10-26T22:44:49Z",
+        "prerelease": true
+      },
       {
         "tag": "v0.2.1-rc.2.4",
         "name": "v0.2.1-rc.2.4",
@@ -2202,10 +2208,10 @@
     "openIssues": 0,
     "watchers": 0,
     "contributors": 2,
-    "commits": 72,
-    "sizeKb": 1378,
+    "commits": 73,
+    "sizeKb": 1388,
     "createdAt": "2026-08-04T16:01:27Z",
-    "pushedAt": "2026-10-24T04:36:14Z",
+    "pushedAt": "2026-10-26T18:42:50Z",
     "languages": [
       {
         "name": "TypeScript",
@@ -2236,7 +2242,7 @@
       {
         "login": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "contributions": 50
+        "contributions": 51
       },
       {
         "login": "zaimokuza-yoshiteru",
@@ -2245,6 +2251,13 @@
       }
     ],
     "commitList": [
+      {
+        "sha": "c94fff9",
+        "message": "Refresh repository snapshots",
+        "author": "github-actions[bot]",
+        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "date": "2026-10-26T18:42:49Z"
+      },
       {
         "sha": "6e2c3f2",
         "message": "Refresh repository snapshots",
@@ -2321,13 +2334,6 @@
         "author": "github-actions[bot]",
         "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
         "date": "2026-10-14T04:53:15Z"
-      },
-      {
-        "sha": "50fc0d8",
-        "message": "Refresh repository snapshots",
-        "author": "github-actions[bot]",
-        "avatarUrl": "https://avatars.githubusercontent.com/in/15368?v=4",
-        "date": "2026-10-13T19:18:18Z"
       }
     ],
     "activity": [
@@ -2476,10 +2482,10 @@
       },
       {
         "week": 1792886400,
-        "total": 0,
+        "total": 1,
         "days": [
           0,
-          0,
+          1,
           0,
           0,
           0,
@@ -2531,7 +2537,7 @@
       0,
       0,
       0,
-      1,
+      2,
       1,
       0,
       0,
